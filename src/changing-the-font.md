@@ -1,0 +1,13 @@
+# Changing the font
+
+<h2>Anki</h2>
+
+- To change the font when reviewing, please see [this article](http://help.ankisrs.net/kb/card-appearance/changing-colorsfontsalignmentetc).
+- To change the font you see when adding or editing, please click the Fields button.
+- To change the font in rows of cards in the browser, please click the Cards button, and then More, and then Browser Appearance.
+- For buttons, menus and so on, Anki uses your system font settings, so you can alter the size by adjusting the system font scale. If you wish to override the font only in Anki, you'll need to install <https://ankiweb.net/shared/info/2103013902> and then alter the fontHeight line, changing f.pixelSize() to a number like 16.
+
+<h2>AnkiMobile</h2>
+
+- Any changes you make to your card templates will be reflected when studying in AnkiMobile
+- You can also tap on Tools while reviewing to adjust the font scaling relative to the computer version

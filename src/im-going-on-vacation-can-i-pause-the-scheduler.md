@@ -1,0 +1,5 @@
+# I'm going on vacation. Can I pause the scheduler?
+
+Being able to come back from a break to find Anki in exactly the same state you left it in may sound attractive, but unfortunately while it's easy to tell the computer to suspend its estimates of how quickly you are forgetting, it's not possible to suspend your memory, so memories will continue to decay if you don't revise. If you paused the scheduler, you would be delaying the review of every card in your deck, increasing your chance of forgetting every one of them, even those that would normally have appeared after you returned from your break.
+
+For this reason, Anki does not provide the ability to pause the scheduling algorithm. Instead, try reviewing ahead using the custom study feature before you leave and/or setting a daily limit on the review tab of the deck options to make it less painful to catch up when you come back.
