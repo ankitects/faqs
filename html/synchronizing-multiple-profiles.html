@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Synchronizing multiple profiles - Frequently Asked Questions</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html">Intro</a></li><li class="chapter-item expanded "><a href="error-establishing-a-secure-connection-when-syncing.html">&quot;Error establishing a secure connection.&quot; when syncing</a></li><li class="chapter-item expanded "><a href="syncing-failed-connection-timed-out-errors-when-syncing.html">'Syncing failed: Connection timed out' errors when syncing</a></li><li class="chapter-item expanded "><a href="a-deck-i-want-has-disappeared-from-ankiweb.html">A deck I want has disappeared from AnkiWeb</a></li><li class="chapter-item expanded "><a href="anki-20-add-ons.html">Anki 2.0 add-ons</a></li><li class="chapter-item expanded "><a href="anki-not-picking-up-gtk-theme-on-gnomelinux.html">Anki not picking up GTK theme on Gnome/Linux</a></li><li class="chapter-item expanded "><a href="anki-says-my-clock-is-wrong.html">Anki says my clock is wrong</a></li><li class="chapter-item expanded "><a href="ankis-not-showing-me-all-my-cards.html">Anki's not showing me all my cards!</a></li><li class="chapter-item expanded "><a href="ankiapp-is-not-part-of-the-anki-ecosystem.html">AnkiApp is not part of the Anki ecosystem</a></li><li class="chapter-item expanded "><a href="ankidroid-has-a-separate-support-site.html">AnkiDroid has a separate support site</a></li><li class="chapter-item expanded "><a href="ankimobile-beta-testing.html">AnkiMobile beta testing</a></li><li class="chapter-item expanded "><a href="ankiuniversal-is-not-supported-here-2.html">AnkiUniversal is not supported here</a></li><li class="chapter-item expanded "><a href="ankiweb-account-removal.html">AnkiWeb account removal</a></li><li class="chapter-item expanded "><a href="are-there-limits-on-file-sizes-on-ankiweb.html">Are there limits on file sizes on AnkiWeb?</a></li><li class="chapter-item expanded "><a href="can-i-reveal-parts-of-a-card-one-at-a-time.html">Can I reveal parts of a card one at a time?</a></li><li class="chapter-item expanded "><a href="can-i-sync-only-some-of-my-decks.html">Can I sync only some of my decks?</a></li><li class="chapter-item expanded "><a href="can-i-use-anki-in-a-company-or-school.html">Can I use Anki in a company or school?</a></li><li class="chapter-item expanded "><a href="cards-are-being-placed-in-the-default-deck.html">Cards are being placed in the &quot;Default&quot; deck</a></li><li class="chapter-item expanded "><a href="changing-the-font.html">Changing the font</a></li><li class="chapter-item expanded "><a href="changing-the-interface-language.html">Changing the interface language</a></li><li class="chapter-item expanded "><a href="characters-are-cut-off.html">Characters are cut off</a></li><li class="chapter-item expanded "><a href="customizing-mathjax.html">Customizing MathJax</a></li><li class="chapter-item expanded "><a href="email-verification.html">Email verification</a></li><li class="chapter-item expanded "><a href="extra-characters-appearing-on-cards.html">Extra characters appearing on cards</a></li><li class="chapter-item expanded "><a href="extra-copies-of-a-card-are-coming-up.html">Extra copies of a card are coming up</a></li><li class="chapter-item expanded "><a href="hiding-decks.html">Hiding Decks</a></li><li class="chapter-item expanded "><a href="how-can-i-donate.html">How can I donate?</a></li><li class="chapter-item expanded "><a href="how-can-i-work-with-someone-else-to-create-a-deck.html">How can I work with someone else to create a deck?</a></li><li class="chapter-item expanded "><a href="how-do-i-move-cards-between-decks.html">How do I move cards between decks?</a></li><li class="chapter-item expanded "><a href="im-going-on-vacation-can-i-pause-the-scheduler.html">I'm going on vacation. Can I pause the scheduler?</a></li><li class="chapter-item expanded "><a href="installing-ankimobile-on-multiple-devices.html">Installing AnkiMobile on multiple devices</a></li><li class="chapter-item expanded "><a href="mergingcombining-two-decks.html">Merging/combining two decks</a></li><li class="chapter-item expanded "><a href="my-antivirus-program-says-anki-is-infected.html">My antivirus program says Anki is infected!</a></li><li class="chapter-item expanded "><a href="note-types-with-strange-names.html">Note types with strange names</a></li><li class="chapter-item expanded "><a href="printing-cards-in-your-collection.html">Printing cards in your collection</a></li><li class="chapter-item expanded "><a href="removing-duplicate-note-types.html">Removing duplicate note types</a></li><li class="chapter-item expanded "><a href="requesting-a-refund-for-ankimobile.html">Requesting a refund for AnkiMobile</a></li><li class="chapter-item expanded "><a href="resetting-progress-in-a-deck.html">Resetting progress in a deck</a></li><li class="chapter-item expanded "><a href="restoring-an-automatic-backup-recovering-from-data-loss.html">Restoring an Automatic Backup (Recovering from Data Loss)</a></li><li class="chapter-item expanded "><a href="settings-for-using-anki-to-prepare-for-a-large-exam.html">Settings for using Anki to prepare for a large exam</a></li><li class="chapter-item expanded "><a href="soundimage-media-files-have-gone-missing.html">Sound/image media files have gone missing!</a></li><li class="chapter-item expanded "><a href="soundsimages-are-not-appearing-on-ankiweb-or-the-mobile-clients.html">Sounds/images are not appearing on AnkiWeb or the mobile clients</a></li><li class="chapter-item expanded "><a href="splitting-a-field-into-multiple-fields.html">Splitting a field into multiple fields</a></li><li class="chapter-item expanded "><a href="synchronizing-multiple-profiles.html" class="active">Synchronizing multiple profiles</a></li><li class="chapter-item expanded "><a href="text-to-speech-support.html">Text to speech support</a></li><li class="chapter-item expanded "><a href="the-anki-21-scheduler.html">The Anki 2.1 scheduler</a></li><li class="chapter-item expanded "><a href="third-party-linux-packages-and-source-builds-are-not-supported.html">Third party Linux packages and source builds are not supported</a></li><li class="chapter-item expanded "><a href="timezone-handling-changes.html">Timezone handling changes</a></li><li class="chapter-item expanded "><a href="we-do-not-make-robots.html">We do not make robots</a></li><li class="chapter-item expanded "><a href="why-does-ankimobile-cost-more-than-a-typical-mobile-app.html">Why does AnkiMobile cost more than a typical mobile app?</a></li><li class="chapter-item expanded "><a href="windows-permission-problems.html">Windows permission problems</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Frequently Asked Questions</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/ankitects/faqs/" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#synchronizing-multiple-profiles" id="synchronizing-multiple-profiles">Synchronizing multiple profiles</a></h1>
+<p><strong>Profiles</strong> are a feature designed to allow multiple people to study with Anki on the same device. They may also be useful for testing and other similar purposes, but this is not their primary purpose. Profiles are <em>not</em> recommended for dividing up your content, as doing so is unnecessary and limits your options in terms of viewing statistics and moving content around. Profiles are also unsupported on AnkiDroid.</p>
+<p>Anki is designed so that each profile syncs with a single AnkiWeb account – this way, each user can have their own account and use it on whichever devices they want.</p>
+<p>If you have created multiple profiles for yourself, the best option is to merge them into a single profile. You can do so by exporting one deck from profile A, and then importing it into profile B, repeating for any other decks in profile A, until everything is in profile B.</p>
+<p>If you have different users on your computer, each user will need to set up a separate AnkiWeb account for their profile. Attempting to sync different profiles with the same AnkiWeb account will result in lost data.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="splitting-a-field-into-multiple-fields.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="text-to-speech-support.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="splitting-a-field-into-multiple-fields.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="text-to-speech-support.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
