@@ -9,5 +9,7 @@ title = "Frequently Asked Questions"
 create-missing = false
 
 [output.html]
+no-section-label = true
+git-repository-url = "https://github.com/ankitects/faqs/"
 
 [output.linkcheck]

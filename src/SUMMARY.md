@@ -1,5 +1,6 @@
 # Summary
 
+- [Intro](./README.md)
 - ["Error establishing a secure connection." when syncing](./error-establishing-a-secure-connection-when-syncing.md)
 - ['Syncing failed: Connection timed out' errors when syncing](./syncing-failed-connection-timed-out-errors-when-syncing.md)
 - [A deck I want has disappeared from AnkiWeb](./a-deck-i-want-has-disappeared-from-ankiweb.md)
