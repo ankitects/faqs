@@ -4,7 +4,7 @@ If you do not intend to study a deck for some time do not want to delete it, you
 
 **A) Export the deck and delete it.**
 
-1. Choose File → Export. Select *Anki Deck Package (*.apkg)* from the *Export Format* drop-down.
+1. Choose File → Export. Select `Anki Deck Package (*.apkg)` from the *Export Format* drop-down.
 2. Select the deck to be removed from the *Include* drop-down.
 3. Make sure that *Include scheduling information* and *Include media* are checked—otherwise you will have lost your review history and possibly your media when it comes time to use the deck again.
 4. Click Export and save the apkg file somewhere you can find it again.
