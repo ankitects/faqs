@@ -1,6 +1,6 @@
 # Summary
 
-- [Intro](./README.md)
+- [Getting Help](./getting-help.md)
 
 - [A deck I want has disappeared from AnkiWeb](./a-deck-i-want-has-disappeared-from-ankiweb.md)
 - [A shared deck is not showing images/playing audio](./a-shared-deck-is-not-showing-images-or-playing-audio.md)
