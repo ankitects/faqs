@@ -12,8 +12,8 @@ your own first:
 
 - Read the [getting started](https://docs.ankiweb.net/#/getting-started) section
   of the manual, and check out the intro videos.
-- Check out the frequently asked questions to the left.
-- Search the manual for the topic you're interested in.
+- Use the search button on this page to search frequently asked questions.
+- Use the search button in the manual.
 - Google the issue.
 - If you've encountered a bug, please follow [these
   steps](https://faqs.ankiweb.net/when-problems-occur.html).
