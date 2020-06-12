@@ -8,6 +8,7 @@
 
 - [A deck I want has disappeared from AnkiWeb](./a-deck-i-want-has-disappeared-from-ankiweb.md)
 - [A shared deck is not showing images/playing audio](./a-shared-deck-is-not-showing-images-or-playing-audio.md)
+- [A shortcut key is not working](./shortcut-not-working.md)
 - [Anki 2.0 add-ons](./anki-2.0-add-ons.md)
 - [Anki failing to start on some Windows 7/8 machines](./anki-failing-to-start-on-some-windows-7-or-8-machines.md)
 - [Anki must be able to connect to a local port](./anki-must-be-able-to-connect-to-a-local-port.md)
