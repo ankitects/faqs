@@ -40,6 +40,12 @@ This is a much better question. It tells us:
 
 Knowing these things makes it much easier to answer your question.
 
+The user forums use a different login to AnkiWeb, so please create an
+account there if it's your first time.
+
+Finally, please check out the [community
+guidelines](https://forums.ankiweb.net/t/faq-guidelines/5).
+
 ## Anki Desktop (the computer version) and AnkiWeb
 
 After reading the above section, please post on the
