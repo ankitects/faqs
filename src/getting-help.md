@@ -3,12 +3,11 @@
 ## Asking good questions
 
 With the exception of AnkiMobile, Anki and its support is provided free of
-charge, by people who generously volunteer their time. They are not obligated to
-help you, and if you post rude or unclear questions, it discourages people from
-answering you.
+charge, by people who generously volunteer their time. Please bear this in mind
+when posting - if you are rude and demanding, or have made no effort to solve
+the problem on your own, people are less likely to want to help you.
 
-To increase the chances of getting an answer, please try to resolve the issue on
-your own first:
+Please start by trying to resolve the issue on your own:
 
 - Read the [getting started](https://docs.ankiweb.net/#/getting-started) section
   of the manual, and check out the intro videos.
@@ -41,7 +40,7 @@ This is a much better question. It tells us:
 
 Knowing these things makes it much easier to answer your question.
 
-## Anki Desktop (the computer version)
+## Anki Desktop (the computer version) and AnkiWeb
 
 After reading the above section, please post on the
 [user forums](https://forums.ankiweb.net) for assistance.
