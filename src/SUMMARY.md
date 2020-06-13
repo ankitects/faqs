@@ -1,6 +1,6 @@
 # Summary
 
-- [Getting Help](./getting-help.md)
+- [Getting help](./getting-help.md)
 - [When problems occur](./when-problems-occur.md)
 - [Anki 2.0 support has ended](./anki-2.0-support-has-ended.md)
 - [Anki's not showing me all my cards!](./anki-is-not-showing-me-all-my-cards.md)

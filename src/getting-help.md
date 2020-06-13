@@ -1,4 +1,4 @@
-# Getting Help
+# Getting help
 
 ## Asking good questions
 
