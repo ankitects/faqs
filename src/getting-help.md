@@ -11,11 +11,11 @@ Please start by trying to resolve the issue on your own:
 
 - Read the [getting started](https://docs.ankiweb.net/#/getting-started) section
   of the manual, and check out the intro videos.
+- If you've encountered a bug, please follow [these
+  steps](https://faqs.ankiweb.net/when-problems-occur.html).
 - Use the search button on this page to search frequently asked questions.
 - Use the search button in the manual.
 - Google the issue.
-- If you've encountered a bug, please follow [these
-  steps](https://faqs.ankiweb.net/when-problems-occur.html).
 
 If you have tried the above and are still stuck, it's time to ask for help.
 When writing a post, please explain the problem you are having clearly, and in detail.
@@ -44,7 +44,7 @@ The user forums use a different login to AnkiWeb, so please create an
 account there if it's your first time.
 
 Finally, please check out the [community
-guidelines](https://forums.ankiweb.net/t/faq-guidelines/5).
+guidelines](https://forums.ankiweb.net/faq).
 
 ## Anki Desktop (the computer version) and AnkiWeb
 
