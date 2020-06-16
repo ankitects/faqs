@@ -53,11 +53,7 @@ After reading the above section, please post on the
 
 ## AnkiMobile (iPhone/iPad)
 
-Please start by taking a look at [AnkiMobile's
-manual](https://docs.ankimobile.net/#/) to see if your question is covered
-there. If you still have questions or need to report a bug, please post either
-on the [user forums](https://forums.ankiweb.net) which Damien checks regularly, or
-create a [private ticket](https://anki.tenderapp.com/discussions/private).
+Please see [AnkiMobile's support page](https://docs.ankimobile.net).
 
 ## AnkiDroid (Android devices)
 
