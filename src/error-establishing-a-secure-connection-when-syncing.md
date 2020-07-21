@@ -6,10 +6,6 @@ This error happens when Anki tries to make a connection to AnkiWeb, and receives
 - a filtered network connection, common on work and school networks
 - an unreliable network connection
 
-**Anki 2.1 is more tolerant**
-
-Please try the latest Anki 2.1 beta  from the Anki website to see if it resolves your problems. Anki 2.1 is more tolerant of intercepted connections.
-
 **Antivirus/firewall/VPN/proxy**
 
 Antivirus, firewall and VPN programs can often cause problems when they filter network traffic.
