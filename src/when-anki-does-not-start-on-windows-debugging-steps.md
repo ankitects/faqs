@@ -8,7 +8,6 @@ Please try the following:
 
 If problems continue after that, instead of running Anki directly, please use Start>Run and type cmd.exe. When a console window appears, please type
 
-cd \program files\anki
-anki-console
+    cd \program files\anki & anki-console
 
 Presumably Anki will fail to open like before. But it should give you some lines of debugging info; please copy&paste or screenshot the text and attach it to your support ticket.
