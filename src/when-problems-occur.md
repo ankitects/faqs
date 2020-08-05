@@ -12,7 +12,7 @@ If the problem does not occur again, you can skip the following steps.
 
 **2. Check your Anki version**
 
-These days, Anki shows its version in the error message. If you're using an old Anki, you can find the version you're using in the Help>About or Anki>About menu. 
+These days, Anki shows its version in the error message. If you're using an old Anki, you can find the version you're using in the Help>About or Anki>About menu.
 
 If the version you're using is not the latest 2.1.x version published on <https://apps.ankiweb.net,> please close Anki, install the latest version, and then start Anki again to see if the problem has gone away.
 
@@ -26,9 +26,9 @@ After restarting Anki, please try the Tools>Check Database menu item to make sur
 
 Please close Anki, then start it again while holding down the shift key, which will disable any add-ons you have installed.
 
-If the problem goes away when add-ons are disabled, you can disable or delete some add-ons and try again, until you discover which add-on is causing the problem.
+If the problem goes away when add-ons are disabled, you can narrow down the culprit by disabling one or more add-ons, restarting Anki, and seeing if the problem goes away. Repeat the process trying different add-ons, until you discover which one is causing the problem.
 
-If the issue turns out to be an add-on, please disable the add-on and report the issue on the add-on's download page.
+If the issue turns out to be an add-on, please report the issue to the add-on author.
 
 **5. Restart your computer**
 
