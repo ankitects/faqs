@@ -18,17 +18,17 @@ If the problem goes away when add-ons are disabled, you can narrow down the culp
 
 If the issue turns out to be an add-on, please report the issue to the add-on author.
 
-**3. Check your database**
-
-After restarting Anki, please try the Tools>Check Database menu item to make sure your collection doesn't have any problems.
-
-**4. Check your Anki version**
+**3. Check your Anki version**
 
 These days, Anki shows its version in the error message. If you're using an old Anki, you can find the version you're using in the Help>About or Anki>About menu.
 
 If the version you're using is not the latest 2.1.x version published on <https://apps.ankiweb.net,> please close Anki, install the latest version, and then start Anki again to see if the problem has gone away.
 
 If you're using Linux, please make sure you can reproduce the error using the packaged version on the Anki website, as distros often distribute [broken versions](https://anki.tenderapp.com/kb/anki-ecosystem/third-party-linux-packages-and-source-builds-are-not-supported).
+
+**4. Check your database**
+
+After restarting Anki, please try the Tools>Check Database menu item to make sure your collection doesn't have any problems.
 
 **5. Restart your computer**
 
