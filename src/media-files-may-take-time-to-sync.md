@@ -1,9 +1,6 @@
 # Media files may take time to sync
 
-Please take a look at the media syncing intro video:
-https://www.youtube.com/watch?v=phP9GGG-PxY&yt:cc=on
-
-If you prefer not to watch a video, please read on.
+Please take a look at the [media syncing intro video](https://www.youtube.com/watch?v=phP9GGG-PxY&yt:cc=on). If you prefer not to watch a video, please read on.
 
 Recent Anki and AnkiMobile versions synchronize sounds and images in the background, allowing you to continue using the app while they are transferred. Until the media files have been transferred, audio may fail to play, and images may fail to appear if those files are not available yet.
 
