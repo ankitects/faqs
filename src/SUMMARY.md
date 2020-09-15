@@ -30,6 +30,7 @@
 - [Changing the interface language](./changing-the-interface-language.md)
 - [Characters are cut off](./characters-are-cut-off.md)
 - [Customizing MathJax](./customizing-mathjax.md)
+- [Cyren are blocking our emails](./cyren-are-blocking-our-emails.md)
 - [Due times after a break](./due-times-after-a-break.md)
 - [Email verification](./email-verification.md)
 - [Error establishing a secure connection when syncing](./error-establishing-a-secure-connection-when-syncing.md)
