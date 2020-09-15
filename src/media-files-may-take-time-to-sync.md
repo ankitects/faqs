@@ -1,5 +1,10 @@
 # Media files may take time to sync
 
+Please take a look at the media syncing intro video:
+https://www.youtube.com/watch?v=phP9GGG-PxY&yt:cc=on
+
+If you prefer not to watch a video, please read on.
+
 Recent Anki and AnkiMobile versions synchronize sounds and images in the background, allowing you to continue using the app while they are transferred. Until the media files have been transferred, audio may fail to play, and images may fail to appear if those files are not available yet.
 
 If you tap/click on the sync button when a spinner is shown next to it, it will reveal more details about the syncing progress. If you are waiting for sounds/images to start working, please wait for that window to show "media sync complete". Once that message has been displayed, it indicates all media files have been transferred to or from your device, and the media should then work during study.
