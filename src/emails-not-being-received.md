@@ -3,7 +3,7 @@
 Some email providers (typically school or business email) outsource spam
 checking to external companies. Some of these external companies can be
 heavy-handed when fighting spam, and collateral damage unfortunately happens -
-innocent parties such as AnkiWeb can end up get blocked when a different
+innocent parties such as AnkiWeb can end up getting blocked when a different
 customer on the same network has sent inappropriate mail.
 
 If you have access to an email address at another provider, the fastest solution
