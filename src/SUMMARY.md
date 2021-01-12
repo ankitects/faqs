@@ -37,6 +37,7 @@
 - [Errors when recording](./errors-when-recording.md)
 - [Extra characters appearing on cards](./extra-characters-appearing-on-cards.md)
 - [Extra copies of a card are coming up](./extra-copies-of-a-card-are-coming-up.md)
+- [Hard/good interval is longer than good/easy](./hard-good-interval-longer-than-good-easy.md)
 - [Hiding Decks](./hiding-decks.md)
 - [How can I donate?](./how-can-i-donate.md)
 - [How can I work with someone else to create a deck?](./how-can-i-work-with-someone-else-to-create-a-deck.md)

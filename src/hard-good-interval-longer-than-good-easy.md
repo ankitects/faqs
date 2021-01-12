@@ -1,4 +1,4 @@
-# My hard/good interval is longer than my good/easy interval
+# Hard/good interval is longer than good/easy
 
 When a card is in learning:
 - Again will be the first learning step
