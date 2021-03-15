@@ -22,7 +22,7 @@ you can use the File>Export menu item to create a .colpkg file containing all
 decks and scheduling. In the unlikely case that you run into problems, you will
 be able to restore from the backup.
 
-### Anki 2.1.41beta4+
+### Anki 2.1.41+
 
 To update, click the Update message shown in the deck list.
 
