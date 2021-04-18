@@ -168,7 +168,9 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#customizing-mathjax" id="customizing-mathjax">Customizing MathJax</a></h1>
-<p>Anki's bundled MathJax support is loaded before your card content, so if you wish to customize MathJax, you will need to do so in the following way in your card template:</p>
+<p>Anki's bundled MathJax support is loaded before your card content, so if you wish to customize MathJax, you will need to do so in a specific way.</p>
+<p>For recent Anki versions, please see <a href="https://forums.ankiweb.net/t/configure-mathjax-macros-on-macos/6535/2">this post</a>.</p>
+<p>For older Anki versions:</p>
 <pre><code class="language-html">&lt;script&gt;
   MathJax.Hub.Config({
   ...
@@ -178,7 +180,7 @@
 </code></pre>
 <p>Notes:</p>
 <ul>
-<li>Please avoid changing the standard open/close tags (<code>\(</code> and <code>\[</code>), as Anki expects them to look like that.</li>
+<li>Please avoid changing the standard open/close tags (<code>\(</code> and <code>\[</code>), to something like <code>$</code> and <code>$$</code>, as Anki has special logic for cloze deletions, which will not work if you change the delimiter.</li>
 </ul>
 
                     </main>
