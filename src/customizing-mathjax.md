@@ -1,6 +1,10 @@
 # Customizing MathJax
 
-Anki's bundled MathJax support is loaded before your card content, so if you wish to customize MathJax, you will need to do so in the following way in your card template:
+Anki's bundled MathJax support is loaded before your card content, so if you wish to customize MathJax, you will need to do so in a specific way.
+
+For recent Anki versions, please see [this post](https://forums.ankiweb.net/t/configure-mathjax-macros-on-macos/6535/2).
+
+For older Anki versions:
 
 ```html
 <script>
@@ -13,4 +17,4 @@ Anki's bundled MathJax support is loaded before your card content, so if you wis
 
 Notes:
 
-- Please avoid changing the standard open/close tags (`\(` and `\[`), as Anki expects them to look like that.
+- Please avoid changing the standard open/close tags (`\(` and `\[`), to something like `$` and `$$`, as Anki has special logic for cloze deletions, which will not work if you change the delimiter.
