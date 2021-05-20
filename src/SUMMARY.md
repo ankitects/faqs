@@ -55,6 +55,7 @@
 - [Resetting progress in a deck](./resetting-progress-in-a-deck.md)
 - [Restoring an Automatic Backup (Recovering from Data Loss)](./restoring-an-automatic-backup-recovering-from-data-loss.md)
 - [Retrieving AnkiMobile crash logs](./retrieving-ankimobile-crash-logs.md)
+- [Running from Python](./running-from-python.md)
 - [Screenshots large and blurry on retina displays](./screenshots-large-and-blurry-on-retina-displays.md)
 - [Settings for using Anki to prepare for a large exam](./settings-for-using-anki-to-prepare-for-a-large-exam.md)
 - [Shared decks with broken Javascript](./shared-decks-with-broken-javascript.md)
