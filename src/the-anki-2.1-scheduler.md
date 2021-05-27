@@ -22,7 +22,7 @@ you can use the File>Export menu item to create a .colpkg file containing all
 decks and scheduling. In the unlikely case that you run into problems, you will
 be able to restore from the backup.
 
-### Anki 2.1.41+
+### Anki 2.1.41+/AnkiMobile 2.0.75+.
 
 To update, click the Update message shown in the deck list.
 
@@ -31,9 +31,9 @@ filtered decks will remain filtered. The new scheduler handles filtered decks
 differently, so custom steps you may have set will no longer apply, but filtered
 decks with rescheduling enabled will not reset learning cards.
 
-You will be asked if you use AnkiDroid 2.14 when updating, as AnkiDroid does not
-currently support the newer timezone handling. If you make a mistake when prompted,
-you can adjust the timezone handling in Anki's preferences screen.
+You may be asked if you use AnkiDroid 2.14 when updating. It is safe to choose
+"no" here, as AnkiDroid 2.15 has since been released. If you make a mistake when
+prompted, you can adjust the timezone handling in Anki's Preferences screen.
 
 Once you've updated, there is no option to switch back to the old scheduler. While
 you can still accomplish this by switching back to an older Anki version and
