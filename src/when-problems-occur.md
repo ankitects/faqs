@@ -42,4 +42,4 @@ three options.
 
 **7. If the problem remains**
 
-If you're confirmed you are using the latest Anki version, and are still receiving errors when starting Anki while holding down the shift key, please paste the next error you receive into your support ticket.
+If you're confirmed you are using the latest Anki version, and are still receiving errors when starting Anki while holding down the shift key, please paste the next error you receive into your support ticket. Support tickets are currently raised on the [Anki Forums](https://forums.ankiweb.net/).
