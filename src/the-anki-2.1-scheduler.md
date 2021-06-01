@@ -52,6 +52,27 @@ version.
 
 ## Changes
 
+Reviews:
+
+- When a deck has children, reviews are taken from all children decks at once,
+  instead of showing one deck at a time.
+- The daily review limit is taken from the deck you click on. If you have a deck
+  tree of the form "grandparent::parent::child" and you click on "parent", the
+  limits you have set on "grandparent" and "child" are ignored.
+
+(Re)learning:
+
+- Learning cards have 4 buttons instead of 3 - Hard repeats the current step
+  after the first step, and is the average of Again and Good on the first step.
+- The learn count is now the number of cards, instead of the number of steps
+  required to complete.
+- Suspending/burying cards does not reset a card's learning steps.
+- Lapsed reviews have their next due date updated on the last relearning step,
+  instead of the first step.
+- There is a new option in the preferences screen to show day learning cards
+  before reviews.
+- When cards are in relearning, the Easy button boosts the interval by 1 day.
+
 Filtered decks:
 
 - Filtered decks no longer reset (re)learning cards when they are built or
@@ -66,22 +87,8 @@ Filtered decks:
   new card order does not get forgotten when previewing.
 - Cards can be buried or suspended while remaining in the filtered deck.
 
-Other scheduling changes:
+Other changes:
 
-- The learn count is now the number of cards, instead of the number of steps
-  required to complete.
-- Suspending/burying cards does not reset a card's learning steps.
-- When a deck has children, reviews are taken from all children decks at once,
-  instead of showing each deck's review cards one by one. The review limit of
-  the child decks is ignored - only the limit of the deck you clicked on
-  applies.
-- Learning cards have 4 buttons instead of 3 - Hard repeats the current step
-  after the first step, and is the average of Again and Good on the first step.
 - "Next day starts at" is now relative to the current timezone.
-- Lapsed reviews have their next due date updated on the last relearning step,
-  instead of the first step.
 - Anki now distinguishes between manually and automatically buried cards, and
   you can unbury one set without the other.
-- There is a new option in the preferences screen to show day learning cards
-  before reviews.
-- When cards are in relearning, the Easy button boosts the interval by 1 day.
