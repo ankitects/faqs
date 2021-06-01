@@ -1082,6 +1082,27 @@ you update with 2.1.41 or later.</p>
 <p>Older versions have an option in the preferences screen to toggle the scheduler
 version.</p>
 <h2><a class="header" href="#changes" id="changes">Changes</a></h2>
+<p>Reviews:</p>
+<ul>
+<li>When a deck has children, reviews are taken from all children decks at once,
+instead of showing one deck at a time.</li>
+<li>The daily review limit is taken from the deck you click on. If you have a deck
+tree of the form &quot;grandparent::parent::child&quot; and you click on &quot;parent&quot;, the
+limits you have set on &quot;grandparent&quot; and &quot;child&quot; are ignored.</li>
+</ul>
+<p>(Re)learning:</p>
+<ul>
+<li>Learning cards have 4 buttons instead of 3 - Hard repeats the current step
+after the first step, and is the average of Again and Good on the first step.</li>
+<li>The learn count is now the number of cards, instead of the number of steps
+required to complete.</li>
+<li>Suspending/burying cards does not reset a card's learning steps.</li>
+<li>Lapsed reviews have their next due date updated on the last relearning step,
+instead of the first step.</li>
+<li>There is a new option in the preferences screen to show day learning cards
+before reviews.</li>
+<li>When cards are in relearning, the Easy button boosts the interval by 1 day.</li>
+</ul>
 <p>Filtered decks:</p>
 <ul>
 <li>Filtered decks no longer reset (re)learning cards when they are built or
@@ -1096,25 +1117,11 @@ buttons instead of 3.</li>
 new card order does not get forgotten when previewing.</li>
 <li>Cards can be buried or suspended while remaining in the filtered deck.</li>
 </ul>
-<p>Other scheduling changes:</p>
+<p>Other changes:</p>
 <ul>
-<li>The learn count is now the number of cards, instead of the number of steps
-required to complete.</li>
-<li>Suspending/burying cards does not reset a card's learning steps.</li>
-<li>When a deck has children, reviews are taken from all children decks at once,
-instead of showing each deck's review cards one by one. The review limit of
-the child decks is ignored - only the limit of the deck you clicked on
-applies.</li>
-<li>Learning cards have 4 buttons instead of 3 - Hard repeats the current step
-after the first step, and is the average of Again and Good on the first step.</li>
 <li>&quot;Next day starts at&quot; is now relative to the current timezone.</li>
-<li>Lapsed reviews have their next due date updated on the last relearning step,
-instead of the first step.</li>
 <li>Anki now distinguishes between manually and automatically buried cards, and
 you can unbury one set without the other.</li>
-<li>There is a new option in the preferences screen to show day learning cards
-before reviews.</li>
-<li>When cards are in relearning, the Easy button boosts the interval by 1 day.</li>
 </ul>
 <h1><a class="header" href="#third-party-linux-packages-and-source-builds-are-not-supported" id="third-party-linux-packages-and-source-builds-are-not-supported">Third party Linux packages and source builds are not supported</a></h1>
 <p>We have seen a lot of issues caused by the customized versions of Anki
