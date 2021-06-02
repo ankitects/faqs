@@ -22,6 +22,10 @@ you can use the File>Export menu item to create a .colpkg file containing all
 decks and scheduling. In the unlikely case that you run into problems, you will
 be able to restore from the backup.
 
+Once you have updated, please sync and choose "Upload" to send the upgraded
+collection to AnkiWeb. Then please sync any other devices you use, choosing
+"Download" on each of them, to bring things back into sync.
+
 ### Anki 2.1.41+/AnkiMobile 2.0.75+.
 
 To update, click the Update message shown in the deck list.
