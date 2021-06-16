@@ -30,25 +30,22 @@ counter this, Anki treats the delay differently depending on your
 answer. If you find a card easy, the last interval plus the full delay
 are added together, and then used to calculate the next interval. When
 you answer good, only half the delay is used. And when you answer hard,
-only a quarter of the delay is used, or 0 if you are using the
-experimental scheduler. So if a card was due in 5 days, and it’s
+none of the extra day is used. So if a card was due in 5 days, and it’s
 answered 20 days late, the next times you’d end up with are
 approximately:
 
-- Hard: (5 + 20/4) \* 1.2 = 12 days (or 6 days with the experimental
-  scheduler)
+- Hard: 5 \* 1.2 = 6 days
 
 - Good: (5 + 20/2) \* 2.5 = 37.5 days
 
 - Easy: (5 + 20) \* 3.25 = 81.25 days
 
-(the factors will actually vary depending on your performance in the
-deck)
+The exact numbers will depend on your past performance with the card,
+and your deck settings.
 
-If you find a card hard, the next interval is quite conservative and is
-less than the last wait (25 days). If you find it good, the next
-interval is only about 50% higher. And easy increases the interval
-aggressively as usual.
+If you find a card hard, the next interval is conservative and any extra delay
+is discarded. If you find it good, the next interval is only about 50% higher.
+And easy increases the interval aggressively as usual.
 
 So it is recommended that you study as normal when you return to Anki
 after a period of absence. But if you absolutely must reset the deck,
