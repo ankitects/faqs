@@ -30,7 +30,7 @@ counter this, Anki treats the delay differently depending on your
 answer. If you find a card easy, the last interval plus the full delay
 are added together, and then used to calculate the next interval. When
 you answer good, only half the delay is used. And when you answer hard,
-none of the extra day is used. So if a card was due in 5 days, and it’s
+none of the extra delay is used. So if a card was due in 5 days, and it’s
 answered 20 days late, the next times you’d end up with are
 approximately:
 
