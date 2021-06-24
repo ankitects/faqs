@@ -67,6 +67,7 @@
 - [Syncing failed: Connection timed out errors when syncing](./syncing-failed-connection-timed-out-errors-when-syncing.md)
 - [Text to speech support](./text-to-speech-support.md)
 - [The Anki 2.1 scheduler](./the-anki-2.1-scheduler.md)
+- [The 2021 scheduler](./the-2021-scheduler.md)
 - [Third party Linux packages and source builds are not supported](./third-party-linux-packages-and-source-builds-are-not-supported.md)
 - [Timezone handling changes](./timezone-handling-changes.md)
 - [We do not make robots](./we-do-not-make-robots.md)

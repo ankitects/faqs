@@ -96,3 +96,7 @@ Other changes:
 - "Next day starts at" is now relative to the current timezone.
 - Anki now distinguishes between manually and automatically buried cards, and
   you can unbury one set without the other.
+
+## 2021 updates
+
+Updates to the V2 scheduler are currently in [beta testing](./the-2021-scheduler.md).
