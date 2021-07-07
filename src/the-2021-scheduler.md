@@ -2,7 +2,7 @@
 
 The 2021 scheduler ("v3") is an update to the [Anki 2.1
 scheduler](./the-anki-2.1-scheduler.md) ("v2"). It was
-first introduced in [2.1.45alpha1](./anki2.1.45.md) and AnkiMobile 2.0.75beta2,
+first introduced in [2.1.45alpha1](./anki2.1.45.md) and AnkiMobile 2.0.75,
 and is currently in beta testing.
 
 ## Compatibility
