@@ -1127,20 +1127,24 @@ you can unbury one set without the other.</li>
 <p>Updates to the V2 scheduler are currently in <a href="./the-2021-scheduler.html">beta testing</a>.</p>
 <h1><a class="header" href="#2021-scheduler" id="2021-scheduler">2021 Scheduler</a></h1>
 <p>The 2021 scheduler (&quot;v3&quot;) is an update to the <a href="./the-anki-2.1-scheduler.html">Anki 2.1
-scheduler</a> (&quot;v2&quot;). It was
-first introduced in <a href="./anki2.1.45.html">2.1.45alpha1</a> and AnkiMobile 2.0.75,
-and is currently in beta testing.</p>
+scheduler</a> (&quot;v2&quot;). It is
+currently in beta testing.</p>
 <h2><a class="header" href="#compatibility-1" id="compatibility-1">Compatibility</a></h2>
 <p>The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
-device and sync to another device that is using v2.</p>
-<p>It will likely be some time until AnkiDroid and AnkiWeb support the v3 scheduler
-directly. In the mean time, they will continue to show cards using the v2 scheduler,
-regardless of the setting you have chosen.</p>
+device and sync with another device that is using v2.</p>
+<p>Client support:</p>
+<ul>
+<li>Anki: <a href="https://betas.ankiweb.net/anki2.1.45.html">2.1.45+</a></li>
+<li>AnkiMobile: 2.0.75+</li>
+<li>AnkiWeb: yes</li>
+<li>AnkiDroid: not yet</li>
+</ul>
+<p>It will likely be some time until AnkiDroid supports the v3 scheduler
+directly. In the mean time, it will continue to show cards using the v2 scheduler, regardless of the setting you have chosen.</p>
 <p>Because the v3 scheduler uses a different approach to gathering and sorting
-cards, there is a good chance that the number of cards you are presented with
-will differ if you switch back and forth - so while it is safe to switch back and
-forth, you should not expect the daily counts to match.</p>
+cards, a v2 and v3 client may show a different number of due cards on a
+given day. While this will not cause scheduling problems, please bear it in mind if you're switching back and forth.</p>
 <h2><a class="header" href="#changes-1" id="changes-1">Changes</a></h2>
 <h3><a class="header" href="#undo" id="undo">Undo</a></h3>
 <p>The v3 scheduler uses Anki's new undo infrastructure - you can answer a card,
@@ -1235,10 +1239,9 @@ if (states.good.normal?.review) {
 }
 </code></pre>
 <p>Because this is implemented in JavaScript, it is not limited to the computer
-version. AnkiMobile supports it as well, and the intention is for AnkiDroid and
-possibly AnkiWeb to support it in the future too, so that advanced users can
-make adjustments to the standard scheduling behaviour that apply on all
-platforms.</p>
+version. AnkiMobile supports it as well, and AnkiWeb and AnkiDroid may support
+it in the future too. This will allow advanced users to make adjustments to the
+standard scheduling behaviour, that apply on all platforms.</p>
 <p>The various scheduling states are described <a href="https://github.com/ankitects/anki/blob/9edac805adfe285cc92ed04dfeeffc1d1813c4d0/rslib/backend.proto#L1454">here</a>.</p>
 <h2><a class="header" href="#stability" id="stability">Stability</a></h2>
 <p>The new scheduler passes most of the tests used to test the previous schedulers
@@ -1246,7 +1249,7 @@ platforms.</p>
 so far, but it's possible there are corner-cases that have not been discovered
 yet. If you notice anything unexpected, please let us know.</p>
 <h2><a class="header" href="#trying-it-out" id="trying-it-out">Trying it out</a></h2>
-<p>As of 2.1.45alpha4 and AnkiMobile 2.0.75beta2, the scheduler can be enabled and
+<p>As of Anki 2.1.45alpha4 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.</p>
 <h1><a class="header" href="#third-party-linux-packages-and-source-builds-are-not-supported" id="third-party-linux-packages-and-source-builds-are-not-supported">Third party Linux packages and source builds are not supported</a></h1>
 <p>We have seen a lot of issues caused by the customized versions of Anki
