@@ -1,24 +1,28 @@
 # 2021 Scheduler
 
 The 2021 scheduler ("v3") is an update to the [Anki 2.1
-scheduler](./the-anki-2.1-scheduler.md) ("v2"). It was
-first introduced in [2.1.45alpha1](./anki2.1.45.md) and AnkiMobile 2.0.75,
-and is currently in beta testing.
+scheduler](./the-anki-2.1-scheduler.md) ("v2"). It is
+currently in beta testing.
 
 ## Compatibility
 
 The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
-device and sync to another device that is using v2.
+device and sync with another device that is using v2.
 
-It will likely be some time until AnkiDroid and AnkiWeb support the v3 scheduler
-directly. In the mean time, they will continue to show cards using the v2 scheduler,
-regardless of the setting you have chosen.
+Client support:
+
+- Anki: [2.1.45+](https://betas.ankiweb.net/anki2.1.45.html)
+- AnkiMobile: 2.0.75+
+- AnkiWeb: yes
+- AnkiDroid: not yet
+
+It will likely be some time until AnkiDroid supports the v3 scheduler
+directly. In the mean time, it will continue to show cards using the v2 scheduler, regardless of the setting you have chosen.
 
 Because the v3 scheduler uses a different approach to gathering and sorting
-cards, there is a good chance that the number of cards you are presented with
-will differ if you switch back and forth - so while it is safe to switch back and
-forth, you should not expect the daily counts to match.
+cards, a v2 and v3 client may show a different number of due cards on a
+given day. While this will not cause scheduling problems, please bear it in mind if you're switching back and forth.
 
 ## Changes
 
@@ -139,10 +143,9 @@ if (states.good.normal?.review) {
 ```
 
 Because this is implemented in JavaScript, it is not limited to the computer
-version. AnkiMobile supports it as well, and the intention is for AnkiDroid and
-possibly AnkiWeb to support it in the future too, so that advanced users can
-make adjustments to the standard scheduling behaviour that apply on all
-platforms.
+version. AnkiMobile supports it as well, and AnkiWeb and AnkiDroid may support
+it in the future too. This will allow advanced users to make adjustments to the
+standard scheduling behaviour, that apply on all platforms.
 
 The various scheduling states are described [here](https://github.com/ankitects/anki/blob/9edac805adfe285cc92ed04dfeeffc1d1813c4d0/rslib/backend.proto#L1454).
 
@@ -155,5 +158,5 @@ yet. If you notice anything unexpected, please let us know.
 
 ## Trying it out
 
-As of 2.1.45alpha4 and AnkiMobile 2.0.75beta2, the scheduler can be enabled and
+As of Anki 2.1.45alpha4 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.
