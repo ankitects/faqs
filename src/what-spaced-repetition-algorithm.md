@@ -15,7 +15,7 @@ Anki’s algorithm differs from SM-2 in some respects. Notably:
   retaining stage.
 
 - Anki uses 4 choices for answering review cards, not 6. There is only
-  one 'fail' choice, not 3. The reason for this is that failure
+  one *fail* choice, not 3. The reason for this is that failure
   comprises a small amount of total reviews, and thus adjusting a
   card’s ease can be sufficiently done by simply varying the positive
   answers.
@@ -29,9 +29,9 @@ Anki’s algorithm differs from SM-2 in some respects. Notably:
   instead of being reset completely. Also, you can elect to review
   failed mature cards on a different day, instead of the same day.
 
-- 'Remembered easily' not only increments the ease factor, but adds an
+- *Remembered easily* not only increments the ease factor, but adds an
   extra bonus to the current interval calculation. Thus, answering
-  'remembered easily' is a little more aggressive than the standard
+  *remembered easily* is a little more aggressive than the standard
   SM-2 algorithm.
 
 - Successive failures while cards are in learning do not result in
@@ -42,15 +42,15 @@ Anki’s algorithm differs from SM-2 in some respects. Notably:
 
 You can also check out `sched.py` and `schedv2.py` in Anki’s source code for the
 scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
-section of the manual for the options that are mentioned in 'italics').
+section of the manual for the options that are mentioned in *italics*).
 
 If you press…​
 
 Again  
 The card is placed into relearning mode, the ease is decreased by 20
-percentage points (that is, 20 is subtracted from the 'ease' value,
+percentage points (that is, 20 is subtracted from the *ease* value,
 which is in units of percentage points), and the current interval is
-multiplied by the value of 'new interval' (this interval will be used
+multiplied by the value of *new interval* (this interval will be used
 when the card exits relearning mode).
 
 Hard  
@@ -62,11 +62,11 @@ The current interval is multiplied by the current ease. The ease is
 unchanged.
 
 Easy  
-The current interval is multiplied by the current ease times the 'easy
-bonus' and the ease is increased by 15 percentage points.
+The current interval is multiplied by the current ease times the *easy
+bonus* and the ease is increased by 15 percentage points.
 
 For Hard, Good, and Easy, the next interval is additionally multiplied
-by the 'interval modifier'. If the card is being reviewed late,
+by the *interval modifier*. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a previous FAQ.
 
@@ -74,7 +74,7 @@ There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
 often than is useful and annoying users. Intervals will never be
-increased beyond the value of 'maximum interval'. Finally, all new
+increased beyond the value of *maximum interval*. Finally, all new
 intervals (except Again) will always be at least one day longer than the
 previous interval.
 
