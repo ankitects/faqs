@@ -41,8 +41,8 @@ Anki’s algorithm differs from SM-2 in some respects. Notably:
   acquisition process does not influence a card’s ease.
 
 You can also check out `sched.py` and `schedv2.py` in Anki’s source code for the
-scheduling code. Here is a summary (see the [deck options](deck-options.md)
-section for the options that are mentioned in 'italics').
+scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
+section of the manual for the options that are mentioned in 'italics').
 
 If you press…​
 
