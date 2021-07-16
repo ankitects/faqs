@@ -9,7 +9,7 @@ the problem on your own, people are less likely to want to help you.
 
 Please start by trying to resolve the issue on your own:
 
-- Read the [getting started](https://docs.ankiweb.net/#/getting-started) section
+- Read the [getting started](https://docs.ankiweb.net/getting-started.html) section
   of the manual, and check out the intro videos.
 - If you've encountered a bug, please follow [these
   steps](https://faqs.ankiweb.net/when-problems-occur.html).
