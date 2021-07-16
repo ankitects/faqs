@@ -2,11 +2,11 @@
 
 <h1>For Anki 2.1.20+</h1>
 
-Please see <https://docs.ankiweb.net/#/templates/fields?id=text-to-speech>
+Please see <https://docs.ankiweb.net/templates/fields.html#text-to-speech>
 
 <h1>For AnkiMobile 2.0.56+</h1>
 
-Please see <https://docs.ankimobile.net/#/more?id=text-to-speech>
+Please see <https://docs.ankimobile.net/tts.html>
 
 <h1>For AnkiDroid</h1>
 

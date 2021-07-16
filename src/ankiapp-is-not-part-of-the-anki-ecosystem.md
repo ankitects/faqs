@@ -40,4 +40,4 @@ with
 
 Finally, you'll need to move the image files that you extracted from the zip file into the User 1/collection.media folder:
 
-<https://apps.ankiweb.net/docs/manual.html#file-locations>
+<https://docs.ankiweb.net/files.html#file-locations>

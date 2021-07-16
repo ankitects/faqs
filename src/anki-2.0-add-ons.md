@@ -7,7 +7,7 @@ If the add-on you want has a 2.0 download link on AnkiWeb, you can download the 
 - If it's a .py file, place it in your add-on folder.
 - If it's a .zip file, unzip the contents into your add-on folder.
 
-Your add-on folder is inside your data folder: <https://apps.ankiweb.net/docs/manual20.html#file-locations>
+Your add-on folder is inside your data folder: <https://docs.ankiweb.net/files.html#file-locations>
 
 An archive of the old 2.0 add-ons has also been made available. To use it:
 
@@ -17,6 +17,6 @@ An archive of the old 2.0 add-ons has also been made available. To use it:
 - If it's a .py file, place it in your add-on folder.
 - If it's a .zip file, unzip the contents into your add-on folder.
 
-Your add-on folder is inside your data folder: <https://apps.ankiweb.net/docs/manual20.html#file-locations>
+Your add-on folder is inside your data folder: <https://docs.ankiweb.net/files.html#file-locations>
 
 **These add-ons are provided as-is, and no support can be provided for them.**
