@@ -14,7 +14,7 @@ If you receive an error about the clock being wrong, please check to ensure all 
 When politicians change the handling of daylight savings time, it can take companies like Windows and Apple time to update their operating systems to reflect the new handling. To work around the problem, you can select a different timezone that has the same UTC offset as your current location, and then update the clock to make sure it is correct. For example:
 
 - it's 10AM where you are
-- you've checked Google for the current standard time, and it's currently midnight: <https://www.google.com.au/?gws_rd=ssl#q=utc+time>
+- you've checked Google for the current standard time, and it's currently midnight: <https://www.google.com/search?q=utc+time>
 - this means you are ten hours ahead of standard time, so your UTC offset is +10:00
 - in your system settings, look for a timezone that is +10:00
 - after adjusting the time zone, adjust the clock so it shows the correct time

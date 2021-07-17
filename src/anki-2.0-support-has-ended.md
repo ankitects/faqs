@@ -14,7 +14,7 @@ You can download Anki 2.1 from <https://apps.ankiweb.net>
 
 <h2>AnkiDroid</h2>
 
-This change will affect devices running Android 4.4 or below. There is a beta build of AnkiDroid available that should fix syncing on devices running 4.1+: <https://groups.google.com/forum/#!topic/anki-android/f9ikzWikjjk>
+This change will affect devices running Android 4.4 or below. There is a beta build of AnkiDroid available that should fix syncing on devices running 4.1+: <https://groups.google.com/g/anki-android/c/f9ikzWikjjk>
 
 <h2>AnkiMobile</h2>
 
