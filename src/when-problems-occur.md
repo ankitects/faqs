@@ -37,7 +37,7 @@ Sometimes restarting your computer may help.
 **6. Change the Video Driver**
 
 On Windows and Linux, crashes and display issues can be caused by the video driver. Changing to a different
-video driver in the preferences screen or via [the gldriver file](https://changes.ankiweb.net/#/known-issues?id=hardware-acceleration-and-startup-issues-on-windowslinux) may help. On Windows, make sure you try all
+video driver in the preferences screen or via [the gldriver file](https://changes.ankiweb.net/known-issues.html#hardware-acceleration-and-startup-issues-on-windowslinux) may help. On Windows, make sure you try all
 three options.
 
 **7. If the problem remains**

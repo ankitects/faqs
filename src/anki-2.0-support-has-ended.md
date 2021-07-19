@@ -6,9 +6,9 @@ Update 1 Jun 2020: An upstream SSL certificate has expired, and this has broken 
 
 On Feb 1 2020, AnkiWeb received a security update that broke syncing for some Anki 2.0 users. The tools Anki 2.0 was built on are no longer receiving bugfixes or security updates, and there is a risk that Anki 2.0 will stop working without warning. For this reason, we highly recommend you start migrating to Anki 2.1.
 
-Syncing with Anki 2.1.x will continue to function. If you have not updated to Anki 2.1.x yet, upgrading is as simple as installing it on your computer, as Anki 2.0.x and 2.1.x use the same file format. You can even switch back and forth if you install 2.0 and 2.1 in separate locations - though please make sure to use the [Downgrade](https://changes.ankiweb.net/#/) button if you're using the latest Anki.
+Syncing with Anki 2.1.x will continue to function. If you have not updated to Anki 2.1.x yet, upgrading is as simple as installing it on your computer, as Anki 2.0.x and 2.1.x use the same file format. You can even switch back and forth if you install 2.0 and 2.1 in separate locations - though please make sure to use the [Downgrade](https://changes.ankiweb.net) button if you're using the latest Anki.
 
-For information on the changes in Anki 2.1, please see <https://changes.ankiweb.net/#/?id=changes-in-anki-21>
+For information on the changes in Anki 2.1, please see <https://changes.ankiweb.net/changes/2.1.html>
 
 You can download Anki 2.1 from <https://apps.ankiweb.net>
 
