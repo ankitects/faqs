@@ -12,9 +12,9 @@ create-missing = true
 no-section-label = true
 git-repository-url = "https://github.com/ankitects/faqs/"
 
-#[output.linkcheck]
-#optional = true
-#warning-policy = "warn"
-#follow-web-links = true
-## quora dislikes bots, and tenderapp doesn't have statically checkable anchors
-#exclude = [ 'quora\.com', 'anki\.tenderapp\.com/.*#.*' ]
+[output.linkcheck]
+optional = true
+warning-policy = "warn"
+follow-web-links = true
+# quora dislikes bots
+exclude = [ 'quora\.com' ]
