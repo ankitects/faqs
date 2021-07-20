@@ -3,48 +3,30 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Anki's not showing me all my cards! - Frequently Asked Questions</title>
-        
-        
-
-
+        <title>Anki&#x27;s not showing me all my cards! - Frequently Asked Questions</title>
         <!-- Custom HTML head -->
         
-
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        
         <link rel="icon" href="favicon.svg">
-        
-        
         <link rel="shortcut icon" href="favicon.png">
-        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-        
         <link rel="stylesheet" href="css/print.css" media="print">
-        
-
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        
         <link rel="stylesheet" href="fonts/fonts.css">
-        
-
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
-
-        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -120,33 +102,26 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                        
                     </div>
 
                     <h1 class="menu-title">Frequently Asked Questions</h1>
 
                     <div class="right-buttons">
-                        
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        
-                        
                         <a href="https://github.com/ankitects/faqs/" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        
                     </div>
                 </div>
 
-                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -154,8 +129,6 @@
                         </ul>
                     </div>
                 </div>
-                
-
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -167,91 +140,62 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#ankis-not-showing-me-all-my-cards" id="ankis-not-showing-me-all-my-cards">Anki's not showing me all my cards!</a></h1>
-<h2><a class="header" href="#anki-decides-which-cards-you-see" id="anki-decides-which-cards-you-see">Anki decides which cards you see</a></h2>
+                        <h1 id="ankis-not-showing-me-all-my-cards"><a class="header" href="#ankis-not-showing-me-all-my-cards">Anki's not showing me all my cards!</a></h1>
+<h2 id="anki-decides-which-cards-you-see"><a class="header" href="#anki-decides-which-cards-you-see">Anki decides which cards you see</a></h2>
 <p>Anki was designed to help you remember large amounts of material for a long time. To do this, it operates differently to a traditional flashcard program.</p>
 <p>In a conventional flashcard program, you see the same set of cards over and over again, and decide when you want to stop. Repeatedly reviewing material in this way - &quot;cramming&quot; - tends to be what we're used to, and for many people it feels like the natural way to study.</p>
 <p>There's just one problem with this approach - it's not terribly effective! Studies have shown that you can achieve better results by adding a delay between each review of an item, instead of reviewing it multiple times in a short period. This delay between reviews is called &quot;spaced repetition&quot;.</p>
 <p>In Anki, instead of going over material until you decide to stop, Anki chooses which cards you need to see. If you press the Again button on a card because you've forgotten it, it will be shown again soon. Once you've remembered the card correctly for 10 minutes, Anki will not show the card again until the next day - and if you answer it correctly then, the delay will grow larger each time.</p>
 <p>If you are new to spaced repetition, you may well be skeptical, and you may still feel that cramming would help you more. You are not alone - studies have shown that people tend to assume that cramming will be more effective, even when results show that spaced repetition actually works better. Please keep an open mind, and try it for a few weeks before you decide which approach is best for you.</p>
 <p>If you have a test due in a few days, it's probably not the best time to be starting with Anki. While Anki does have tools to bypass the regular scheduling for things like upcoming tests, they take some time to learn how to use, and they are awkward to use on a daily basis. If you have an imminent test, you may want to consider studying as you have done previously, and then picking Anki back up when you're not under as much pressure.</p>
-<h2><a class="header" href="#new-cards" id="new-cards">New cards</a></h2>
+<h2 id="new-cards"><a class="header" href="#new-cards">New cards</a></h2>
 <p>By default, Anki will show you a maximum of 20 new cards each day. The reason for this limit is because those cards will need to be reviewed in the coming days - such as the next day, and then a few days after, and so on. Each day you use Anki, another 20 cards will be introduced, and the reviews will start to add up - if you're adding 20 new cards each day, you can expect the daily reviews in the early stages to build up to around 200 cards/day.</p>
 <p>It is possible to increase the number of new cards that are presented each day by adjusting the deck options or using the custom study feature, but please be careful - if you try to learn too many new cards at once, you'll find the follow-up reviews overwhelming, and you'll end up forgetting the material again. While you're no doubt eager to get stuck into your material, it's a good idea to try Anki with the default options for a week or two before you think about changing the limits.</p>
-<h2><a class="header" href="#reviews" id="reviews">Reviews</a></h2>
+<h2 id="reviews"><a class="header" href="#reviews">Reviews</a></h2>
 <p>Anki will show cards you've previously reviewed when it thinks you will forget them. The delays will start from a single day, but can grow into months or years if you repeatedly answer a card correctly.</p>
 <p>Unless you have a test coming up soon, it's best to review cards as Anki schedules them. Try to resist the urge to review material multiple times to reinforce it - it is more efficient to just wait a while than to view the same content over and over again. If you do find yourself with free time, consider adding some more new cards to Anki instead, or doing some other studies.</p>
 <p>If you have a test coming up and need to review the material before it is due, you can tell Anki you'd like to <a href="https://docs.ankiweb.net/filtered-decks.html">review outside of the regular schedule</a>. If you just want to quickly flip through some cards to check for mistakes after creating them or get a general idea of what's there, you can use the <strong>Preview</strong> button in the upper-right corner of the Browse screen.</p>
-<h2><a class="header" href="#card-counts-dropping-down-by-more-than-one" id="card-counts-dropping-down-by-more-than-one">Card counts dropping down by more than one</a></h2>
+<h2 id="card-counts-dropping-down-by-more-than-one"><a class="header" href="#card-counts-dropping-down-by-more-than-one">Card counts dropping down by more than one</a></h2>
 <p>If you're seeing the card count drop down by more than one after certain operations like an undo, please see <a href="https://anki.tenderapp.com/kb/problems/i-created-reversed-cards-but-theyre-not-showing-up">https://anki.tenderapp.com/kb/problems/i-created-reversed-cards-but-theyre-not-showing-up</a></p>
-<h2><a class="header" href="#related" id="related">Related</a></h2>
+<h2 id="related"><a class="header" href="#related">Related</a></h2>
 <p><a href="https://anki.tenderapp.com/kb/collection-management/settings-for-using-anki-to-prepare-for-a-large-exam">Settings for using Anki to prepare for a large exam</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
                             <a rel="prev" href="anki-2.0-support-has-ended.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                        
-
-                        
                             <a rel="next" href="media-files-may-take-time-to-sync.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        
-
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
                     <a rel="prev" href="anki-2.0-support-has-ended.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                
-
-                
                     <a rel="next" href="media-files-may-take-time-to-sync.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-                
             </nav>
 
         </div>
 
-        
-
-        
-
-        
-
-        
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        
-
-        
-
-        
         <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        
-
-        
-
     </body>
 </html>

@@ -4,47 +4,29 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>The 2021 scheduler - Frequently Asked Questions</title>
-        
-        
-
-
         <!-- Custom HTML head -->
         
-
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        
         <link rel="icon" href="favicon.svg">
-        
-        
         <link rel="shortcut icon" href="favicon.png">
-        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-        
         <link rel="stylesheet" href="css/print.css" media="print">
-        
-
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        
         <link rel="stylesheet" href="fonts/fonts.css">
-        
-
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
-
-        
     </head>
     <body>
         <!-- Provide site root to javascript -->
@@ -120,33 +102,26 @@
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                        
                     </div>
 
                     <h1 class="menu-title">Frequently Asked Questions</h1>
 
                     <div class="right-buttons">
-                        
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        
-                        
                         <a href="https://github.com/ankitects/faqs/" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        
                     </div>
                 </div>
 
-                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -154,8 +129,6 @@
                         </ul>
                     </div>
                 </div>
-                
-
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -167,11 +140,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#2021-scheduler" id="2021-scheduler">2021 Scheduler</a></h1>
+                        <h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>The 2021 scheduler (&quot;v3&quot;) is an update to the <a href="./the-anki-2.1-scheduler.html">Anki 2.1
 scheduler</a> (&quot;v2&quot;). It is
 currently in beta testing.</p>
-<h2><a class="header" href="#compatibility" id="compatibility">Compatibility</a></h2>
+<h2 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h2>
 <p>The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
 device and sync with another device that is using v2.</p>
@@ -187,13 +160,13 @@ directly. In the mean time, it will continue to show cards using the v2 schedule
 <p>Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a
 given day. While this will not cause scheduling problems, please bear it in mind if you're switching back and forth.</p>
-<h2><a class="header" href="#changes" id="changes">Changes</a></h2>
-<h3><a class="header" href="#undo" id="undo">Undo</a></h3>
+<h2 id="changes"><a class="header" href="#changes">Changes</a></h2>
+<h3 id="undo"><a class="header" href="#undo">Undo</a></h3>
 <p>The v3 scheduler uses Anki's new undo infrastructure - you can answer a card,
 bury a different card, and answer another card, then undo each one in turn if
 you wish. Previous schedulers handled undo separately, so a non-review action
 would clear the review history, and vice versa.</p>
-<h3><a class="header" href="#daily-limits" id="daily-limits">Daily limits</a></h3>
+<h3 id="daily-limits"><a class="header" href="#daily-limits">Daily limits</a></h3>
 <p>Previously each deck's limit was limited by the its parent limits, grandparent
 limits, and so on. This has been simplified to the following:</p>
 <ul>
@@ -216,7 +189,7 @@ below for more.</p>
 <p>Another change is that the new count is now capped by the review count. If you
 have limits of 200 reviews and 20 new cards, and 190 reviews are due, only 10
 new cards will be introduced.</p>
-<h3><a class="header" href="#sorting" id="sorting">Sorting</a></h3>
+<h3 id="sorting"><a class="header" href="#sorting">Sorting</a></h3>
 <p>Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
 reviews can optionally be ordered by interval or subdeck.</p>
@@ -225,7 +198,7 @@ shown together or not.</p>
 <p>The options controlling the mixing of new cards and interday learning cards have
 been moved from the Preferences screen into the deck options. The options will
 be used from the deck you select to study.</p>
-<h3><a class="header" href="#burying" id="burying">Burying</a></h3>
+<h3 id="burying"><a class="header" href="#burying">Burying</a></h3>
 <p>When burying is enabled, cards are now excluded from the queues at the start of
 a study session. Previously if you had 10 forward and 10 reverse cards, the
 counts would start at 20 and jump down as you review, but now they'll start directly
@@ -234,18 +207,18 @@ at 10. The actual burying still happens as you review cards.</p>
 list will differ from the ones you see when you click on a deck. If you press the
 Unbury button at the end of reviews, you'll get the other cards that were excluded
 at the start.</p>
-<h3><a class="header" href="#fuzz" id="fuzz">Fuzz</a></h3>
+<h3 id="fuzz"><a class="header" href="#fuzz">Fuzz</a></h3>
 <p>The small random delay added to reviews is now reflected on the answer buttons, instead of
 only being applied when answering.</p>
-<h3><a class="header" href="#interday-learning" id="interday-learning">Interday learning</a></h3>
+<h3 id="interday-learning"><a class="header" href="#interday-learning">Interday learning</a></h3>
 <p>Learning cards that cross a day boundary are now included in the review count, instead
 of the learning count. They will now be affected by the daily review limit, and can be
 automatically buried like review cards.</p>
-<h3><a class="header" href="#filtered-decks" id="filtered-decks">Filtered decks</a></h3>
+<h3 id="filtered-decks"><a class="header" href="#filtered-decks">Filtered decks</a></h3>
 <p>Filtered decks with rescheduling disabled now show 4 buttons - the provided
 delay applies to the Again button, and Hard/Good will use 1.5x and 2x the
 provided delay. Easy will remove the card.</p>
-<h2><a class="header" href="#add-ons-and-custom-scheduling" id="add-ons-and-custom-scheduling">Add-ons and custom scheduling</a></h2>
+<h2 id="add-ons-and-custom-scheduling"><a class="header" href="#add-ons-and-custom-scheduling">Add-ons and custom scheduling</a></h2>
 <p>The new scheduler is a ground-up rewrite, so add-ons that modified the old
 scheduler's card gathering or answering routines will no longer work. It is no
 longer possible to selectively replace parts of the scheduler's code (&quot;monkey
@@ -285,12 +258,12 @@ version. AnkiMobile supports it as well, and AnkiWeb and AnkiDroid may support
 it in the future too. This will allow advanced users to make adjustments to the
 standard scheduling behaviour, that apply on all platforms.</p>
 <p>The various scheduling states are described <a href="https://github.com/ankitects/anki/blob/9edac805adfe285cc92ed04dfeeffc1d1813c4d0/rslib/backend.proto#L1454">here</a>.</p>
-<h2><a class="header" href="#stability" id="stability">Stability</a></h2>
+<h2 id="stability"><a class="header" href="#stability">Stability</a></h2>
 <p>The new scheduler passes most of the tests used to test the previous schedulers
 (the ones where behaviour is the same), and appears to have been well received
 so far, but it's possible there are corner-cases that have not been discovered
 yet. If you notice anything unexpected, please let us know.</p>
-<h2><a class="header" href="#trying-it-out" id="trying-it-out">Trying it out</a></h2>
+<h2 id="trying-it-out"><a class="header" href="#trying-it-out">Trying it out</a></h2>
 <p>As of Anki 2.1.45alpha4 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.</p>
 
@@ -298,67 +271,38 @@ disabled in the Preferences screen.</p>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
                             <a rel="prev" href="the-anki-2.1-scheduler.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                        
-
-                        
                             <a rel="next" href="third-party-linux-packages-and-source-builds-are-not-supported.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        
-
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
                     <a rel="prev" href="the-anki-2.1-scheduler.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                
-
-                
                     <a rel="next" href="third-party-linux-packages-and-source-builds-are-not-supported.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-                
             </nav>
 
         </div>
 
-        
-
-        
-
-        
-
-        
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        
-
-        
-
-        
         <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        
-
-        
-
     </body>
 </html>
