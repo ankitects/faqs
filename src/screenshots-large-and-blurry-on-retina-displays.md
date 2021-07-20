@@ -10,4 +10,4 @@ The problem is that it will shrink all images by 50%. Images from high resolutio
 
 Unfortunately there is no good solution to this problem at the moment - the web technologies Anki uses do not have a way of detecting which images need to be resized. Resizing the images prior to adding them to Anki will allow you to mix and match other images, but it requires some setup: <https://www.quora.com/How-can-I-get-my-retina-Mac-to-not-take-screenshots-that-are-too-big>
 
-If you're on Windows, an Anki user suggested using SnagIt as a workaround: <https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey#comment_48043268>
+If you're on Windows, an Anki user suggested using SnagIt as a workaround: <https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey>
