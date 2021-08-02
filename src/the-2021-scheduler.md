@@ -35,7 +35,7 @@ would clear the review history, and vice versa.
 
 ### Daily limits
 
-Previously each deck's limit was limited by the its parent limits, grandparent
+Previously each deck's limit was limited by its parent limits, grandparent
 limits, and so on. This has been simplified to the following:
 
 - Each deck's limit controls how many cards from that specific deck can be used.
@@ -158,5 +158,5 @@ yet. If you notice anything unexpected, please let us know.
 
 ## Trying it out
 
-As of Anki 2.1.45alpha4 and AnkiMobile 2.0.75, the scheduler can be enabled and
+As of Anki 2.1.45 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.
