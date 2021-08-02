@@ -12,7 +12,7 @@ device and sync with another device that is using v2.
 
 Client support:
 
-- Anki: [2.1.45+](https://betas.ankiweb.net/anki2.1.45.html)
+- Anki: 2.1.45+
 - AnkiMobile: 2.0.75+
 - AnkiWeb: yes
 - AnkiDroid: not yet
