@@ -1262,12 +1262,27 @@ steps 2 and 5.</p>
 <a href="./when-problems-occur.html">when problems occur</a>, then you may unfortunately be
 out of luck.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="screenshots-large-and-blurry-on-retina-displays"><a class="header" href="#screenshots-large-and-blurry-on-retina-displays">Screenshots large and blurry on retina displays</a></h1>
-<p>If you edit a card, click on Cards, and then place the following at the very bottom of the styling section, it will shrink screenshots down to the correct size:</p>
-<pre><code>img { zoom: 50%; }
+<p>If you edit a card, click on Cards, and then place the following at the very
+bottom of the styling section, it will shrink screenshots down to the correct
+size:</p>
+<pre><code>img[src*=&quot;Screen&quot;] { 
+  zoom: 50%;
+}
 </code></pre>
-<p>The problem is that it will shrink all images by 50%. Images from high resolution displays will now look correct, but images you obtain from other sources may now look too small.</p>
-<p>Unfortunately there is no good solution to this problem at the moment - the web technologies Anki uses do not have a way of detecting which images need to be resized. Resizing the images prior to adding them to Anki will allow you to mix and match other images, but it requires some setup: <a href="https://www.quora.com/How-can-I-get-my-retina-Mac-to-not-take-screenshots-that-are-too-big">https://www.quora.com/How-can-I-get-my-retina-Mac-to-not-take-screenshots-that-are-too-big</a></p>
-<p>If you're on Windows, an Anki user suggested using SnagIt as a workaround: <a href="https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey">https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey</a></p>
+<p>It works by targeting any filenames that have &quot;Screen&quot; in them - which applies
+to the default &quot;Screen Shot&quot; name that macOS uses. If your screenshots use a
+different but consistent name, you can adjust the line above.</p>
+<p>If your screenshots use names that don't have a consistent pattern, you can
+remove the square brackets and the text inside them, which will cause all images
+to be matched. Images from high resolution displays will now look correct, but
+images you obtain from other sources may now look too small. Unfortunately there
+is no good solution to this problem at the moment - the web technologies Anki
+uses do not have a way of detecting which images need to be resized. Resizing
+the images prior to adding them to Anki will allow you to mix and match other
+images, but it requires some setup:
+<a href="https://www.quora.com/How-can-I-get-my-retina-Mac-to-not-take-screenshots-that-are-too-big">https://www.quora.com/How-can-I-get-my-retina-Mac-to-not-take-screenshots-that-are-too-big</a></p>
+<p>If you're on Windows, an Anki user suggested using SnagIt as a workaround:
+<a href="https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey">https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="third-party-linux-packages-and-source-builds-are-not-supported"><a class="header" href="#third-party-linux-packages-and-source-builds-are-not-supported">Third party Linux packages and source builds are not supported</a></h1>
 <p>We have seen a lot of issues caused by the customized versions of Anki
 distributed by Linux distributions:</p>
