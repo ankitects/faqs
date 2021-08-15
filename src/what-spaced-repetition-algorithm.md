@@ -44,7 +44,32 @@ You can also check out `sched.py` and `schedv2.py` in Anki’s source code for t
 scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
 section of the manual for the options that are mentioned in *italics*).
 
-## Review cards
+## New cards.
+If you press…​
+
+- Again  
+Moves the card back to the first step setted in [*Learning Steps.*](https://docs.ankiweb.net/deck-options.html?#learning-steps)
+
+- Hard 
+Repeats the current step after the first step, and is the average of 
+Again and Good.
+
+- Good  
+Moves the card to the [*next step*](https://docs.ankiweb.net/deck-options.html?#learning-steps). 
+If the card was on the final step, the card is converted into a 
+review card (it 'graduates').
+
+- Easy 
+Immediately converts the card into a review card. 
+
+New cards have no ease, so no matter how many times you press
+'Again' or 'Hard', the future ease factor of the card won't be affected. 
+
+
+## Review cards.
+Once a card is graduated, it gets an ease factor. By default is 2.5, but you
+can set another value using the [Deck Options](https://docs.ankiweb.net/deck-options.html?#starting-ease). 
+
 If you press…​
 
 - Again  
@@ -71,6 +96,10 @@ by the *interval modifier*. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a previous FAQ.
 
+## Relearning cards.
+
+
+## Limitations and Fuzz.
 There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
