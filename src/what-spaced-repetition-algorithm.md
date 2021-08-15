@@ -44,11 +44,11 @@ You can also check out `sched.py` and `schedv2.py` in Anki’s source code for t
 scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
 section of the manual for the options that are mentioned in *italics*).
 
-## New cards.
+## New and Relearning cards.
 If you press…​
 
 - Again  
-Moves the card back to the first step setted in [*Learning Steps.*](https://docs.ankiweb.net/deck-options.html?#learning-steps)
+Moves the card back to the first step setted in [*Learning/Relearning Steps.*](https://docs.ankiweb.net/deck-options.html?#learning-steps)
 
 - Hard 
 Repeats the current step after the first step, and is the average of 
@@ -64,6 +64,8 @@ Immediately converts the card into a review card.
 
 New cards have no ease, so no matter how many times you press
 'Again' or 'Hard', the future ease factor of the card won't be affected. 
+The same can be said about relearning cards: pressing 'Again' 
+or 'Hard' won't have any effect over the card's ease. 
 
 
 ## Review cards.
@@ -95,8 +97,6 @@ For Hard, Good, and Easy, the next interval is additionally multiplied
 by the *interval modifier*. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a previous FAQ.
-
-## Relearning cards.
 
 
 ## Limitations and Fuzz.
