@@ -112,7 +112,8 @@ After you select an ease button, Anki also applies a small amount of
 random “fuzz” to prevent cards that were introduced at the same time and
 given the same ratings from sticking together and always coming up for
 review on the same day. This fuzz appear on the interval
-buttons from 2.1.45+, but if you are using a previous version and you’re 
+buttons from 2.1.45+, but not in previous versions, so if you are using 
+a previous version and you’re 
 noticing a slight discrepancy between what you
 select and the intervals your cards actually get, this is probably the
 cause.
