@@ -50,7 +50,7 @@ If you press…​
 - Again  
 Moves the card back to the first step setted in [*Learning/Relearning Steps.*](https://docs.ankiweb.net/deck-options.html?#learning-steps)
 
-- Hard 
+- Hard  
 Repeats the current step after the first step, and is the average of 
 Again and Good.
 
@@ -83,7 +83,7 @@ when the card exits relearning mode).
 
 - Hard  
 The card’s ease is decreased by 15 percentage points and the current
-interval is multiplied by 1.2.
+interval is multiplied by the value of *hard interval* (1.2 by default)
 
 - Good  
 The current interval is multiplied by the current ease. The ease is
