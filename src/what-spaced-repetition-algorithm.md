@@ -96,7 +96,7 @@ bonus* and the ease is increased by 15 percentage points.
 For Hard, Good, and Easy, the next interval is additionally multiplied
 by the *interval modifier*. If the card is being reviewed late,
 additional days will be added to the current interval, as described
-in a previous FAQ.
+in a [previous FAQ.](https://faqs.ankiweb.net/due-times-after-a-break.html)
 
 
 ## Limitations and Fuzz.
