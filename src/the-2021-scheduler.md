@@ -97,9 +97,9 @@ only being applied when answering.
 Learning cards that cross a day boundary are now included in the review count, instead
 of the learning count. They will now be affected by the daily review limit.
 
-In Anki 2.1.47+ / AnkiMobile 2.0.79+, the plan is to revert this change - interday
-learning cards will be in the learning count again, and not subject to review
-limits.
+In Anki 2.1.47+ / AnkiMobile 2.0.79+, interday learning cards will be included in the
+learning count again, but the review limit will still apply. Anki fetches interday
+learning cards first, then reviews, and finally new cards.
 
 ### Filtered decks
 
