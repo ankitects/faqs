@@ -99,7 +99,8 @@ of the learning count. They will now be affected by the daily review limit.
 
 In Anki 2.1.47+ / AnkiMobile 2.0.79+, interday learning cards will be included in the
 learning count again, but the review limit will still apply. Anki fetches interday
-learning cards first, then reviews, and finally new cards.
+learning cards first, then reviews, and finally new cards. This change is already
+live on AnkiWeb.
 
 ### Filtered decks
 
