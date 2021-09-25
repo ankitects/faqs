@@ -8,7 +8,7 @@ Resetting cards within Anki
 --------------------------------
 
 1. Find the cards you want to reset in the browser.
-2. Select all the cards and choose Cards->Reschedule or Edit->Reschedule, then *Place at end of new card queue*. Click OK.
+2. Select all the cards and choose Cards->Forget.
 
 When you do this, Anki will turn the cards back into new cards. If you click Info in the browser you'll see any previous reviews you've done listed there, but that history will not influence how the cards are scheduled: they will be treated just like new cards.
 
