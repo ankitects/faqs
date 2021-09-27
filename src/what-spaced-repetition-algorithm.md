@@ -48,14 +48,14 @@ section of the manual for the options that are mentioned in *italics*).
 If you press…​
 
 - Again  
-Moves the card back to the first step setted in [*Learning/Relearning Steps.*](https://docs.ankiweb.net/deck-options.html?#learning-steps)
+Moves the card back to the first step setted in [Learning/Relearning Steps.](https://docs.ankiweb.net/deck-options.html?#learning-steps)
 
 - Hard  
 Repeats the current step after the first step, and is the average of 
 Again and Good.
 
 - Good  
-Moves the card to the [*next step*](https://docs.ankiweb.net/deck-options.html?#learning-steps). 
+Moves the card to the [next step](https://docs.ankiweb.net/deck-options.html?#learning-steps). 
 If the card was on the final step, the card is converted into a 
 review card (it 'graduates').
 
