@@ -68,7 +68,7 @@ The same can be said about relearning cards: pressing 'Again'
 or 'Hard' won't have any effect over the card's ease. 
 
 
-## Review cards.
+## Review Cards
 Once a card is graduated, it gets an ease factor. By default is 2.5, but you
 can set another value using the [Deck Options](https://docs.ankiweb.net/deck-options.html?#starting-ease). 
 
