@@ -99,7 +99,7 @@ additional days will be added to the current interval, as described
 in a [previous FAQ.](https://faqs.ankiweb.net/due-times-after-a-break.html)
 
 
-## Limitations and Fuzz.
+## Limitations and Fuzz
 There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
