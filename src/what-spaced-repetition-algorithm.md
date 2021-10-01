@@ -44,7 +44,7 @@ You can also check out `sched.py` and `schedv2.py` in Anki’s source code for t
 scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
 section of the manual for the options that are mentioned in *italics*).
 
-## New and Relearning cards.
+## Learning/Relearning Cards
 If you press…​
 
 - Again  
