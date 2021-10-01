@@ -44,32 +44,62 @@ You can also check out `sched.py` and `schedv2.py` in Anki’s source code for t
 scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
 section of the manual for the options that are mentioned in *italics*).
 
+## Learning/Relearning Cards
 If you press…​
 
-Again  
+- Again  
+Moves the card back to the first step setted in [Learning/Relearning Steps.](https://docs.ankiweb.net/deck-options.html?#learning-steps)
+
+- Hard  
+Repeats the current step after the first step, and is the average of 
+Again and Good.
+
+- Good  
+Moves the card to the [next step](https://docs.ankiweb.net/deck-options.html?#learning-steps). 
+If the card was on the final step, the card is converted into a 
+review card (it 'graduates').
+
+- Easy 
+Immediately converts the card into a review card. 
+
+New cards have no ease, so no matter how many times you press
+'Again' or 'Hard', the future ease factor of the card won't be affected. 
+The same can be said about relearning cards: pressing 'Again' 
+or 'Hard' won't have any effect over the card's ease. 
+
+
+## Review Cards
+Once a card is graduated, it gets an ease factor. By default is 2.5, but you
+can set another value using the [Deck Options](https://docs.ankiweb.net/deck-options.html?#starting-ease). 
+
+If you press…​
+
+- Again  
 The card is placed into relearning mode, the ease is decreased by 20
 percentage points (that is, 20 is subtracted from the *ease* value,
 which is in units of percentage points), and the current interval is
 multiplied by the value of *new interval* (this interval will be used
 when the card exits relearning mode).
 
-Hard  
+- Hard  
 The card’s ease is decreased by 15 percentage points and the current
-interval is multiplied by 1.2.
+interval is multiplied by the value of *hard interval* (1.2 by default)
 
-Good  
+- Good  
 The current interval is multiplied by the current ease. The ease is
 unchanged.
 
-Easy  
+- Easy  
 The current interval is multiplied by the current ease times the *easy
 bonus* and the ease is increased by 15 percentage points.
 
 For Hard, Good, and Easy, the next interval is additionally multiplied
 by the *interval modifier*. If the card is being reviewed late,
 additional days will be added to the current interval, as described
-in a previous FAQ.
+in a [previous FAQ.](https://faqs.ankiweb.net/due-times-after-a-break.html)
 
+
+## Limitations and Fuzz
 There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
@@ -81,8 +111,10 @@ previous interval.
 After you select an ease button, Anki also applies a small amount of
 random “fuzz” to prevent cards that were introduced at the same time and
 given the same ratings from sticking together and always coming up for
-review on the same day. This fuzz does not appear on the interval
-buttons, so if you’re noticing a slight discrepancy between what you
+review on the same day. This fuzz appear on the interval
+buttons from 2.1.45+, but not in previous versions, so if you are using 
+a previous version and you’re 
+noticing a slight discrepancy between what you
 select and the intervals your cards actually get, this is probably the
 cause.
 
