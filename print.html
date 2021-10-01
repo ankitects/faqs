@@ -693,7 +693,7 @@ Cards&gt;Reschedule.</p>
 <h2 id="resetting-cards-within-anki"><a class="header" href="#resetting-cards-within-anki">Resetting cards within Anki</a></h2>
 <ol>
 <li>Find the cards you want to reset in the browser.</li>
-<li>Select all the cards and choose Cards-&gt;Reschedule or Edit-&gt;Reschedule, then <em>Place at end of new card queue</em>. Click OK.</li>
+<li>Select all the cards and choose Cards-&gt;Forget.</li>
 </ol>
 <p>When you do this, Anki will turn the cards back into new cards. If you click Info in the browser you'll see any previous reviews you've done listed there, but that history will not influence how the cards are scheduled: they will be treated just like new cards.</p>
 <h2 id="removing-the-review-history"><a class="header" href="#removing-the-review-history">Removing the review history</a></h2>
@@ -988,26 +988,67 @@ acquisition process does not influence a card’s ease.</p>
 <p>You can also check out <code>sched.py</code> and <code>schedv2.py</code> in Anki’s source code for the
 scheduling code. Here is a summary (see the <a href="https://docs.ankiweb.net/deck-options.html">deck options</a>
 section of the manual for the options that are mentioned in <em>italics</em>).</p>
+<h2 id="learningrelearning-cards"><a class="header" href="#learningrelearning-cards">Learning/Relearning Cards</a></h2>
 <p>If you press…​</p>
+<ul>
+<li>
+<p>Again<br />
+Moves the card back to the first step setted in <a href="https://docs.ankiweb.net/deck-options.html?#learning-steps">Learning/Relearning Steps.</a></p>
+</li>
+<li>
+<p>Hard<br />
+Repeats the current step after the first step, and is the average of 
+Again and Good.</p>
+</li>
+<li>
+<p>Good<br />
+Moves the card to the <a href="https://docs.ankiweb.net/deck-options.html?#learning-steps">next step</a>. 
+If the card was on the final step, the card is converted into a 
+review card (it 'graduates').</p>
+</li>
+<li>
+<p>Easy 
+Immediately converts the card into a review card. </p>
+</li>
+</ul>
+<p>New cards have no ease, so no matter how many times you press
+'Again' or 'Hard', the future ease factor of the card won't be affected. 
+The same can be said about relearning cards: pressing 'Again' 
+or 'Hard' won't have any effect over the card's ease. </p>
+<h2 id="review-cards"><a class="header" href="#review-cards">Review Cards</a></h2>
+<p>Once a card is graduated, it gets an ease factor. By default is 2.5, but you
+can set another value using the <a href="https://docs.ankiweb.net/deck-options.html?#starting-ease">Deck Options</a>. </p>
+<p>If you press…​</p>
+<ul>
+<li>
 <p>Again<br />
 The card is placed into relearning mode, the ease is decreased by 20
 percentage points (that is, 20 is subtracted from the <em>ease</em> value,
 which is in units of percentage points), and the current interval is
 multiplied by the value of <em>new interval</em> (this interval will be used
 when the card exits relearning mode).</p>
+</li>
+<li>
 <p>Hard<br />
 The card’s ease is decreased by 15 percentage points and the current
-interval is multiplied by 1.2.</p>
+interval is multiplied by the value of <em>hard interval</em> (1.2 by default)</p>
+</li>
+<li>
 <p>Good<br />
 The current interval is multiplied by the current ease. The ease is
 unchanged.</p>
+</li>
+<li>
 <p>Easy<br />
 The current interval is multiplied by the current ease times the <em>easy
 bonus</em> and the ease is increased by 15 percentage points.</p>
+</li>
+</ul>
 <p>For Hard, Good, and Easy, the next interval is additionally multiplied
 by the <em>interval modifier</em>. If the card is being reviewed late,
 additional days will be added to the current interval, as described
-in a previous FAQ.</p>
+in a <a href="https://faqs.ankiweb.net/due-times-after-a-break.html">previous FAQ.</a></p>
+<h2 id="limitations-and-fuzz"><a class="header" href="#limitations-and-fuzz">Limitations and Fuzz</a></h2>
 <p>There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
@@ -1018,8 +1059,10 @@ previous interval.</p>
 <p>After you select an ease button, Anki also applies a small amount of
 random “fuzz” to prevent cards that were introduced at the same time and
 given the same ratings from sticking together and always coming up for
-review on the same day. This fuzz does not appear on the interval
-buttons, so if you’re noticing a slight discrepancy between what you
+review on the same day. This fuzz appear on the interval
+buttons from 2.1.45+, but not in previous versions, so if you are using 
+a previous version and you’re 
+noticing a slight discrepancy between what you
 select and the intervals your cards actually get, this is probably the
 cause.</p>
 <h2 id="why-doesnt-anki-use-supermemos-latest-algorithm"><a class="header" href="#why-doesnt-anki-use-supermemos-latest-algorithm">Why doesn’t Anki use SuperMemo’s latest algorithm?</a></h2>
@@ -1173,6 +1216,7 @@ again to pick up where you left off.</p>
 <p>Some other program on your computer is likely capturing the shortcut. For example, some users have recently reported that their AMD/ATI video card software is stealing the cloze deletion shortcut key. When they disable the shortcut in that program's preferences, the key starts working in Anki again.</p>
 <p>If you run into similar problems, please try temporarily closing/turning off other software running on your machine, until you discover the cause.</p>
 <p>If you use add-ons in Anki, please also try disabling them to rule them out as the cause of the problem.</p>
+<p>In some cases, using a non-English keyboard layout may cause the problem. </p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki-failing-to-start-on-some-windows-78-machines"><a class="header" href="#anki-failing-to-start-on-some-windows-78-machines">Anki failing to start on some Windows 7/8 machines</a></h1>
 <p>Some users on Windows 7 or Windows 8 have reported that they are unable to start Anki on their system. It is not clear what is causing these problems - it may be that some systems are missing a certain library, or something about their configuration is not compatible with the libraries recent versions are built with.</p>
 <p>If you are not able to update to Windows 10 at the moment, please download the older <a href="https://github.com/ankitects/anki/releases/download/2.1.15/anki-2.1.15-windows-alternate.exe">2.1.15</a> version. It is built with older libraries, and should work on most systems where the latest release does not. Please uninstall the current version before installing 2.1.15.</p>
