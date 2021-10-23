@@ -14,7 +14,8 @@ If the problem does not occur again, you can skip the following steps.
 
 Please close Anki, then start it again while holding down the shift key, which will disable any add-ons you have installed.
 
-If the problem goes away when add-ons are disabled, you can narrow down the culprit by disabling one or more add-ons, restarting Anki, and seeing if the problem goes away. Repeat the process trying different add-ons, until you discover which one is causing the problem.
+If the problem goes away when add-ons are disabled, you can narrow down the culprit by disabling one or more add-ons, restarting Anki, and seeing if the problem goes away. If you have lots of them, you can select the top half of your add-ons in the Add-ons screen and disable them. If after restarting Anki, the problem is still there, try the other half instead. Once you’ve found the half that is causing the problem, divide that half into half again, and repeat. You should be able to narrow it down in around ~6 steps that way. 
+Alternatively, if you don’t need all the add-ons you have installed, you could start by disabling all the ones you don’t need, and seeing if that helps.Repeat the process trying different add-ons, until you discover which one is causing the problem.
 
 If the issue turns out to be an add-on, please report the issue to the add-on author.
 
