@@ -76,18 +76,13 @@
 # Anki Desktop
 
 - [A shortcut key is not working](./shortcut-not-working.md)
-- [Anki failing to start on some Windows 7/8 machines](./anki-failing-to-start-on-some-windows-7-or-8-machines.md)
 - [Anki must be able to connect to a local port](./anki-must-be-able-to-connect-to-a-local-port.md)
-- [Anki not picking up GTK theme on Gnome/Linux](./anki-not-picking-up-gtk-theme-on-gnome.md)
 - [Anki says my clock is wrong](./anki-says-my-clock-is-wrong.md)
 - [Changing the font](./changing-the-font.md)
 - [Changing the interface language](./changing-the-interface-language.md)
 - [My antivirus program says Anki is infected!](./my-antivirus-program-says-anki-is-infected.md)
 - [Running from Python](./running-from-python.md)
 - [Screenshots large and blurry on retina displays](./screenshots-large-and-blurry-on-retina-displays.md)
-- [Third party Linux packages and source builds are not supported](./third-party-linux-packages-and-source-builds-are-not-supported.md)
-- [When Anki doesn't start on Windows (debugging steps)](./when-anki-does-not-start-on-windows-debugging-steps.md)
-- [Windows permission problems](./windows-permission-problems.md)
 
 ---
 

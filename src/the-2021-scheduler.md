@@ -84,6 +84,9 @@ list will differ from the ones you see when you click on a deck. If you press th
 Unbury button at the end of reviews, you'll get the other cards that were excluded
 at the start.
 
+Learning cards that cross a day boundary can now be buried like reviews and new
+cards.
+
 ### Fuzz
 
 The small random delay added to reviews is now reflected on the answer buttons, instead of
@@ -92,8 +95,12 @@ only being applied when answering.
 ### Interday learning
 
 Learning cards that cross a day boundary are now included in the review count, instead
-of the learning count. They will now be affected by the daily review limit, and can be
-automatically buried like review cards.
+of the learning count. They will now be affected by the daily review limit.
+
+In Anki 2.1.47+ / AnkiMobile 2.0.79+, interday learning cards will be included in the
+learning count again, but the review limit will still apply. Anki fetches interday
+learning cards first, then reviews, and finally new cards. This change is already
+live on AnkiWeb.
 
 ### Filtered decks
 
