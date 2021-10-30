@@ -59,7 +59,7 @@ Moves the card to the [next step](https://docs.ankiweb.net/deck-options.html?#le
 If the card was on the final step, the card is converted into a 
 review card (it 'graduates').
 
-- Easy 
+- Easy  
 Immediately converts the card into a review card. 
 
 New cards have no ease, so no matter how many times you press
@@ -99,7 +99,7 @@ additional days will be added to the current interval, as described
 in a [previous FAQ.](https://faqs.ankiweb.net/due-times-after-a-break.html)
 
 
-## Limitations and Fuzz
+## Limitations
 There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
@@ -108,15 +108,6 @@ increased beyond the value of *maximum interval*. Finally, all new
 intervals (except Again) will always be at least one day longer than the
 previous interval.
 
-After you select an ease button, Anki also applies a small amount of
-random “fuzz” to prevent cards that were introduced at the same time and
-given the same ratings from sticking together and always coming up for
-review on the same day. This fuzz appear on the interval
-buttons from 2.1.45+, but not in previous versions, so if you are using 
-a previous version and you’re 
-noticing a slight discrepancy between what you
-select and the intervals your cards actually get, this is probably the
-cause.
 
 ## Why doesn’t Anki use SuperMemo’s latest algorithm?
 
