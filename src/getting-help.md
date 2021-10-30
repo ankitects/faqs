@@ -15,6 +15,7 @@ Please start by trying to resolve the issue on your own:
   steps](https://faqs.ankiweb.net/when-problems-occur.html).
 - Use the search button on this page to search frequently asked questions.
 - Use the search button in the manual.
+- Use the search button on the forums. 
 - Google the issue.
 
 If you have tried the above and are still stuck, it's time to ask for help.
