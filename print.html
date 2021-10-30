@@ -155,6 +155,7 @@ of the manual, and check out the intro videos.</li>
 steps</a>.</li>
 <li>Use the search button on this page to search frequently asked questions.</li>
 <li>Use the search button in the manual.</li>
+<li>Use the search button on the forums. </li>
 <li>Google the issue.</li>
 </ul>
 <p>If you have tried the above and are still stuck, it's time to ask for help.
@@ -198,7 +199,7 @@ are likely to be answered faster, as they can be seen by more people.</p>
 create a <a href="https://anki.tenderapp.com/discussions/private">private ticket</a> on the
 old support site.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="when-problems-occur"><a class="header" href="#when-problems-occur">When problems occur</a></h1>
-<p>When you have problems, please try the following.</p>
+<p>If after <a href="./getting-help.html#asking-good-questions">following these steps</a> you still have problems, please try the following:</p>
 <p><strong>1. Restart Anki</strong></p>
 <p>Please close Anki, then start it again.</p>
 <p>If you are unable to close Anki because of an error message, you can either terminate Anki using your task manager, or restart your computer. Anki saves periodically, so you should not lose more than a few minutes of work in most circumstances.</p>
@@ -680,7 +681,7 @@ Cards&gt;Reschedule.</p>
 <p>When a card is in learning:</p>
 <ul>
 <li>Again will be the first learning step</li>
-<li>Hard will be the current learning step</li>
+<li>Hard will repeat the current learning step (except on the first step, where it is the average of first and second steps)```</li>
 <li>Good will the the next learning step, or the Graduating interval if learning steps are exhausted</li>
 <li>Easy will be the Easy Interval</li>
 </ul>
@@ -1008,7 +1009,7 @@ If the card was on the final step, the card is converted into a
 review card (it 'graduates').</p>
 </li>
 <li>
-<p>Easy 
+<p>Easy
 Immediately converts the card into a review card. </p>
 </li>
 </ul>
@@ -1049,7 +1050,7 @@ bonus</em> and the ease is increased by 15 percentage points.</p>
 by the <em>interval modifier</em>. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a <a href="https://faqs.ankiweb.net/due-times-after-a-break.html">previous FAQ.</a></p>
-<h2 id="limitations-and-fuzz"><a class="header" href="#limitations-and-fuzz">Limitations and Fuzz</a></h2>
+<h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
 <p>There are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
@@ -1057,15 +1058,6 @@ often than is useful and annoying users. Intervals will never be
 increased beyond the value of <em>maximum interval</em>. Finally, all new
 intervals (except Again) will always be at least one day longer than the
 previous interval.</p>
-<p>After you select an ease button, Anki also applies a small amount of
-random “fuzz” to prevent cards that were introduced at the same time and
-given the same ratings from sticking together and always coming up for
-review on the same day. This fuzz appear on the interval
-buttons from 2.1.45+, but not in previous versions, so if you are using 
-a previous version and you’re 
-noticing a slight discrepancy between what you
-select and the intervals your cards actually get, this is probably the
-cause.</p>
 <h2 id="why-doesnt-anki-use-supermemos-latest-algorithm"><a class="header" href="#why-doesnt-anki-use-supermemos-latest-algorithm">Why doesn’t Anki use SuperMemo’s latest algorithm?</a></h2>
 <p>The simple answer is that SuperMemo’s latest algorithm is proprietary,
 and requires licensing. As Anki is an open source application, it can
