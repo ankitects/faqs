@@ -3,7 +3,7 @@
 When a card is in learning:
 
 - Again will be the first learning step
-- Hard will be the current learning step
+- Hard will be the average of Again and Good
 - Good will the the next learning step, or the Graduating interval if learning steps are exhausted
 - Easy will be the Easy Interval
 
