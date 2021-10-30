@@ -1,6 +1,6 @@
 # When problems occur
 
-When you have problems, please try the following.
+If after [following these steps](./getting-help.md#asking-good-questions) you still have problems, please try the following:
 
 **1. Restart Anki**
 
