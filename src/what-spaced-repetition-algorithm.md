@@ -59,7 +59,7 @@ Moves the card to the [next step](https://docs.ankiweb.net/deck-options.html?#le
 If the card was on the final step, the card is converted into a 
 review card (it 'graduates').
 
-- Easy 
+- Easy  
 Immediately converts the card into a review card. 
 
 New cards have no ease, so no matter how many times you press
