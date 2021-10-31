@@ -4,13 +4,13 @@ Anki 2.1.22+ and AnkiMobile 2.0.57+ contain an optional change to the way Anki c
 
 For most users, the new calculation should produce the same number of elapsed days as the old calculation. For some users, enabling this code may move Anki forward or back by one day, but this will only happen once, and Anki should be more robust against timezone changes afterwards.
 
-**Please make sure you are running the above-mentioned versions prior to enabling the new code.** If any of your Anki clients have not been updated yet, you won't be able to sync them while this feature is enabled. **AnkiDroid does not currently support these changes**.
+**Please make sure you are running the above-mentioned versions prior to enabling the new code.** If any of your Anki clients have not been updated yet, you won't be able to sync them while this feature is enabled. **AnkiDroid does only support these changes from version 2.1.15**.
 
 To enable the new calculation, please make sure:
 
 - your devices are in sync
 - you're running Anki 2.1.22+
-- the 2.1 scheduler is enabled in the preferences screen
+- 2.1 scheduler or higher is enabled in the preferences screen
 
 Then to enable the new timezone code, please check the 'new timezone' checkbox.
 
