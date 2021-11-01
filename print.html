@@ -681,7 +681,7 @@ Cards&gt;Reschedule.</p>
 <p>When a card is in learning:</p>
 <ul>
 <li>Again will be the first learning step</li>
-<li>Hard will repeat the current learning step (except on the first step, where it is the average of first and second steps)```</li>
+<li>Hard will repeat the current learning step (except on the first step, where it is the average of first and second steps)</li>
 <li>Good will the the next learning step, or the Graduating interval if learning steps are exhausted</li>
 <li>Easy will be the Easy Interval</li>
 </ul>
@@ -928,14 +928,14 @@ yet. If you notice anything unexpected, please let us know.</p>
 <p>As of Anki 2.1.45 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="timezone-handling-changes"><a class="header" href="#timezone-handling-changes">Timezone handling changes</a></h1>
-<p>Anki 2.1.22+ and AnkiMobile 2.0.57+ contain an optional change to the way Anki calculates the elapsed number of days. This change addresses some corner cases where timezone changes (including daylight savings) could cause Anki to move back or forward a day, and addresses cards being unburied / daily counts being reset for some users when syncing with AnkiWeb.</p>
+<p>Anki 2.1.22+, AnkiMobile 2.0.57+, and AnkiDroid 2.15+ contain an optional change to the way Anki calculates the elapsed number of days. This change addresses some corner cases where timezone changes (including daylight savings) could cause Anki to move back or forward a day, and addresses cards being unburied / daily counts being reset for some users when syncing with AnkiWeb.</p>
 <p>For most users, the new calculation should produce the same number of elapsed days as the old calculation. For some users, enabling this code may move Anki forward or back by one day, but this will only happen once, and Anki should be more robust against timezone changes afterwards.</p>
-<p><strong>Please make sure you are running the above-mentioned versions prior to enabling the new code.</strong> If any of your Anki clients have not been updated yet, you won't be able to sync them while this feature is enabled. <strong>AnkiDroid does not currently support these changes</strong>.</p>
+<p><strong>Please make sure you are running the above-mentioned versions prior to enabling the new code.</strong> If any of your Anki clients have not been updated yet, you won't be able to sync them while this feature is enabled. </p>
 <p>To enable the new calculation, please make sure:</p>
 <ul>
 <li>your devices are in sync</li>
 <li>you're running Anki 2.1.22+</li>
-<li>the 2.1 scheduler is enabled in the preferences screen</li>
+<li>2.1 scheduler or higher is enabled in the preferences screen</li>
 </ul>
 <p>Then to enable the new timezone code, please check the 'new timezone' checkbox.</p>
 <p>Please close the window and sync, then sync your other devices to complete the process.</p>
