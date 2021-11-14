@@ -8,7 +8,7 @@ You may want to move cards between decks for a variety of reasons, for example:
 
 The [browser](https://docs.ankiweb.net/browsing.html) offers a **Change Deck** option in the menu bar for these kinds of tasks.
 
-See also [Merging/combining two decks](https://anki.tenderapp.com/kb/collection-management/mergingcombining-two-decks) for more precise instructions for that exact situation.
+See also [Merging/combining two decks](https://faqs.ankiweb.net/merging-or-combining-two-decks.html#mergingcombining-two-decks) for more precise instructions for that exact situation.
 
 ---
 
