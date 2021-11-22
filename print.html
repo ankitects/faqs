@@ -815,11 +815,13 @@ device and sync with another device that is using v2.</p>
 <li>AnkiWeb: yes</li>
 <li>AnkiDroid: not yet</li>
 </ul>
-<p>It will likely be some time until AnkiDroid supports the v3 scheduler
-directly. In the mean time, it will continue to show cards using the v2 scheduler, regardless of the setting you have chosen.</p>
+<p>It will likely be some time until AnkiDroid supports the v3 scheduler directly.
+In the mean time, it will continue to show cards using the v2 scheduler,
+regardless of the setting you have chosen.</p>
 <p>Because the v3 scheduler uses a different approach to gathering and sorting
-cards, a v2 and v3 client may show a different number of due cards on a
-given day. While this will not cause scheduling problems, please bear it in mind if you're switching back and forth.</p>
+cards, a v2 and v3 client may show a different number of due cards on a given
+day. While this will not cause scheduling problems, please bear it in mind if
+you're switching back and forth.</p>
 <h2 id="changes-1"><a class="header" href="#changes-1">Changes</a></h2>
 <h3 id="undo"><a class="header" href="#undo">Undo</a></h3>
 <p>The v3 scheduler uses Anki's new undo infrastructure - you can answer a card,
@@ -854,7 +856,7 @@ new cards will be introduced.</p>
 reviews are presented in. New cards can be mixed from multiple decks, and
 reviews can optionally be ordered by interval or subdeck.</p>
 <p>When burying is disabled, it is now possible to control whether siblings are
-shown together or not.</p>
+shown together or not, by adjusting the display order.</p>
 <p>The options controlling the mixing of new cards and interday learning cards have
 been moved from the Preferences screen into the deck options. The options will
 be used from the deck you select to study.</p>
@@ -870,15 +872,15 @@ at the start.</p>
 <p>Learning cards that cross a day boundary can now be buried like reviews and new
 cards.</p>
 <h3 id="fuzz"><a class="header" href="#fuzz">Fuzz</a></h3>
-<p>The small random delay added to reviews is now reflected on the answer buttons, instead of
-only being applied when answering.</p>
+<p>The small random delay added to reviews is now reflected on the answer buttons,
+instead of only being applied when answering.</p>
+<p>The way the delay is calculated has also been improved - cards with intervals under
+a week now receive a more equally-weighted delay, and the delay amount increases more
+smoothly as intervals increase.</p>
 <h3 id="interday-learning"><a class="header" href="#interday-learning">Interday learning</a></h3>
-<p>Learning cards that cross a day boundary are now included in the review count, instead
-of the learning count. They will now be affected by the daily review limit.</p>
-<p>In Anki 2.1.47+ / AnkiMobile 2.0.79+, interday learning cards will be included in the
-learning count again, but the review limit will still apply. Anki fetches interday
-learning cards first, then reviews, and finally new cards. This change is already
-live on AnkiWeb.</p>
+<p>Interday (1+ day) learning cards are now subject to the review limit. When
+determining what fits within the limit, Anki fetches interday learning cards
+first, then reviews, and finally new cards.</p>
 <h3 id="filtered-decks"><a class="header" href="#filtered-decks">Filtered decks</a></h3>
 <p>Filtered decks with rescheduling disabled now show 4 buttons - the provided
 delay applies to the Again button, and Hard/Good will use 1.5x and 2x the
