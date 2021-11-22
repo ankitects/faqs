@@ -17,12 +17,14 @@ Client support:
 - AnkiWeb: yes
 - AnkiDroid: not yet
 
-It will likely be some time until AnkiDroid supports the v3 scheduler
-directly. In the mean time, it will continue to show cards using the v2 scheduler, regardless of the setting you have chosen.
+It will likely be some time until AnkiDroid supports the v3 scheduler directly.
+In the mean time, it will continue to show cards using the v2 scheduler,
+regardless of the setting you have chosen.
 
 Because the v3 scheduler uses a different approach to gathering and sorting
-cards, a v2 and v3 client may show a different number of due cards on a
-given day. While this will not cause scheduling problems, please bear it in mind if you're switching back and forth.
+cards, a v2 and v3 client may show a different number of due cards on a given
+day. While this will not cause scheduling problems, please bear it in mind if
+you're switching back and forth.
 
 ## Changes
 
@@ -66,7 +68,7 @@ reviews are presented in. New cards can be mixed from multiple decks, and
 reviews can optionally be ordered by interval or subdeck.
 
 When burying is disabled, it is now possible to control whether siblings are
-shown together or not.
+shown together or not, by adjusting the display order.
 
 The options controlling the mixing of new cards and interday learning cards have
 been moved from the Preferences screen into the deck options. The options will
@@ -89,18 +91,17 @@ cards.
 
 ### Fuzz
 
-The small random delay added to reviews is now reflected on the answer buttons, instead of
-only being applied when answering.
+The small random delay added to reviews is now reflected on the answer buttons,
+instead of only being applied when answering.
 
+The way the delay is calculated has also been improved - cards with intervals under
+a week now receive a more equally-weighted delay, and the delay amount increases more
+smoothly as intervals increase.
 ### Interday learning
 
-Learning cards that cross a day boundary are now included in the review count, instead
-of the learning count. They will now be affected by the daily review limit.
-
-In Anki 2.1.47+ / AnkiMobile 2.0.79+, interday learning cards will be included in the
-learning count again, but the review limit will still apply. Anki fetches interday
-learning cards first, then reviews, and finally new cards. This change is already
-live on AnkiWeb.
+Interday (1+ day) learning cards are now subject to the review limit. When
+determining what fits within the limit, Anki fetches interday learning cards
+first, then reviews, and finally new cards.
 
 ### Filtered decks
 
