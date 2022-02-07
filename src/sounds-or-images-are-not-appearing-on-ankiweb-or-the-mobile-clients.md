@@ -14,4 +14,6 @@ Then open your collection's media folder (<https://docs.ankiweb.net/files.html#f
 
 If it was a shared deck, please report the issue to the shared deck author. If the differences in case are regular, you can try fix the problem using Anki's find&replace feature in the browser. For example, if the link is for "dog.JPG" but the file on disk is "dog.jpg", you can click browse, select all cards, and use find&replace to replace JPG with jpg.
 
+If the filename is too long, the file will fail to sync even if the filename is correct in Anki. In that case, renaming the file (both in your file explorer and in Anki) so that it has a shorter name will fix this problem.
+
 If that doesn't explain your issue, please check that the computer you're on is not using a vfat/fat32 file system. Anki currently is unable to detect changes to the media folder when it's on such a filesystem, so media syncing will not work in this case. A workaround is planned for a future release.
