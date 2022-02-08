@@ -143,10 +143,11 @@
                         <h1 id="soundsimages-are-not-appearing-on-ankiweb-or-the-mobile-clients"><a class="header" href="#soundsimages-are-not-appearing-on-ankiweb-or-the-mobile-clients">Sounds/images are not appearing on AnkiWeb or the mobile clients</a></h1>
 <p>If you created your deck by importing from a text file, or you downloaded a shared deck that was created in that way, it's possible the filenames in Anki do not match the filenames on the computer. Some computers treat &quot;file.jpg&quot;, &quot;file.JPG&quot; and &quot;FILE.JPG&quot; all as the same file, but other computers do not. This means that if the deck contains a reference to &quot;dog.jpg&quot; but the file on disk is &quot;dog.JPG&quot;, some devices (including AnkiWeb) will not be able to display the image.</p>
 <p>You can confirm this is a problem by editing a card that's not showing up correctly using the computer version. If audio isn't working, you'll see a link like <code>[sound:hello.mp3]</code>. If you see a broken image link, click on that field, then press the down arrow on the top right, choose &quot;Edit HTML&quot;, and locate text that looks like:</p>
-<pre><code class="language-html">&lt;img src=&quot;cat.jpg&quot;&gt;
+<pre><code class="language-html">&lt;img src=&quot;cat.jpg&quot; /&gt;
 </code></pre>
 <p>Note down the name of the file.</p>
 <p>Then open your collection's media folder (<a href="https://docs.ankiweb.net/files.html#file-locations">https://docs.ankiweb.net/files.html#file-locations</a>) and locate the file that is referenced. If the file does not use exactly the same combination of lowercase or uppercase letters, you've found the problem.</p>
+<p>Please also make sure you <a href="https://docs.ankiweb.net/media.html#manually-adding-media">ran a media check</a>.</p>
 <p>If it was a shared deck, please report the issue to the shared deck author. If the differences in case are regular, you can try fix the problem using Anki's find&amp;replace feature in the browser. For example, if the link is for &quot;dog.JPG&quot; but the file on disk is &quot;dog.jpg&quot;, you can click browse, select all cards, and use find&amp;replace to replace JPG with jpg.</p>
 <p>If that doesn't explain your issue, please check that the computer you're on is not using a vfat/fat32 file system. Anki currently is unable to detect changes to the media folder when it's on such a filesystem, so media syncing will not work in this case. A workaround is planned for a future release.</p>
 
