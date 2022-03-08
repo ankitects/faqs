@@ -37,29 +37,33 @@ would clear the review history, and vice versa.
 
 ### Daily limits
 
-Previously each deck's limit was limited by its parent limits, grandparent
-limits, and so on. This has been simplified to the following:
+The new count is now capped by the review count. If you have limits of 200
+reviews and 20 new cards, and 190 reviews are due, only 10 new cards will be
+introduced.
 
-- Each deck's limit controls how many cards from that specific deck can be used.
-- The deck you select controls the maximum number of cards that will be shown in
-  the study session.
+In Anki 2.1.50+/AnkiMobile 2.0.84+, each deck's limit affects the number of
+cards that will be drawn from that deck and its subdecks. For example, with
+the following limits:
 
-For example, imagine you have a parent deck with a limit of 100, with 2 child
-decks. The first one has a limit of 20, and the second has a limit of 200.
+- Parent: 100
+- Parent::Child: 30
+- Parent::Child::Grandchild1: 50
+- Parent::Child::Grandchild2: 5
+- Parent::Child::Grandchild3: 200
 
-- If you click on the parent deck, you will get a maximum of 100 cards.
-- If you click on the first child, you'll get a maximum of 20 cards.
-- If you click on the second child, you'll get a maximum of 200 cards.
+Then:
 
-This may sound similar to the way reviews are handled in the v2 scheduler. The
-difference is that each child deck's limit is also enforced. When you click on
-the parent deck, you will not get more than 20 cards from the first child. You
-do not need to see the cards in deck order either - see the Sorting section
-below for more.
+- If you click on Grandchild3, you'll get up to 200 cards.
+- If you click on Grandchild2, you'll get up to 5 cards.
+- If you click on Grandchild1, you'll get up to 50 cards.
+- If you click on Child, you'll get up to 30 cards from the Child deck and its
+  subdecks. No more than 5 cards will be taken from Grandchild2.
+- If you click on Parent, you'll get up to 100 cards, with a maximum of 30
+  coming from Child and its subdecks.
 
-Another change is that the new count is now capped by the review count. If you
-have limits of 200 reviews and 20 new cards, and 190 reviews are due, only 10
-new cards will be introduced.
+In the v3 scheduler in earlier Anki releases, intermediate limits were not
+respected, so when clicking on Parent, the limits of Child did not influence how
+many cards were taken from the grandchildren.
 
 ### Sorting
 
@@ -82,12 +86,12 @@ counts would start at 20 and jump down as you review, but now they'll start dire
 at 10. The actual burying still happens as you review cards.
 
 Because exclusion is done when you click on a deck, the counts you see on the deck
-list will differ from the ones you see when you click on a deck. If you press the
-Unbury button at the end of reviews, you'll get the other cards that were excluded
-at the start.
+list will differ from the ones you see when you click on a deck. The overview screen
+will point out the number of cards that will be buried.
 
 Learning cards that cross a day boundary can now be buried like reviews and new
-cards.
+cards, and there is a new option available that controls whether they should be buried
+or not.
 
 ### Fuzz
 
@@ -97,6 +101,7 @@ instead of only being applied when answering.
 The way the delay is calculated has also been improved - cards with intervals under
 a week now receive a more equally-weighted delay, and the delay amount increases more
 smoothly as intervals increase.
+
 ### Interday learning
 
 Interday (1+ day) learning cards are now subject to the review limit. When
