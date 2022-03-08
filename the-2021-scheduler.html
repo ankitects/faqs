@@ -169,28 +169,32 @@ bury a different card, and answer another card, then undo each one in turn if
 you wish. Previous schedulers handled undo separately, so a non-review action
 would clear the review history, and vice versa.</p>
 <h3 id="daily-limits"><a class="header" href="#daily-limits">Daily limits</a></h3>
-<p>Previously each deck's limit was limited by its parent limits, grandparent
-limits, and so on. This has been simplified to the following:</p>
+<p>The new count is now capped by the review count. If you have limits of 200
+reviews and 20 new cards, and 190 reviews are due, only 10 new cards will be
+introduced.</p>
+<p>In Anki 2.1.50+/AnkiMobile 2.0.84+, each deck's limit affects the number of
+cards that will be drawn from that deck and its subdecks. For example, with
+the following limits:</p>
 <ul>
-<li>Each deck's limit controls how many cards from that specific deck can be used.</li>
-<li>The deck you select controls the maximum number of cards that will be shown in
-the study session.</li>
+<li>Parent: 100</li>
+<li>Parent::Child: 30</li>
+<li>Parent::Child::Grandchild1: 50</li>
+<li>Parent::Child::Grandchild2: 5</li>
+<li>Parent::Child::Grandchild3: 200</li>
 </ul>
-<p>For example, imagine you have a parent deck with a limit of 100, with 2 child
-decks. The first one has a limit of 20, and the second has a limit of 200.</p>
+<p>Then:</p>
 <ul>
-<li>If you click on the parent deck, you will get a maximum of 100 cards.</li>
-<li>If you click on the first child, you'll get a maximum of 20 cards.</li>
-<li>If you click on the second child, you'll get a maximum of 200 cards.</li>
+<li>If you click on Grandchild3, you'll get up to 200 cards.</li>
+<li>If you click on Grandchild2, you'll get up to 5 cards.</li>
+<li>If you click on Grandchild1, you'll get up to 50 cards.</li>
+<li>If you click on Child, you'll get up to 30 cards from the Child deck and its
+subdecks. No more than 5 cards will be taken from Grandchild2.</li>
+<li>If you click on Parent, you'll get up to 100 cards, with a maximum of 30
+coming from Child and its subdecks.</li>
 </ul>
-<p>This may sound similar to the way reviews are handled in the v2 scheduler. The
-difference is that each child deck's limit is also enforced. When you click on
-the parent deck, you will not get more than 20 cards from the first child. You
-do not need to see the cards in deck order either - see the Sorting section
-below for more.</p>
-<p>Another change is that the new count is now capped by the review count. If you
-have limits of 200 reviews and 20 new cards, and 190 reviews are due, only 10
-new cards will be introduced.</p>
+<p>In the v3 scheduler in earlier Anki releases, intermediate limits were not
+respected, so when clicking on Parent, the limits of Child did not influence how
+many cards were taken from the grandchildren.</p>
 <h3 id="sorting"><a class="header" href="#sorting">Sorting</a></h3>
 <p>Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
@@ -206,11 +210,11 @@ a study session. Previously if you had 10 forward and 10 reverse cards, the
 counts would start at 20 and jump down as you review, but now they'll start directly
 at 10. The actual burying still happens as you review cards.</p>
 <p>Because exclusion is done when you click on a deck, the counts you see on the deck
-list will differ from the ones you see when you click on a deck. If you press the
-Unbury button at the end of reviews, you'll get the other cards that were excluded
-at the start.</p>
+list will differ from the ones you see when you click on a deck. The overview screen
+will point out the number of cards that will be buried.</p>
 <p>Learning cards that cross a day boundary can now be buried like reviews and new
-cards.</p>
+cards, and there is a new option available that controls whether they should be buried
+or not.</p>
 <h3 id="fuzz"><a class="header" href="#fuzz">Fuzz</a></h3>
 <p>The small random delay added to reviews is now reflected on the answer buttons,
 instead of only being applied when answering.</p>
