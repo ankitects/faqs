@@ -11,6 +11,8 @@ since Oct 2019.
 
 It is not supported by the older Anki 2.0.
 
+Anki 2.1.50+/AnkiMobile 2.0.84+ require an update to the 2.1 scheduler.
+
 ## Updating
 
 If you are syncing with AnkiWeb, updating requires a one-way upload to AnkiWeb.
@@ -19,7 +21,8 @@ you may accidentally overwrite changes made on your other devices.
 
 Before updating, it is recommended you export a backup. Using the computer version,
 you can use the File>Export menu item to create a .colpkg file containing all
-decks and scheduling. In the unlikely case that you run into problems, you will
+decks and scheduling. Using AnkiMobile, you can use the Add/Export option to export
+a colpkg file. In the unlikely case that you run into problems, you will
 be able to restore from the backup.
 
 Once you have updated, please sync and choose "Upload" to send the upgraded
@@ -40,9 +43,12 @@ You may be asked if you use AnkiDroid 2.14 when updating. It is safe to choose
 prompted, you can adjust the timezone handling in Anki's Preferences screen.
 
 Once you've updated, there is no option to switch back to the old scheduler. While
-you can still accomplish this by switching back to an older Anki version and
-changing the scheduler in the preferences, please bear in mind that it will
+it is possible to switch back to an older version of Anki on your computer and then
+change the scheduler in the preferences, please bear in mind that it will
 require your learning cards and filtered decks to be reset.
+
+If you have updated to AnkiMobile 2.0.84+, it will not be possible to return to the
+old scheduler, as Apple do not allow app downgrades.
 
 ### Older Anki versions
 
