@@ -15,7 +15,7 @@ Please start by trying to resolve the issue on your own:
   steps](https://faqs.ankiweb.net/when-problems-occur.html).
 - Use the search button on this page to search frequently asked questions.
 - Use the search button in the manual.
-- Use the search button on the forums. 
+- Use the search button on the forums.
 - Google the issue.
 
 If you have tried the above and are still stuck, it's time to ask for help.
@@ -51,6 +51,9 @@ guidelines](https://forums.ankiweb.net/faq).
 
 After reading the above section, please post on the
 [user forums](https://forums.ankiweb.net) for assistance.
+
+The user forums use a different login to AnkiWeb, so please create an
+account there if it's your first time.
 
 ## AnkiMobile (iPhone/iPad)
 
