@@ -131,7 +131,9 @@ For example:
 
 ```javascript
 // print the existing states
-console.log(JSON.stringify(states, null, 4));
+console.log(
+  JSON.stringify(states.$type.toObject(states, { defaults: true }), null, 4)
+);
 
 // load the debugger if the web inspector is open
 debugger;
