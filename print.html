@@ -907,7 +907,9 @@ calculated in advance, and it is possible to modify the calculated scheduling
 with some JavaScript code entered into the bottom of the deck options screen.</p>
 <p>For example:</p>
 <pre><code class="language-javascript">// print the existing states
-console.log(JSON.stringify(states, null, 4));
+console.log(
+  JSON.stringify(states.$type.toObject(states, { defaults: true }), null, 4)
+);
 
 // load the debugger if the web inspector is open
 debugger;
