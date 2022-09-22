@@ -1,6 +1,14 @@
 # Splitting a field into multiple fields
 
-Sometimes you may create a deck, or download a shared deck, with several things in one field, such as text and audio, but then later decide that you would rather have the information in two fields so that you can have more precise control over what displays on each card. One option is to add a new field and then manually cut and paste the content between fields; this may be the fastest if you have less than a hundred cards or so, but otherwise it will be very tedious and slow. Here is a method you can use based on exporting to a text file and doing a search and replace; as an example, we'll focus on 
+## Recent Anki versions
+
+With recent Anki versions, there is no need to export+import. An example is provided here:
+
+https://forums.ankiweb.net/t/cloze-type-to-basic-type/23305/2
+
+## Older Anki versions
+
+Sometimes you may create a deck, or download a shared deck, with several things in one field, such as text and audio, but then later decide that you would rather have the information in two fields so that you can have more precise control over what displays on each card. One option is to add a new field and then manually cut and paste the content between fields; this may be the fastest if you have less than a hundred cards or so, but otherwise it will be very tedious and slow. Here is a method you can use based on exporting to a text file and doing a search and replace; as an example, we'll focus on
 
 1. If the field you want to split is the first field, make a different field the first field by using the **Reposition** button in the Fields dialog.. This field needs to be unique, so that no two cards have the same content in that field. If you don't have any unique fields except the one you're trying to split, you can use the [add note ID](https://ankiweb.net/shared/info/1672832404) add-on to add a unique field to the notes.
 2. Export the entire deck to a text file, using the **Notes in plain text** choice.
