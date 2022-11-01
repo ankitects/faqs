@@ -55,21 +55,17 @@ After reading the above section, please post on the
 The user forums use a different login to AnkiWeb, so please create an
 account there if it's your first time.
 
-## AnkiMobile (iPhone/iPad)
-
-Please see [AnkiMobile's support page](https://docs.ankimobile.net).
-
 ## AnkiDroid (Android devices)
 
 Please see [AnkiDroid's support page](https://docs.ankidroid.org/help.html).
 
+## AnkiMobile (iPhone/iPad)
+
+Please see [AnkiMobile's support page](https://docs.ankimobile.net).
+
 ## Private questions
 
-Where possible, please use the [user forums](https://forums.ankiweb.net) - you
-do not need to provide your full name, and your email address will only be
-visible to support staff/forum moderators. Questions posted on the user forums
-are likely to be answered faster, as they can be seen by more people.
-
-If you need to write something that shouldn't be seen by the public, please
-create a [private ticket](https://anki.tenderapp.com/discussions/private) on the
-old support site.
+For security reports and business enquiries, you can post a private ticket
+[here](https://anki.tenderapp.com/discussions/private). If you have a question
+about Anki, AnkiWeb or AnkiDroid, please use the [user forums](https://forums.ankiweb.net)
+instead.
