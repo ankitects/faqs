@@ -5,7 +5,7 @@ bottom of the styling section, it will shrink screenshots down to the correct
 size:
 
 ```
-img[src*="Screen"] { 
+img[src*="Screen"] {
   zoom: 50%;
 }
 ```
@@ -23,6 +23,3 @@ uses do not have a way of detecting which images need to be resized. Resizing
 the images prior to adding them to Anki will allow you to mix and match other
 images, but it requires some setup:
 <https://www.quora.com/How-can-I-get-my-retina-Mac-to-not-take-screenshots-that-are-too-big>
-
-If you're on Windows, an Anki user suggested using SnagIt as a workaround:
-<https://anki.tenderapp.com/discussions/ankidesktop/38152-feature-request-de-zoom-picture-pasted-with-a-certain-hotkey>
