@@ -157,11 +157,12 @@ device and sync with another device that is using v2.</p>
 <li>Anki: 2.1.45+</li>
 <li>AnkiMobile: 2.0.75+</li>
 <li>AnkiWeb: yes</li>
-<li>AnkiDroid: not yet</li>
+<li>AnkiDroid: available in the alpha builds, after enabling the new schema
+in the advanced prefs.</li>
 </ul>
-<p>It will likely be some time until AnkiDroid supports the v3 scheduler directly.
-In the mean time, it will continue to show cards using the v2 scheduler,
-regardless of the setting you have chosen.</p>
+<p>It will likely be some time until a stable AnkiDroid release supports the v3
+scheduler directly. In the mean time, it will continue to show cards using the
+v2 scheduler, regardless of the setting you have chosen.</p>
 <p>Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
 day. While this will not cause scheduling problems, please bear it in mind if
@@ -278,12 +279,7 @@ version. AnkiMobile supports it as well, and AnkiWeb and AnkiDroid may support
 it in the future too. This will allow advanced users to make adjustments to the
 standard scheduling behaviour, that apply on all platforms.</p>
 <p>The various scheduling states are described <a href="https://github.com/ankitects/anki/blob/9edac805adfe285cc92ed04dfeeffc1d1813c4d0/rslib/backend.proto#L1454">here</a>.</p>
-<h2 id="stability"><a class="header" href="#stability">Stability</a></h2>
-<p>The new scheduler passes most of the tests used to test the previous schedulers
-(the ones where behaviour is the same), and appears to have been well received
-so far, but it's possible there are corner-cases that have not been discovered
-yet. If you notice anything unexpected, please let us know.</p>
-<h2 id="trying-it-out"><a class="header" href="#trying-it-out">Trying it out</a></h2>
+<h2 id="enabling"><a class="header" href="#enabling">Enabling</a></h2>
 <p>As of Anki 2.1.45 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.</p>
 
