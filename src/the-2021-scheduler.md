@@ -14,11 +14,12 @@ Client support:
 - Anki: 2.1.45+
 - AnkiMobile: 2.0.75+
 - AnkiWeb: yes
-- AnkiDroid: not yet
+- AnkiDroid: available in the alpha builds, after enabling the new schema
+in the advanced prefs.
 
-It will likely be some time until AnkiDroid supports the v3 scheduler directly.
-In the mean time, it will continue to show cards using the v2 scheduler,
-regardless of the setting you have chosen.
+It will likely be some time until a stable AnkiDroid release supports the v3
+scheduler directly. In the mean time, it will continue to show cards using the
+v2 scheduler, regardless of the setting you have chosen.
 
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
@@ -167,14 +168,7 @@ standard scheduling behaviour, that apply on all platforms.
 
 The various scheduling states are described [here](https://github.com/ankitects/anki/blob/9edac805adfe285cc92ed04dfeeffc1d1813c4d0/rslib/backend.proto#L1454).
 
-## Stability
-
-The new scheduler passes most of the tests used to test the previous schedulers
-(the ones where behaviour is the same), and appears to have been well received
-so far, but it's possible there are corner-cases that have not been discovered
-yet. If you notice anything unexpected, please let us know.
-
-## Trying it out
+## Enabling
 
 As of Anki 2.1.45 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.
