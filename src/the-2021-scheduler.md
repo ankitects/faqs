@@ -128,6 +128,9 @@ card is presented, the times and states associated with each answer button are
 calculated in advance, and it is possible to modify the calculated scheduling
 with some JavaScript code entered into the bottom of the deck options screen.
 
+The code you enter applies to the entire collection, and not just decks using
+the preset.
+
 Here's an example. Please note that it uses modern JavaScript that will need
 to be transpiled if you want to use it with the Qt5 version of Anki.
 
