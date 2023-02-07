@@ -7,8 +7,8 @@ send the remainder to us about a month later. They do not tell us who has purcha
 give us any ability to confirm you've made a purchase, or to initiate a refund. For this reason, any
 refund requests need to be made to Apple directly.
 
-Please note that refunds are at Apple's discretion. If it's your first time requesting a refund, there's a good chance
-they'll refund your money, but this is not guaranteed.
+Please note that except when required by law, refunds are at Apple's discretion. If it's your first time requesting a refund,
+there's a good chance they'll refund your money, but this is not guaranteed.
 
 Please see the following page for more information:
 
