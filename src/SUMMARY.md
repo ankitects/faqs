@@ -25,6 +25,7 @@
 - [Sound/image media files have gone missing!](./sounds-or-images-have-gone-missing.md)
 - [Splitting a field into multiple fields](./splitting-a-field-into-multiple-fields.md)
 - [Text to speech support](./text-to-speech-support.md)
+- [When adding a new card, some fields does not reset!](./sticky-fields.md)
 
 ---
 
@@ -44,14 +45,16 @@
 # Scheduling
 
 - [Anki's not showing me all my cards!](./anki-is-not-showing-me-all-my-cards.md)
+- [Can I study my cards in a particular order?](./study-in-particular-order.md)
 - [Due times after a break](./due-times-after-a-break.md)
 - [Extra copies of a card are coming up](./extra-copies-of-a-card-are-coming-up.md)
 - [Hard/good interval is longer than good/easy](./hard-good-interval-longer-than-good-easy.md)
 - [I'm going on vacation. Can I pause the scheduler?](./i-am-going-on-vacation-can-i-pause-the-scheduler.md)
+- [My learning cards do not follow my learning steps](./weird-intervals.md)
 - [Resetting progress in a deck](./resetting-progress-in-a-deck.md)
 - [Settings for using Anki to prepare for a large exam](./settings-for-using-anki-to-prepare-for-a-large-exam.md)
 - [The Anki 2.1 scheduler](./the-anki-2.1-scheduler.md)
-- [The 2021 scheduler](./the-2021-scheduler.md)
+- [The Anki v3 scheduler](./the-2021-scheduler.md)
 - [Timezone handling changes](./timezone-handling-changes.md)
 - [What spaced repetition algorithm does Anki use?](./what-spaced-repetition-algorithm.md)
 
