@@ -45,7 +45,7 @@
 # Scheduling
 
 - [Anki's not showing me all my cards!](./anki-is-not-showing-me-all-my-cards.md)
-- [Can I study my cards in a particular order?](./study-in-particular-order.md)
+- [Can I study my cards in a particular order?](./study-in-a-particular-order.md)
 - [Due times after a break](./due-times-after-a-break.md)
 - [Extra copies of a card are coming up](./extra-copies-of-a-card-are-coming-up.md)
 - [Hard/good interval is longer than good/easy](./hard-good-interval-longer-than-good-easy.md)
