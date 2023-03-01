@@ -50,7 +50,7 @@
 - [Extra copies of a card are coming up](./extra-copies-of-a-card-are-coming-up.md)
 - [Hard/good interval is longer than good/easy](./hard-good-interval-longer-than-good-easy.md)
 - [I'm going on vacation. Can I pause the scheduler?](./i-am-going-on-vacation-can-i-pause-the-scheduler.md)
-- [My learning cards do not follow my learning steps](./weird-intervals.md)
+- [Learning steps are skipped or repeated](./learning-steps-skipped-or-repeated.md)
 - [Resetting progress in a deck](./resetting-progress-in-a-deck.md)
 - [Settings for using Anki to prepare for a large exam](./settings-for-using-anki-to-prepare-for-a-large-exam.md)
 - [The Anki 2.1 scheduler](./the-anki-2.1-scheduler.md)
