@@ -4,13 +4,17 @@
 
 By default, new cards are introduced by their due number. If you open the
 Browse screen and look at the due column, you'll see new cards have numbers
-like Due #1, Due #2, and so on. Anki will show the card with the smallest
-due number first.
+like New #1, New #2, and so on. Anki will show the card with the smallest
+due number first. If you'd like to change the order, you can select one or more
+cards, then use the Reposition action in the Cards menu.
+
+The number of new cards that will be introduced each day depends on the daily
+limits you've set in the deck options.
 
 When you have multiple cards for a note (for example, both forward->backward
-and backward->forward cards, or multiple cloze deletions on a note), you may
-want those cards to be shown on different days, or spaced apart, or shown
-one after the other depending on your preferences.
+and backward->forward cards, or multiple cloze deletions on a note), those cards
+will have the same new number, and you may want those cards to be shown on different days,
+or spaced apart, or shown one after the other depending on your preferences.
 
 - To have the cards shown on different days, enable burying in the deck options.
 - Sibling cards are spaced apart by default.
