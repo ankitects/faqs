@@ -39,6 +39,7 @@
 - [How do I move cards between decks?](./how-do-i-move-cards-between-decks.md)
 - [Merging/combining two decks](./merging-or-combining-two-decks.md)
 - [Shared decks with broken Javascript](./shared-decks-with-broken-javascript.md)
+- [Importing/exporting fails due to timestamps in the future](./timestamps-in-the-future.md)
 
 ---
 
