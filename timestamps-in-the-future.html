@@ -150,32 +150,17 @@
 they say cards were created in the year 40000 instead of the year 2023.
 This causes a variety of problems, and causes any cards created after
 importing such a deck to end up with similarly-invalid timestamps.</p>
-<p>To prevent this problem spreading, recent Anki versions will refuse to import or
-export decks that have invalid dates. In an ideal world Anki would fix the problem
-automatically for you, but doing so breaks the connection between cards, preventing
-updates from working when importing again in the future. For this reason, this is
-an issue that shared deck authors should ideally address.</p>
+<p>To prevent this problem spreading, recent Anki versions will refuse to
+export decks that have invalid dates.</p>
 <h2 id="when-exporting"><a class="header" href="#when-exporting">When exporting</a></h2>
-<p>If you receive this message when exporting, please install the following add-on:</p>
-<p><a href="https://ankiweb.net/shared/info/196231552">https://ankiweb.net/shared/info/196231552</a></p>
-<p>After restarting Anki (and waiting a while if loading is slow), the problem should
-be fixed, and you should be able to export the deck.</p>
-<h2 id="when-importing"><a class="header" href="#when-importing">When importing</a></h2>
-<p>Please try contacting the deck author to notify them of the problem, and point
-them to this page. If they use the add-on mentioned in the above section and
-export the deck again, it will be importable.</p>
-<p>If the deck author is not responsive, you can try to fix the problem yourself.
-To do so, you'll need access to a computer - this can not be resolved with the
-mobile clients.</p>
+<p>If you receive this message when exporting, you can fix it using one
+of the following methods:</p>
 <ul>
-<li>Ensure you're on Anki 2.1.60+.</li>
-<li>Go into the Preferences screen, and in the Editing section, enable legacy
-import/export handling.</li>
-<li>Import the deck(s).</li>
-<li>Return to the preferences, and disable legacy handling again.</li>
-<li>Follow the instructions in the 'when exporting' section above to fix the
-problematic cards you've imported.</li>
+<li>On a 2.1.61+ computer version, use the Tools&gt;Check Database menu item.</li>
+<li>On AnkiMobile 2.0.90+, use Check Database in the preferences screen.</li>
 </ul>
+<h2 id="when-importing"><a class="header" href="#when-importing">When importing</a></h2>
+<p>The Anki versions mentioned in the previous section can now automatically fix problem decks when importing.</p>
 
                     </main>
 
