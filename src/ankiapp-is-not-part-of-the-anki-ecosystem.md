@@ -16,7 +16,7 @@ bonus, it's easier than the old approach.
 **Importing from AnkiApp - Old Approach**
 
 The approach below relies on the export feature of AnkiApp. The AnkiApp developers have recently
-taken that feature aware from free users, requiring users to pay for a subscription before they
+taken that feature away from free users, requiring users to pay for a subscription before they
 can export their data. For that reason, the add-on approach above is recommended instead. But for posterity, the old instructions are below:
 
 If you have accidentally added content to AnkiApp, you may be able to move it over to Anki. Study progress can't be imported, but basic text and images can be:
