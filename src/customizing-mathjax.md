@@ -2,7 +2,19 @@
 
 Anki's bundled MathJax support is loaded before your card content, so if you wish to customize MathJax, you will need to do so in a specific way.
 
-For recent Anki versions, please see [this post](https://forums.ankiweb.net/t/configure-mathjax-macros-on-macos/6535/2).
+For recent Anki versions, use something like this:
+
+```html
+<script>
+MathJax.config.tex['macros'] = {
+    R: '{\\mathbb {R}}',
+};
+if (typeof is_already_run == 'undefined') {
+  is_already_run = true
+  MathJax.startup.getComponents();
+}
+</script>
+```
 
 For older Anki versions:
 
