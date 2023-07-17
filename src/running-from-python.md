@@ -20,7 +20,7 @@ platforms too.
 4. And then the following, which will take a while:
 
 ```
-\anki-venv\scripts\pip install aqt orjson
+\anki-venv\scripts\pip install aqt orjson pyqt6-webengine
 ```
 
 5. Finally:
