@@ -8,7 +8,7 @@ The instructions below are provided for Windows users, as these problems seem
 most prevalent on Windows, but a similar approach can be taken on other
 platforms too.
 
-1. Install <https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe>. Customize
+1. Install <https://www.python.org/ftp/python/3.9.13/python-3.9.13-amd64.exe>. Customize
    the install location, and choose `c:\python`
 2. Open the Start menu, and open a Command Prompt.
 3. Type in the following and hit enter:
@@ -35,7 +35,7 @@ steps 2 and 5.
 If you still experience problems, you can try changing the Qt version:
 
 ```
-\anki-venv\scripts\pip install pyqt5==5.13 pyqtwebengine==5.13.0
+\anki-venv\scripts\pip install pyqt5==5.15 pyqtwebengine==5.15.0
 ```
 
 If that does not help either, and you have already followed all the steps on
