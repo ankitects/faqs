@@ -14,12 +14,7 @@ Client support:
 - Anki: 2.1.45+
 - AnkiMobile: 2.0.75+
 - AnkiWeb: yes
-- AnkiDroid: available in the alpha builds, after enabling the new schema
-in the advanced prefs.
-
-It will likely be some time until a stable AnkiDroid release supports the v3
-scheduler directly. In the mean time, it will continue to show cards using the
-v2 scheduler, regardless of the setting you have chosen.
+- AnkiDroid: 2.16.2+
 
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
