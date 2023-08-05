@@ -147,3 +147,9 @@ fundamental problems with the algorithm. SuperMemo have subsequently
 stated that the description of the SM-5 algorithm listed on their
 website is incomplete, so it is possible the problems we encountered do
 not exist in SuperMemo’s proprietary implementation.
+
+## FSRS
+
+There is an experimental alternative scheduler available that aims to schedule
+cards more efficiently. More information can be found on its
+[GitHub page](https://github.com/open-spaced-repetition/fsrs4anki). 
