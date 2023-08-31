@@ -1,7 +1,8 @@
 # How can I donate / contribute?
 
 As Anki is run as a business, it is difficult to accept donations. Instead, we
-make available AnkiMobile to raise funds for development. You can purchase
+make available [AnkiMobile](https://apps.apple.com/us/app/ankimobile-flashcards/id373493387)
+to raise funds for development. You can purchase
 AnkiMobile on your Apple mobile device, and the proceeds from it go towards
 supporting Anki's development.
 
