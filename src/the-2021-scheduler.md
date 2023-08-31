@@ -14,7 +14,7 @@ Client support:
 - Anki: 2.1.45+
 - AnkiMobile: 2.0.75+
 - AnkiWeb: yes
-- AnkiDroid: 2.16.2+ includes support for the v3 scheduler when the experimental "new backend" option is enabled in the advanced preferences. Support for custom scheduling (for things like FSRS) is not yet implemented.
+- AnkiDroid: 2.16.2+ includes support for the v3 scheduler when the experimental "new backend" option is enabled in the advanced preferences. Support for custom scheduling (for things like FSRS) is coming in 2.17.
 
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
