@@ -14,12 +14,15 @@ Client support:
 - Anki: 2.1.45+
 - AnkiMobile: 2.0.75+
 - AnkiWeb: yes
-- AnkiDroid: 2.16.2+ includes support for the v3 scheduler when the experimental "new backend" option is enabled in the advanced preferences. Support for custom scheduling (for things like FSRS) is coming in 2.17.
+- AnkiDroid: 2.16.2+ includes support for the v3 scheduler when the "new
+backend" option is enabled in the advanced preferences. While backups are
+always a good idea, there have been no reports of data loss caused by this option.
+Support for FSRS is coming in 2.17.
 
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
-day. While this will not cause scheduling problems, please bear it in mind if
-you're switching back and forth.
+day, and may show them in a different order. Please bear this in mind if you're
+using a client that is still only supports v2.
 
 ## Changes
 
@@ -32,14 +35,15 @@ would clear the review history, and vice versa.
 
 ### Daily limits
 
-The new count is now capped by the review count. If you have limits of 200
+The new count is now capped by the review count by default, so that new card introduction
+is reduced/paused when you have a backlog of cards. If you have limits of 200
 reviews and 20 new cards, and 190 reviews are due, only 10 new cards will be
-introduced.
+introduced. While not recommended, you can disable this behavior in the deck options.
 
-In Anki 2.1.50+/AnkiMobile 2.0.84+, each deck's limit affects the number of
-cards that will be drawn from that deck and its subdecks. Limits are applied
-from the deck you select, so if you select a child deck, its parents' limits
-will not apply. For example, with the following limits:
+Each deck's limit affects the number of cards that will be drawn from that deck
+and its subdecks. Limits are applied from the deck you select, so if you select
+a child deck, its parents' limits will not apply. For example, with the
+following limits:
 
 - Parent: 100
 - Parent::Child: 30
@@ -170,3 +174,6 @@ The various scheduling states are described in SchedulingStates [here](https://g
 
 As of Anki 2.1.45 and AnkiMobile 2.0.75, the scheduler can be enabled and
 disabled in the Preferences screen.
+
+On AnkiDroid, you'll need to go to the advanced settings, enable the new
+backend, and then the v3 scheduler can be enabled.
