@@ -16,9 +16,10 @@ I have experimented with different price points in the past, and reducing the pr
 
 **"It's too expensive in my country."**
 
-I am not against the idea of providing different prices based on a country's average income, but Apple does not make it possible to set different prices for different countries. Apple sets the price in each country based on the local taxes and costs of doing business there.
+I appreciate that costs of living are different in different countries, but I'm afraid it's not practical to vary the price depending on where you live. The
+costs of building and supporting Anki are fixed, and they don't vary based on the country a person using Anki lives in.
 
-Please also bear in mind that the price in the US is the price before state sales taxes are applied, so the difference may not be as as much as you think.
+As for why the price might not be exactly the same as $25 USD, please note that Apple sets the price in each country based on the local taxes and costs of doing business there. Please also bear in mind that the price in the US is the price before state sales taxes are applied, so the difference may not be as as much as you think.
 
 **"As a student, I think it's too expensive."**
 
