@@ -1,7 +1,8 @@
 # What spaced repetition algorithm does Anki use?
 
-Anki’s algorithm is based on the SuperMemo 2 algorithm. For info on
-SM-2, please see <http://www.supermemo.com/english/ol/sm2.htm>
+As of Anki 23.10, Anki has two available algorithms. The first one is based on
+the [SuperMemo 2 algorithm](http://www.supermemo.com/english/ol/sm2.htm), and
+the second one is called [FSRS](https://github.com/open-spaced-repetition).
 
 Anki’s algorithm differs from SM-2 in some respects. Notably:
 
@@ -113,43 +114,6 @@ previous interval.
 
 The simple answer is that SuperMemo’s latest algorithm is proprietary,
 and requires licensing. As Anki is an open source application, it can
-only make use of algorithms that have been made freely available.
-
-We’re inclined to believe SuperMemo when they say their newer algorithms
-are more efficient, but feel that to a certain extent, it is a case of
-diminishing returns. The gains achieved by moving from a traditional
-study routine to SM-2 are already great, and by sticking with an open
-algorithm, your learning data is not locked into a single product.
-
-Ultimately it’s up to you to decide - if access to the latest and
-greatest scheduler is a higher priority than the things that Anki brings
-to the table, you may want to check out SuperMemo to see if it is a good
-fit for you.
-
-## What about SM-5?
-
-Anki’s scheduler was originally based on SuperMemo's SM-5. Anki’s default of
-showing the next interval above each ease button revealed problems with the
-implementation - harder cards could end up with greater interval increases than
-easy ones, and the ease factors sometimes grew to the point where a single
-review could result in a 20-30x increase in interval.
-
-An attempt was made at the time to correct this by smoothing the optimal
-factors matrix - applying a cap on the maximum factor and enforcing a
-minimum difference between adjacent ease factors. This addressed the
-above problems, but resulted in an optimal factors matrix that had very
-little room to move, and the conclusion drawn at the time was that SM-5
-was not an improvement over SM-2.
-
-While SM-5 clearly wasn’t working for Anki, in hindsight, it may not
-have been fair to assume the issues we encountered were due to
-fundamental problems with the algorithm. SuperMemo have subsequently
-stated that the description of the SM-5 algorithm listed on their
-website is incomplete, so it is possible the problems we encountered do
-not exist in SuperMemo’s proprietary implementation.
-
-## FSRS
-
-There is an experimental alternative scheduler available that aims to schedule
-cards more efficiently. More information can be found on its
-[GitHub page](https://github.com/open-spaced-repetition/fsrs4anki). 
+only make use of algorithms that have been made freely available, such as
+FSRS. [Preliminary tests](https://github.com/open-spaced-repetition/fsrs-vs-sm17)
+seem to indicate FSRS is roughly on par with SM17.
