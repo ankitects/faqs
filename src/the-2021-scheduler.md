@@ -36,9 +36,15 @@ would clear the review history, and vice versa.
 ### Daily limits
 
 The new count is now capped by the review count by default, so that new card introduction
-is reduced/paused when you have a backlog of cards. If you have limits of 200
-reviews and 20 new cards, and 190 reviews are due, only 10 new cards will be
-introduced. While not recommended, you can disable this behavior in the deck options.
+is reduced/paused when you have a backlog of reviews. For example, if you have limits of
+200 reviews and 20 new cards, and 190 reviews are due, only 10 new
+cards will be introduced. This prevents the backlog from getting
+worse.
+
+If you find this happening, the recommended solution is to increase your review limit, and work through
+the backlog before you add more new cards. If you're sure you want to add more new cards
+even though you have a backlog, you can enable the "new cards ignore review limit" option
+in the deck options.
 
 Each deck's limit affects the number of cards that will be drawn from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
