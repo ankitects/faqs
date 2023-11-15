@@ -1083,9 +1083,9 @@ the card to get stuck in &quot;low interval hell&quot;. In Anki, the initial
 acquisition process does not influence a card’s ease.</p>
 </li>
 </ul>
-<p>You can also check out <code>sched.py</code> and <code>schedv2.py</code> in Anki’s source code for the
-scheduling code. Here is a summary (see the <a href="https://docs.ankiweb.net/deck-options.html">deck options</a>
-section of the manual for the options that are mentioned in <em>italics</em>).</p>
+<p>The scheduling code can be found in <code>rslib/src/scheduler/states</code>. Here is a summary
+(see the <a href="https://docs.ankiweb.net/deck-options.html">deck options</a>
+section of the manual for the options that are mentioned in <em>italics</em>):</p>
 <h2 id="learningrelearning-cards"><a class="header" href="#learningrelearning-cards">Learning/Relearning Cards</a></h2>
 <p>If you press…​</p>
 <ul>
@@ -1114,7 +1114,7 @@ Immediately converts the card into a review card.</p>
 The same can be said about relearning cards: pressing 'Again'
 or 'Hard' won't have any effect over the card's ease.</p>
 <h2 id="review-cards"><a class="header" href="#review-cards">Review Cards</a></h2>
-<p>Once a card is graduated, it gets an ease factor. By default is 2.5, but you
+<p>In SM-2, once a card is graduated, it gets an ease factor. By default is 2.5, but you
 can set another value using the <a href="https://docs.ankiweb.net/deck-options.html?#starting-ease">Deck Options</a>.</p>
 <p>If you press…​</p>
 <ul>
