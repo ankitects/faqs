@@ -41,9 +41,9 @@ Anki’s algorithm differs from SM-2 in some respects. Notably:
   the card to get stuck in "low interval hell". In Anki, the initial
   acquisition process does not influence a card’s ease.
 
-You can also check out `sched.py` and `schedv2.py` in Anki’s source code for the
-scheduling code. Here is a summary (see the [deck options](https://docs.ankiweb.net/deck-options.html)
-section of the manual for the options that are mentioned in _italics_).
+The scheduling code can be found in `rslib/src/scheduler/states`. Here is a summary
+(see the [deck options](https://docs.ankiweb.net/deck-options.html)
+section of the manual for the options that are mentioned in _italics_):
 
 ## Learning/Relearning Cards
 
@@ -71,7 +71,7 @@ or 'Hard' won't have any effect over the card's ease.
 
 ## Review Cards
 
-Once a card is graduated, it gets an ease factor. By default is 2.5, but you
+In SM-2, once a card is graduated, it gets an ease factor. By default is 2.5, but you
 can set another value using the [Deck Options](https://docs.ankiweb.net/deck-options.html?#starting-ease).
 
 If you press…​
