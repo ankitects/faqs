@@ -38,14 +38,19 @@ Sometimes restarting your computer may help.
 
 **6. Change the Video Driver**
 
-On Windows and Linux, crashes and display issues can be caused by the video
-driver. Changing to a different video driver in the preferences screen or via
-the gldriver file may help. On Windows, make sure you try all three options.
+Crashes and display issues can be caused by the video driver. Changing to a
+different video driver in the preferences screen or via the gldriver file may
+help. Make sure you try all three options.
 
 - [Windows](https://docs.ankiweb.net/platform/windows/display-issues.html)
+- [Mac](https://docs.ankiweb.net/platform/mac/display-issues.html)
 - [Linux](https://docs.ankiweb.net/platform/linux/display-issues.html)
 
+**7. Reset window sizes**
 
-**7. If the problem remains**
+Sometimes pressing 'reset window sizes' button in the preferences screen 
+immediately after starting Anki will help.
+
+**8. If the problem remains**
 
 If you're confirmed you are using the latest Anki version, and are still receiving errors when starting Anki while holding down the shift key, please [report the problem](./getting-help.md), including the next error you receive in your post.
