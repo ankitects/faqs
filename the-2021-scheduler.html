@@ -257,7 +257,7 @@ to be transpiled if you want to use it with the Qt5 version of Anki.</p>
 <p>For example:</p>
 <pre><code class="language-javascript">// print the existing states
 console.log(
-  JSON.stringify(states.$type.toObject(states, { defaults: true }), null, 4)
+  JSON.stringify(states, null, 4)
 );
 
 // load the debugger if the web inspector is open
