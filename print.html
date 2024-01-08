@@ -798,6 +798,12 @@ you can unbury one set without the other.</li>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2021-scheduler"><a class="header" href="#2021-scheduler">2021 Scheduler</a></h1>
 <p>The 2021 scheduler (&quot;v3&quot;) is an update to the <a href="./the-anki-2.1-scheduler.html">Anki 2.1
 scheduler</a> (&quot;v2&quot;).</p>
+<h2 id="enabling"><a class="header" href="#enabling">Enabling</a></h2>
+<p>As of Anki/AnkiMobile 23.10, the v3 scheduler is the default and only option.</p>
+<p>On older Anki/AnkiMobile versions, the scheduler can be changed in the preferences
+screen.</p>
+<p>On AnkiDroid, you'll either need to switch to the 2.17 alphas, or go to the advanced
+settings, enable the new backend, and then v3 scheduler.</p>
 <h2 id="compatibility-1"><a class="header" href="#compatibility-1">Compatibility</a></h2>
 <p>The v2 and v3 schedulers are compatible. You can switch between them without
 a full sync, and it will not cause scheduling issues if you use v3 on one
@@ -936,11 +942,6 @@ version. AnkiMobile supports it as well, and AnkiWeb and AnkiDroid may support
 it in the future too. This will allow advanced users to make adjustments to the
 standard scheduling behaviour, that apply on all platforms.</p>
 <p>The various scheduling states are described in SchedulingStates <a href="https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto">here</a>.</p>
-<h2 id="enabling"><a class="header" href="#enabling">Enabling</a></h2>
-<p>As of Anki 2.1.45 and AnkiMobile 2.0.75, the scheduler can be enabled and
-disabled in the Preferences screen.</p>
-<p>On AnkiDroid, you'll need to go to the advanced settings, enable the new
-backend, and then the v3 scheduler can be enabled.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="timezone-handling-changes"><a class="header" href="#timezone-handling-changes">Timezone handling changes</a></h1>
 <p>Anki 2.1.22+, AnkiMobile 2.0.57+, and AnkiDroid 2.15+ contain an optional change to the way Anki calculates the elapsed number of days. This change addresses some corner cases where timezone changes (including daylight savings) could cause Anki to move back or forward a day, and addresses cards being unburied / daily counts being reset for some users when syncing with AnkiWeb.</p>
 <p>For most users, the new calculation should produce the same number of elapsed days as the old calculation. For some users, enabling this code may move Anki forward or back by one day, but this will only happen once, and Anki should be more robust against timezone changes afterwards.</p>
