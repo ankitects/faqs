@@ -100,7 +100,7 @@
 
 # Other Apps
 
-- [AnkiApp is not part of the Anki ecosystem](./ankiapp-is-not-part-of-the-anki-ecosystem.md)
+- [Anki knockoffs](./anki-knockoffs.md)
 - [AnkiDroid has a separate support site](./ankidroid-has-a-separate-support-site.md)
 - [AnkiUniversal is not supported here](./ankiuniversal-is-not-supported-here.md)
 - [We do not make robots](./we-do-not-make-robots.md)
