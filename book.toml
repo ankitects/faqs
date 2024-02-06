@@ -16,5 +16,5 @@ git-repository-url = "https://github.com/ankitects/faqs/"
 optional = true
 warning-policy = "warn"
 follow-web-links = true
-# quora dislikes bots
-exclude = [ 'quora\.com' ]
+# sites that block programmatic access
+exclude = [ 'quora\.com', 'reddit.com' ]
