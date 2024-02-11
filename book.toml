@@ -11,6 +11,7 @@ create-missing = true
 [output.html]
 no-section-label = true
 git-repository-url = "https://github.com/ankitects/faqs/"
+additional-css = ["css/misc.css"]
 
 [output.linkcheck]
 optional = true
