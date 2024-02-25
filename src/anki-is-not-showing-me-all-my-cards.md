@@ -30,8 +30,8 @@ If you have a test coming up and need to review the material before it is due, y
 
 <h2>Card counts dropping down by more than one</h2>
 
-If you're seeing the card count drop down by more than one after certain operations like an undo, please see <https://anki.tenderapp.com/kb/problems/i-created-reversed-cards-but-theyre-not-showing-up>
+If you're seeing the card count drop down by more than one after certain operations like an undo, please see <https://anki.tenderapp.com/kb/problems/i-created-reversed-cards-but-theyre-not-showing-up>.
 
 <h2>Related</h2>
 
-[Settings for using Anki to prepare for a large exam](https://anki.tenderapp.com/kb/collection-management/settings-for-using-anki-to-prepare-for-a-large-exam)
+[Settings for using Anki to prepare for a large exam](https://faqs.ankiweb.net/settings-for-using-anki-to-prepare-for-a-large-exam.html)
