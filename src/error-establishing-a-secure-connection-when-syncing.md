@@ -20,4 +20,4 @@ Unfortunately some antivirus programs do not completely stop themselves when dis
 
 If your wifi or internet connection is experiencing troubles, the messages from AnkiWeb may arrive corrupted or not at all, which can cause this error message to occur. It may be worth checking for packet loss:
 
-<https://anki.tenderapp.com/kb/problems/syncing-failed-connection-timed-out-errors-when-syncing>
+<https://faqs.ankiweb.net/syncing-failed-connection-timed-out-errors-when-syncing.html>
