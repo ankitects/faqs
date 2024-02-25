@@ -4,7 +4,7 @@
 
 If syncing never appears to make any progress, it is possible that Anki is completely blocked from connecting to the internet. In that case, you may need to add an exception in your antivirus/firewall, or ask your network administrators for assistance. For more information, please see
 
-<https://anki.tenderapp.com/kb/anki-ecosystem/error-establishing-a-secure-connection-when-syncing>
+<https://faqs.ankiweb.net/error-establishing-a-secure-connection-when-syncing.html>
 
 **If the sync appears to make some progress**
 

@@ -12,7 +12,7 @@ If your AnkiWeb account expires, only the AnkiWeb copy of your data is deleted. 
 Returning to AnkiWeb after your data has expired
 -------
 
-If your account data was deleted due to inactivity, you may still be able to recover that data if you have a copy on your computer or mobile device. You can confirm this by opening Anki or AnkiMobile/AnkiDroid to see if your data is still there. If you had data on your device but accidentally overwrote it in a sync, you may be able to recover it from an [automatic backup](https://anki.tenderapp.com/kb/problems/restoring-an-automatic-backup-recovering-from-data-loss)
+If your account data was deleted due to inactivity, you may still be able to recover that data if you have a copy on your computer or mobile device. You can confirm this by opening Anki or AnkiMobile/AnkiDroid to see if your data is still there. If you had data on your device but accidentally overwrote it in a sync, you may be able to recover it from an [automatic backup](https://faqs.ankiweb.net/restoring-an-automatic-backup-recovering-from-data-loss.html)
 
 If you'd like to start syncing that data with AnkiWeb again, please start by logging in to ankiweb.net using your Anki ID. If you receive a message that no such account exists, you'll need to sign up again first - you can use the same email address as before if you wish. 
 
