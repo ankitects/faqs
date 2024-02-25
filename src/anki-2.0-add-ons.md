@@ -1,6 +1,6 @@
 # Anki 2.0 add-ons
 
-**Due to the libraries Anki 2.0 uses no longer being supported, [Anki 2.0 has been discontinued](https://anki.tenderapp.com/kb/anki-ecosystem/anki-20-support-has-ended), and may stop working in a future OS update. Please consider updating to Anki 2.1 instead.**
+**Due to the libraries Anki 2.0 uses no longer being supported, [Anki 2.0 has been discontinued](https://faqs.ankiweb.net/anki-2.0-support-has-ended.html), and may stop working in a future OS update. Please consider updating to Anki 2.1 instead.**
 
 If the add-on you want has a 2.0 download link on AnkiWeb, you can download the add-on's .py or .zip file.
 
