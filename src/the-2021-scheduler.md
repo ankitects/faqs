@@ -5,13 +5,9 @@ scheduler](./the-anki-2.1-scheduler.md) ("v2").
 
 ## Enabling
 
-As of Anki/AnkiMobile 23.10, the v3 scheduler is the default and only option.
+As of Anki/AnkiMobile 23.10, and AnkiDroid 2.17, the v3 scheduler is the default and only option.
 
-On older Anki/AnkiMobile versions, the scheduler can be changed in the preferences
-screen.
-
-On AnkiDroid, you'll either need to switch to the 2.17 alphas, or go to the advanced
-settings, enable the new backend, and then v3 scheduler.
+On older versions, the scheduler can be changed in the preferences screen.
 
 ## Compatibility
 
@@ -24,10 +20,7 @@ Client support:
 - Anki: 2.1.45+
 - AnkiMobile: 2.0.75+
 - AnkiWeb: yes
-- AnkiDroid: 2.16.2+ includes support for the v3 scheduler when the "new
-backend" option is enabled in the advanced preferences. While backups are
-always a good idea, there have been no reports of data loss caused by this option.
-Support for FSRS is coming in 2.17.
+- AnkiDroid: 2.17.0+
 
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
