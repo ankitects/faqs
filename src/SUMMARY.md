@@ -25,7 +25,7 @@
 - [Sound/image media files have gone missing!](./sounds-or-images-have-gone-missing.md)
 - [Splitting a field into multiple fields](./splitting-a-field-into-multiple-fields.md)
 - [Text to speech support](./text-to-speech-support.md)
-- [When adding a new card, some fields does not reset!](./sticky-fields.md)
+- [When adding a new card, some fields do not reset!](./sticky-fields.md)
 
 ---
 
