@@ -12,7 +12,7 @@ there's a good chance they'll refund your money, but this is not guaranteed.
 
 Please see the following page for more information:
 
-<http://www.imore.com/how-request-refund-itunes-or-app-store-purchase>
+<https://support.apple.com/en-au/118223>
 
 We have heard reports that some Apple Support representatives, when refusing a refund, are suggesting you
 contact us instead. That is misleading, as they know we do not have access to your payment details,
