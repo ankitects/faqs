@@ -3,6 +3,7 @@
 Anki's collaboration support is limited at the moment, but it is possible for multiple people to work on content together.
 
 If you are creating cards that have no sounds or images, then the easiest option may be to take advantage of an online document collaboration service such as Google Drive.
+There is also add-ons available that support real-time collaboration, such as [AnkiHub](https://www.ankihub.net) or [AnkiCollab](https://www.ankicollab.com/). Additional add-ons offering similar functionality can be found on the [shared add-ons page](https://ankiweb.net/shared/addons)
 
 With this system, you create your cards in a spreadsheet (one column per field in the note type you're using). To allow updating easily, the first column should be one that you do not expect to change if you update the cards. You can add and edit cards together at whatever time you want; when you're ready to update your collection with new and updated cards, each user can export the spreadsheet to a text file and [import it into Anki](https://docs.ankiweb.net/importing/intro.html).
 
