@@ -12,4 +12,4 @@ Using a separate deck for each unit of work makes it easier to export the conten
 
 Advanced users can skip the separate deck step by instead creating a filtered deck using something like 'added:7' to only include cards added in the last 7 days, and then exporting that filtered deck to share.
 
-There is also add-ons available that support real-time collaboration, such as [AnkiHub](https://www.ankihub.net) or [AnkiCollab](https://www.ankicollab.com/). Additional add-ons offering similar functionality can be found on the [shared add-ons page](https://ankiweb.net/shared/addons).
+There are also add-ons available that support collaboration, such as [AnkiHub](https://www.ankihub.net) or [AnkiCollab](https://www.ankicollab.com/). Additional add-ons offering similar functionality can be found on the [shared add-ons page](https://ankiweb.net/shared/addons).
