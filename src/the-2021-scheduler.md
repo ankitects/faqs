@@ -173,8 +173,8 @@ if (states.good.normal?.review) {
 ```
 
 Because this is implemented in JavaScript, it is not limited to the computer
-version. AnkiMobile supports it as well, and AnkiWeb and AnkiDroid may support
-it in the future too. This will allow advanced users to make adjustments to the
-standard scheduling behaviour, that apply on all platforms.
+version. AnkiMobile and AnkiDroid both support it as well, and AnkiWeb may
+support it in the future too. This will allow advanced users to make 
+adjustments to the standard scheduling behaviour, that apply on all platforms.
 
 The various scheduling states are described in SchedulingStates [here](https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto).
