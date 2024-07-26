@@ -18,4 +18,4 @@ optional = true
 warning-policy = "warn"
 follow-web-links = true
 # sites that block programmatic access
-exclude = [ 'quora\.com', 'reddit.com', 'superuser.com' ]
+exclude = [ 'quora\.com', 'reddit.com', 'superuser.com', 'github.com/open-spaced-repetition' ]
