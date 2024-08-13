@@ -15,4 +15,4 @@ When you do this, Anki will turn the cards back into new cards. If you click **I
 Removing the review history
 ---------------------------------
 
-If you accidentally imported the review history of someone else, because they shared their deck with scheduling, you can use [this add-on](https://ankiweb.net/shared/info/83793850) to remove the history of cards you have selected.
+If you accidentally imported the review history of someone else, because they shared their deck with scheduling, you can use the [Remove card history](https://ankiweb.net/shared/info/2089200096) add-on to remove the history of selected cards.
