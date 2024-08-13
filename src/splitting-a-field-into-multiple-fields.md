@@ -2,9 +2,7 @@
 
 ## Recent Anki versions
 
-With recent Anki versions, there is no need to export+import. An example is provided here:
-
-https://forums.ankiweb.net/t/cloze-type-to-basic-type/23305/2
+With recent Anki versions, there is no need to export+import. An example is provided [in this forum post](https://forums.ankiweb.net/t/cloze-type-to-basic-type/23305/2).
 
 ## Older Anki versions
 
