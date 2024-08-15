@@ -10,4 +10,4 @@
 <h2>AnkiMobile</h2>
 
 - Any changes you make to your card templates will be reflected when studying in AnkiMobile.
-- You can also tap on "Tools" while reviewing to adjust the font scaling relative to the computer version.
+- You can also tap on the blue cog while reviewing to adjust the font scaling relative to the computer version.
