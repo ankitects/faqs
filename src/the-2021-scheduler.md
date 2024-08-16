@@ -7,7 +7,7 @@ scheduler](./the-anki-2.1-scheduler.md) ("v2").
 
 As of Anki/AnkiMobile 23.10, and AnkiDroid 2.17, the v3 scheduler is the default and only option.
 
-On older versions, the scheduler can be changed in the preferences screen.
+On earlier versions, the scheduler can be changed from the preferences screen.
 
 ## Compatibility
 
@@ -24,16 +24,15 @@ Client support:
 
 Because the v3 scheduler uses a different approach to gathering and sorting
 cards, a v2 and v3 client may show a different number of due cards on a given
-day, and may show them in a different order. Please bear this in mind if you're
-using a client that is still only supports v2.
+day, and may show them in a different order.
 
 ## Changes
 
 ### Undo
 
-The v3 scheduler uses Anki's new undo infrastructure - you can answer a card,
-bury a different card, and answer another card, then undo each one in turn if
-you wish. Previous schedulers handled undo separately, so a non-review action
+The v3 scheduler uses Anki's new undo infrastructure: you can answer a card,
+bury another card, and answer a different card, then undo each action in turn if
+you wish. Previous schedulers handled undo for review and non-review actions separately, so a non-review action
 would clear the review history, and vice versa.
 
 ### Daily limits
@@ -46,10 +45,10 @@ worse.
 
 If you find this happening, the recommended solution is to increase your review limit, and work through
 the backlog before you add more new cards. If you're sure you want to add more new cards
-even though you have a backlog, you can enable the "new cards ignore review limit" option
-in the deck options.
+even though you have a backlog, you can enable the "New cards ignore review limit" option
+in deck options.
 
-Each deck's limit affects the number of cards that will be drawn from that deck
+Each deck's limit affects the number of cards that will be gathered from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
 a child deck, its parents' limits will not apply. For example, with the
 following limits:
@@ -62,12 +61,12 @@ following limits:
 
 Then:
 
-- If you click on Grandchild3, you'll get up to 200 cards.
-- If you click on Grandchild2, you'll get up to 5 cards.
-- If you click on Grandchild1, you'll get up to 50 cards.
-- If you click on Child, you'll get up to 30 cards from the Child deck and its
+- If you click Grandchild3, you'll get up to 200 cards.
+- If you click Grandchild2, you'll get up to 5 cards.
+- If you click Grandchild1, you'll get up to 50 cards.
+- If you click Child, you'll get up to 30 cards from the Child deck and its
   subdecks. No more than 5 cards will be taken from Grandchild2.
-- If you click on Parent, you'll get up to 100 cards, with a maximum of 30
+- If you click Parent, you'll get up to 100 cards, with a maximum of 30
   coming from Child and its subdecks.
 
 In the v3 scheduler in earlier Anki releases, intermediate limits were not
@@ -80,7 +79,7 @@ Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
 reviews can optionally be ordered by interval or subdeck.
 
-When burying is disabled, it is now possible to control whether siblings are
+When burying is disabled, with v3 scheduler it's possible to control whether siblings are
 shown together or not, by adjusting the display order.
 
 The options controlling the mixing of new cards and interday learning cards have
@@ -90,7 +89,7 @@ be used from the deck you select to study.
 ### Burying
 
 When burying is enabled, cards are now excluded from the queues at the start of
-a study session. Previously if you had 10 forward and 10 reverse cards, the
+a study session. Previously if you had 10 forward and 10 reversed cards, the
 counts would start at 20 and jump down as you review, but now they'll start directly
 at 10. The actual burying still happens as you review cards.
 
@@ -114,8 +113,8 @@ smoothly as intervals increase.
 ### Interday learning
 
 Interday (1+ day) learning cards are now subject to the review limit. When
-determining what fits within the limit, Anki fetches interday learning cards
-first, then reviews, and finally new cards.
+determining what fits within the limit, Anki gathers interday learning cards
+first, then review cards, and finally new cards.
 
 ### Filtered decks
 
@@ -125,13 +124,12 @@ provided delay. Easy will remove the card.
 
 ## Add-ons and custom scheduling
 
-The new scheduler is a ground-up rewrite, so add-ons that modified the old
-scheduler's card gathering or answering routines will no longer work. It is no
+The v3 scheduler is a ground-up rewrite, so add-ons that modified the previous scheduler's card gathering or answering routines doesn't work with it. It is no
 longer possible to selectively replace parts of the scheduler's code ("monkey
 patching"), so some add-ons may not be practical to port without significant
 effort.
 
-The new scheduler does provide some control over the scheduling however. As each
+However, the v3 scheduler does provide more control over the scheduling. As each
 card is presented, the times and states associated with each answer button are
 calculated in advance, and it is possible to modify the calculated scheduling
 with some JavaScript code entered into the bottom of the deck options screen.
@@ -173,8 +171,8 @@ if (states.good.normal?.review) {
 ```
 
 Because this is implemented in JavaScript, it is not limited to the computer
-version. AnkiMobile and AnkiDroid both support it as well, and AnkiWeb may
-support it in the future too. This will allow advanced users to make 
+version. AnkiMobile and AnkiDroid both support it as well, and AnkiWeb may also
+support it in the future. This will allow advanced users to make 
 adjustments to the standard scheduling behaviour, that apply on all platforms.
 
 The various scheduling states are described in SchedulingStates [here](https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto).
