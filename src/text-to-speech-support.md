@@ -20,7 +20,7 @@ There is a popular add-on called AwesomeTTS that supports a number of text to sp
 
 It works by downloading the audio into your collection, so that when you sync with AnkiWeb, your other devices will gain access to the audio as well.
 
-If you want to use the generated files outside the computer version, make sure you use the stored files mode and not 'on the fly': <https://ankiatts.appspot.com/usage/editor>
+If you want to use the generated files outside the computer version, make sure you use the stored files mode and not 'on the fly'.
 
 While AnkiMobile <2.0.56 has no official support for on-device TTS, Apple introduced TTS support in iOS7, and it is possible to gain access to it. The following is based on a user-contributed solution.
 
