@@ -31,8 +31,7 @@ day, and may show them in a different order.
 ### Undo
 
 The v3 scheduler uses Anki's new undo infrastructure: you can answer a card,
-bury another card, and answer a different card, then undo each action in turn if
-you wish. Previous schedulers handled undo for review and non-review actions separately, so a non-review action
+bury another card, answer a different card, then undo each action in turn. Previous schedulers handled undo for review and non-review actions separately, so a non-review action
 would clear the review history, and vice versa.
 
 ### Daily limits
@@ -90,16 +89,15 @@ be used from the deck you select to study.
 
 When burying is enabled, cards are now excluded from the queues at the start of
 a study session. Previously if you had 10 forward and 10 reversed cards, the
-counts would start at 20 and jump down as you review, but now they'll start directly
-at 10. The actual burying still happens as you review cards.
+counts would start at 20 and jump down as you review, but with v3 they'll start directly
+at 10.
 
-Because exclusion is done when you click on a deck, the counts you see on the deck
+Because burying is done when you click on a deck, the counts you see on the deck
 list will differ from the ones you see when you click on a deck. The overview screen
-will point out the number of cards that will be buried.
+will point out the number of cards that will be buried in grey.
 
-Learning cards that cross a day boundary can now be buried like reviews and new
-cards, and there is a new option available that controls whether they should be buried
-or not.
+In the v3 scheduler, learning cards that cross a day boundary can be buried like review and new
+cards.
 
 ### Fuzz
 
@@ -118,9 +116,10 @@ first, then review cards, and finally new cards.
 
 ### Filtered decks
 
-Filtered decks with rescheduling disabled now show 4 buttons - the provided
-delay applies to the Again button, and Hard/Good will use 1.5x and 2x the
-provided delay. Easy will remove the card.
+Filtered decks with rescheduling disabled show 4 answer buttons. You can configure a time delay for each button. Setting this delay to 0 makes a button remove the card from the deck.
+
+In earlier versions, a single delay was provided for Again. Hard used 1.5x the provided delay, whereas Good used 2x of the delay.
+Easy removed the card.
 
 ## Add-ons and custom scheduling
 
