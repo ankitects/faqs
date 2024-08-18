@@ -31,8 +31,7 @@ day, and may show them in a different order.
 ### Undo
 
 The v3 scheduler uses Anki's new undo infrastructure: you can answer a card,
-bury another card, answer a different card, then undo each action in turn. Previous schedulers handled undo for review and non-review actions separately, so a non-review action
-would clear the review history, or the other way around.
+bury another card, answer a different card, then undo each action in turn. Previous schedulers handled undo for review and non-review actions separately, so performing an action for one would clear the undo history for the other.
 
 ### Daily limits
 
