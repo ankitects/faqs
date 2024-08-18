@@ -172,4 +172,4 @@ version. AnkiMobile and AnkiDroid both support it as well, and AnkiWeb may also
 support it in the future. This will allow advanced users to make 
 adjustments to the standard scheduling behaviour, that apply on all platforms.
 
-The various scheduling states are described in [Scheduling States](https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto).
+The various scheduling states are described in [SchedulingStates](https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto).
