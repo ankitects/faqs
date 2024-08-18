@@ -96,7 +96,7 @@ Because burying is done when you click on a deck, the counts you see on the deck
 list will differ from the ones you see when you click on a deck. The overview screen
 will point out the number of cards that will be buried in grey.
 
-In the v3 scheduler, learning cards that cross a day boundary can be buried like review and new
+Learn cards that cross a day boundary ("interday learning cards") can be buried like review and new
 cards.
 
 ### Fuzz
