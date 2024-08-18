@@ -110,7 +110,7 @@ smoothly as intervals increase.
 
 ### Interday learning
 
-Interday (1+ day) learning cards are now subject to the review limit. When
+Interday learning cards are now subject to the review limit. When
 determining what fits within the limit, Anki gathers interday learning cards
 first, then review cards, and finally new cards.
 
