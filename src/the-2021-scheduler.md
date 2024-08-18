@@ -123,7 +123,7 @@ Easy removed the card.
 
 ## Add-ons and custom scheduling
 
-The v3 scheduler is a ground-up rewrite, so add-ons that modified the previous scheduler's card gathering or answering routines doesn't work with it. It is no
+The v3 scheduler is a ground-up rewrite, so add-ons that modified the previous scheduler's card-gathering or answering routines will not work with it. It is no
 longer possible to selectively replace parts of the scheduler's code ("monkey
 patching"), so some add-ons may not be practical to port without significant
 effort.
