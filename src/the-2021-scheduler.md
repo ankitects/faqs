@@ -38,7 +38,7 @@ would clear the review history, and vice versa.
 
 The new card limit in v3 scheduler is capped by the review limit by default, so that new card introduction
 is reduced/paused when you have a backlog of reviews. For example, if you have limits of
-200 review card and 20 new cards, and 190 review cards are due, only 10 new
+200 review cards and 20 new cards, and 190 review cards are due, only 10 new
 cards will be introduced. This prevents the backlog from getting
 worse.
 
