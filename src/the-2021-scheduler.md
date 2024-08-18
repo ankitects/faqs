@@ -47,7 +47,7 @@ the backlog before you add more new cards. If you're sure you want to add more n
 even though you have a backlog, you can enable the "New cards ignore review limit" option
 in deck options.
 
-In a deck tree, the limits of each deck will control the number of cards that gathered from that deck
+The limits of each deck will control the number of cards that are gathered from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
 a child deck, its parents' limits will not apply. For example, if the
 following are the limits:
