@@ -60,13 +60,13 @@ following limits are set:
 
 Then:
 
-- If you click "Grandchild3", you'll get up to 200 cards.
-- If you click "Grandchild2", you'll get up to 5 cards.
-- If you click "Grandchild1", you'll get up to 50 cards.
-- If you click "Child", you'll get up to 30 cards from the "Child" deck and its
-  subdecks. No more than 5 cards will be taken from "Grandchild2".
-- If you click "Parent", you'll get up to 100 cards, with a maximum of 30
-  coming from "Child" and its subdecks.
+- If you select Grandchild3, you'll get up to 200 cards.
+- If you select Grandchild2, you'll get up to 5 cards.
+- If you select Grandchild1, you'll get up to 50 cards.
+- If you select Child, you'll get up to 30 cards from the Child deck and its
+  subdecks. No more than 5 cards will be taken from Grandchild2.
+- If you select Parent, you'll get up to 100 cards, with a maximum of 30
+  coming from Child and its subdecks.
 
 In earlier Anki releases, the v3 scheduler did not respect intermediate limits, so when clicking on parent, the limits of child did not influence how
 many cards were taken from the grandchild decks.
