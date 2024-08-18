@@ -50,7 +50,7 @@ in deck options.
 The limits of each deck will control the number of cards that are gathered from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
 a child deck, its parents' limits will not apply. For example, if the
-following are the limits:
+following limits are set:
 
 - Parent: 100
 - Parent::Child: 30
