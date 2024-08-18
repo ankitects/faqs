@@ -32,7 +32,7 @@ day, and may show them in a different order.
 
 The v3 scheduler uses Anki's new undo infrastructure: you can answer a card,
 bury another card, answer a different card, then undo each action in turn. Previous schedulers handled undo for review and non-review actions separately, so a non-review action
-would clear the review history, and vice versa.
+would clear the review history, or the other way around.
 
 ### Daily limits
 
@@ -47,10 +47,10 @@ the backlog before you add more new cards. If you're sure you want to add more n
 even though you have a backlog, you can enable the "New cards ignore review limit" option
 in deck options.
 
-The limits of each deck control the number of cards that will be gathered from that deck
+In a deck tree, the limits of each deck will control the number of cards that gathered from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
-a child deck, its parents' limits will not apply. For example, with the
-following limits:
+a child deck, its parents' limits will not apply. For example, if the
+following are the limits:
 
 - Parent: 100
 - Parent::Child: 30
@@ -60,22 +60,22 @@ following limits:
 
 Then:
 
-- If you click Grandchild3, you'll get up to 200 cards.
-- If you click Grandchild2, you'll get up to 5 cards.
-- If you click Grandchild1, you'll get up to 50 cards.
-- If you click Child, you'll get up to 30 cards from the Child deck and its
-  subdecks. No more than 5 cards will be taken from Grandchild2.
-- If you click Parent, you'll get up to 100 cards, with a maximum of 30
-  coming from Child and its subdecks.
+- If you click "Grandchild3", you'll get up to 200 cards.
+- If you click "Grandchild2", you'll get up to 5 cards.
+- If you click "Grandchild1", you'll get up to 50 cards.
+- If you click "Child", you'll get up to 30 cards from the "Child" deck and its
+  subdecks. No more than 5 cards will be taken from "Grandchild2".
+- If you click "Parent", you'll get up to 100 cards, with a maximum of 30
+  coming from "Child" and its subdecks.
 
-In earlier Anki releases, the v3 scheduler did not respect intermediate limits, so when clicking on Parent, the limits of Child did not influence how
-many cards were taken from the grandchildren.
+In earlier Anki releases, the v3 scheduler did not respect intermediate limits, so when clicking on parent, the limits of child did not influence how
+many cards were taken from the grandchild decks.
 
 ### Sorting
 
 Additional deck options have been added to control the order new cards and
-reviews are presented in. New cards can be mixed from multiple decks, and
-reviews can optionally be ordered by interval or subdeck.
+review cards are presented in. New cards can be mixed from multiple decks, and
+review cards can optionally be ordered by interval or subdeck.
 
 When burying is disabled, with the v3 scheduler it's possible to control whether siblings are
 shown together or not, by adjusting the display order.
@@ -86,7 +86,7 @@ be used from the deck you select to study.
 
 ### Burying
 
-When burying is enabled, cards are now excluded from the queues at the start of
+When burying is enabled, cards are now excluded from the card counts at the start of
 a study session. Previously if you had 10 forward and 10 reversed cards, the
 counts would start at 20 and jump down as you review, but with v3 they'll start directly
 at 10.
@@ -95,7 +95,7 @@ Because burying is done when you click on a deck, the counts you see on the deck
 list will differ from the ones you see when you click on a deck. The overview screen
 will point out the number of cards that will be buried in grey.
 
-Learn cards that cross a day boundary ("interday learning cards") can be buried like review and new
+Learning cards that cross a day boundary ("interday learning cards") can be buried like review and new
 cards.
 
 ### Fuzz
