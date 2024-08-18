@@ -36,9 +36,9 @@ would clear the review history, and vice versa.
 
 ### Daily limits
 
-The new count is now capped by the review count by default, so that new card introduction
+The new card limit in v3 scheduler is capped by the review limit by default, so that new card introduction
 is reduced/paused when you have a backlog of reviews. For example, if you have limits of
-200 reviews and 20 new cards, and 190 reviews are due, only 10 new
+200 review card and 20 new cards, and 190 review cards are due, only 10 new
 cards will be introduced. This prevents the backlog from getting
 worse.
 
@@ -47,7 +47,7 @@ the backlog before you add more new cards. If you're sure you want to add more n
 even though you have a backlog, you can enable the "New cards ignore review limit" option
 in deck options.
 
-Each deck's limit affects the number of cards that will be gathered from that deck
+Each deck's limits affects the number of cards that will be gathered from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
 a child deck, its parents' limits will not apply. For example, with the
 following limits:
@@ -68,8 +68,7 @@ Then:
 - If you click Parent, you'll get up to 100 cards, with a maximum of 30
   coming from Child and its subdecks.
 
-In the v3 scheduler in earlier Anki releases, intermediate limits were not
-respected, so when clicking on Parent, the limits of Child did not influence how
+In earlier Anki releases, v3 scheduler did not respect intermediate limits, so when clicking on Parent, the limits of Child did not influence how
 many cards were taken from the grandchildren.
 
 ### Sorting
@@ -101,11 +100,11 @@ cards.
 
 ### Fuzz
 
-The small random delay added to reviews is now reflected on the answer buttons,
+The small random delay added to intervals is reflected on the answer buttons,
 instead of only being applied when answering.
 
 The way the delay is calculated has also been improved - cards with intervals under
-a week now receive a more equally-weighted delay, and the delay amount increases more
+a week receive a more equally-weighted delay, and the delay amount increases more
 smoothly as intervals increase.
 
 ### Interday learning
@@ -116,10 +115,9 @@ first, then review cards, and finally new cards.
 
 ### Filtered decks
 
-Filtered decks with rescheduling disabled show 4 answer buttons. You can configure a time delay for each button. Setting this delay to 0 makes a button remove the card from the deck.
+Filtered decks with rescheduling disabled show 4 answer buttons. You can configure a time delay for each button. Setting this delay to 0 for an answer button means that button will return the card to its home deck.
 
-In earlier versions, a single delay was provided for Again. Hard used 1.5x the provided delay, whereas Good used 2x of the delay.
-Easy removed the card.
+In earlier releases, a delay could be configured for "Again". "Hard" used 1.5x that delay, whereas "Good" used 2x that delay, and "Easy" returned the card to its home deck.
 
 ## Add-ons and custom scheduling
 
@@ -174,4 +172,4 @@ version. AnkiMobile and AnkiDroid both support it as well, and AnkiWeb may also
 support it in the future. This will allow advanced users to make 
 adjustments to the standard scheduling behaviour, that apply on all platforms.
 
-The various scheduling states are described in SchedulingStates [here](https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto).
+The various scheduling states are described in [Scheduling States](https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto).
