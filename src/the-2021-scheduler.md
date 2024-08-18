@@ -68,7 +68,7 @@ Then:
 - If you click Parent, you'll get up to 100 cards, with a maximum of 30
   coming from Child and its subdecks.
 
-In earlier Anki releases, v3 scheduler did not respect intermediate limits, so when clicking on Parent, the limits of Child did not influence how
+In earlier Anki releases, the v3 scheduler did not respect intermediate limits, so when clicking on Parent, the limits of Child did not influence how
 many cards were taken from the grandchildren.
 
 ### Sorting
