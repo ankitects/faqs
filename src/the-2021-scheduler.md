@@ -77,7 +77,7 @@ Additional deck options have been added to control the order new cards and
 reviews are presented in. New cards can be mixed from multiple decks, and
 reviews can optionally be ordered by interval or subdeck.
 
-When burying is disabled, with v3 scheduler it's possible to control whether siblings are
+When burying is disabled, with the v3 scheduler it's possible to control whether siblings are
 shown together or not, by adjusting the display order.
 
 The options controlling the mixing of new cards and interday learning cards have
