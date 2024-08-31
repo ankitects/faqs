@@ -1,5 +1,7 @@
 # What spaced repetition algorithm does Anki use?
 
+## SM-2
+
 As of Anki 23.10, Anki has two available algorithms. The first one is based on
 the [SuperMemo 2 algorithm](http://www.supermemo.com/english/ol/sm2.htm), and
 the second one is called [FSRS](https://github.com/open-spaced-repetition).
@@ -40,6 +42,50 @@ Anki’s algorithm differs from SM-2 in some respects. Notably:
   standard SM-2 algorithm is that repeated failings of a card cause
   the card to get stuck in "low interval hell". In Anki, the initial
   acquisition process does not influence a card’s ease.
+
+## FSRS
+
+FSRS aims to learn your memory patterns and schedule reviews 
+more efficiently than SM-2.
+
+FSRS is based on the "Three Component Model of Memory". The model asserts 
+that three variables are sufficient to describe the status of a 
+unitary memory in a human brain.
+These three variables include:
+
+- Retrievability (R): The probability that the person can successfully 
+recall a particular information at a given moment. It depends 
+on the time elapsed since the last review and the memory stability (S).
+
+- Stability (S): The time, in days, required for R to decrease from
+100% to 90%. For example, S = 365 means that an entire year 
+will pass before the probability of recalling a particular card drops to 90%.
+
+- Difficulty (D): The inherent complexity of a particular information.
+It represents how difficult it is to increase memory stability after a review.
+
+In FSRS, these three values are collectively called the "memory state".
+The value of R changes daily, while D and S change only after a card 
+has been reviewed.
+Each card has its own DSR values, in other words, each card has 
+its own memory state.
+To accurately estimate the DSR values, FSRS analyzes the user's 
+review history and uses machine learning to find parameters that 
+provide the best fit to the review history.
+
+Note that the users should not tweak the parameters manually.
+If you want to adjust the scheduling, all you need to do is choose an appropriate
+value of desired retention.
+With FSRS, users can target a specific value of retention, allowing them 
+to balance how much they remember and how many reviews they have to do.
+Higher retention leads to more reviews per day.
+
+Aside from allowing the users to easily control their retention, 
+FSRS has some other advantages when compared to Anki's default algorithm.
+With FSRS, users have to do fewer reviews than with Anki's default algorithm 
+to achieve the same retention level. FSRS is also much better at scheduling 
+cards that have been reviewed with a delay, for example, if the user took 
+a break from Anki for a few weeks or months.
 
 The scheduling code can be found in `rslib/src/scheduler/states`. Here is a summary
 (see the [deck options](https://docs.ankiweb.net/deck-options.html)
@@ -100,9 +146,29 @@ by the _interval modifier_. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a [previous FAQ.](https://faqs.ankiweb.net/due-times-after-a-break.html)
 
+In FSRS, once a card is graduated, it gets assigned DSR values.
+
+If you press…​
+
+- Again  
+  The card is placed into relearning mode, stability significantly decreases, 
+  and difficulty significantly increases.
+
+- Hard  
+  The card’s stability either increases or stays the same, 
+  and difficulty moderately increases.
+
+- Good  
+  The card’s stability increases, and difficulty may 
+  increase or decrease very slightly.
+
+- Easy  
+  The card’s stability significantly increases, and difficulty 
+  moderately decreases.
+
 ## Limitations
 
-There are a few limitations on the scheduling values that cards can
+When using SM-2, there are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
 often than is useful and annoying users. Intervals will never be
@@ -116,4 +182,4 @@ The simple answer is that SuperMemo’s latest algorithm is proprietary,
 and requires licensing. As Anki is an open source application, it can
 only make use of algorithms that have been made freely available, such as
 FSRS. [Preliminary tests](https://github.com/open-spaced-repetition/fsrs-vs-sm17)
-seem to indicate FSRS is roughly on par with SM17.
+seem to indicate FSRS is roughly on par with SM-17.
