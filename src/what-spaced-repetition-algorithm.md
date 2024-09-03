@@ -146,7 +146,7 @@ by the _interval modifier_. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a [previous FAQ.](https://faqs.ankiweb.net/due-times-after-a-break.html)
 
-In FSRS, once a card is graduated, it gets assigned DSR values.
+In FSRS, once a card is reviewed at least once, it gets assigned DSR values.
 
 If you press…​
 
