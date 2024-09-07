@@ -90,7 +90,7 @@ a study session. Previously if you had 10 forward and 10 reversed cards, the
 counts would start at 20 and jump down as you review, but with v3 they'll start directly
 at 10.
 
-Because burying is done when you click on a deck, the counts you see on the deck
+Because siblings are skipped when you click on a deck, the counts you see on the deck
 list will differ from the ones you see when you click on a deck. The overview screen
 will point out the number of cards that will be buried in grey.
 
