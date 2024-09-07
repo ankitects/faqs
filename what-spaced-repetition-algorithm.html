@@ -147,6 +147,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="what-spaced-repetition-algorithm-does-anki-use"><a class="header" href="#what-spaced-repetition-algorithm-does-anki-use">What spaced repetition algorithm does Anki use?</a></h1>
+<h2 id="sm-2"><a class="header" href="#sm-2">SM-2</a></h2>
 <p>As of Anki 23.10, Anki has two available algorithms. The first one is based on
 the <a href="http://www.supermemo.com/english/ol/sm2.htm">SuperMemo 2 algorithm</a>, and
 the second one is called <a href="https://github.com/open-spaced-repetition">FSRS</a>.</p>
@@ -194,6 +195,49 @@ the card to get stuck in &quot;low interval hell&quot;. In Anki, the initial
 acquisition process does not influence a card’s ease.</p>
 </li>
 </ul>
+<h2 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h2>
+<p>FSRS aims to learn your memory patterns and schedule reviews 
+more efficiently than SM-2.</p>
+<p>FSRS is based on the &quot;Three Component Model of Memory&quot;. The model asserts 
+that three variables are sufficient to describe the status of a 
+unitary memory in a human brain.
+These three variables include:</p>
+<ul>
+<li>
+<p>Retrievability (R): The probability that the person can successfully 
+recall a particular information at a given moment. It depends 
+on the time elapsed since the last review and the memory stability (S).</p>
+</li>
+<li>
+<p>Stability (S): The time, in days, required for R to decrease from
+100% to 90%. For example, S = 365 means that an entire year 
+will pass before the probability of recalling a particular card drops to 90%.</p>
+</li>
+<li>
+<p>Difficulty (D): The inherent complexity of a particular information.
+It represents how difficult it is to increase memory stability after a review.</p>
+</li>
+</ul>
+<p>In FSRS, these three values are collectively called the &quot;memory state&quot;.
+The value of R changes daily, while D and S change only after a card 
+has been reviewed.
+Each card has its own DSR values, in other words, each card has 
+its own memory state.
+To accurately estimate the DSR values, FSRS analyzes the user's 
+review history and uses machine learning to find parameters that 
+provide the best fit to the review history.</p>
+<p>Note that the users should not tweak the parameters manually.
+If you want to adjust the scheduling, all you need to do is choose an appropriate
+value of desired retention.
+With FSRS, users can target a specific value of retention, allowing them 
+to balance how much they remember and how many reviews they have to do.
+Higher retention leads to more reviews per day.</p>
+<p>Aside from allowing users to easily control their retention, 
+FSRS has some other advantages when compared to Anki's default algorithm.
+With FSRS, users have to do fewer reviews than with Anki's default algorithm 
+to achieve the same retention level. FSRS is also much better at scheduling 
+cards that have been reviewed with a delay, for example, if the user took 
+a break from Anki for a few weeks or months.</p>
 <p>The scheduling code can be found in <code>rslib/src/scheduler/states</code>. Here is a summary
 (see the <a href="https://docs.ankiweb.net/deck-options.html">deck options</a>
 section of the manual for the options that are mentioned in <em>italics</em>):</p>
@@ -257,8 +301,32 @@ bonus</em> and the ease is increased by 15 percentage points.</p>
 by the <em>interval modifier</em>. If the card is being reviewed late,
 additional days will be added to the current interval, as described
 in a <a href="https://faqs.ankiweb.net/due-times-after-a-break.html">previous FAQ.</a></p>
+<p>In FSRS, once a card is reviewed at least once, it gets assigned DSR values.</p>
+<p>If you press…​</p>
+<ul>
+<li>
+<p>Again<br />
+The card is placed into relearning mode, stability significantly decreases, 
+and difficulty significantly increases.</p>
+</li>
+<li>
+<p>Hard<br />
+The card’s stability either increases or stays the same, 
+and difficulty moderately increases.</p>
+</li>
+<li>
+<p>Good<br />
+The card’s stability increases, and difficulty may 
+increase or decrease very slightly.</p>
+</li>
+<li>
+<p>Easy<br />
+The card’s stability significantly increases, and difficulty 
+moderately decreases.</p>
+</li>
+</ul>
 <h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
-<p>There are a few limitations on the scheduling values that cards can
+<p>When using SM-2, there are a few limitations on the scheduling values that cards can
 take. Eases will never be decreased below 130%; SuperMemo’s research has
 shown that eases below 130% tend to result in cards becoming due more
 often than is useful and annoying users. Intervals will never be
@@ -270,7 +338,7 @@ previous interval.</p>
 and requires licensing. As Anki is an open source application, it can
 only make use of algorithms that have been made freely available, such as
 FSRS. <a href="https://github.com/open-spaced-repetition/fsrs-vs-sm17">Preliminary tests</a>
-seem to indicate FSRS is roughly on par with SM17.</p>
+seem to indicate FSRS is roughly on par with SM-17.</p>
 
                     </main>
 
