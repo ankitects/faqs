@@ -80,7 +80,7 @@ With FSRS, users can target a specific value of retention, allowing them
 to balance how much they remember and how many reviews they have to do.
 Higher retention leads to more reviews per day.
 
-Aside from allowing the users to easily control their retention, 
+Aside from allowing users to easily control their retention, 
 FSRS has some other advantages when compared to Anki's default algorithm.
 With FSRS, users have to do fewer reviews than with Anki's default algorithm 
 to achieve the same retention level. FSRS is also much better at scheduling 
