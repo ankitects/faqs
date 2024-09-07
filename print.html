@@ -419,12 +419,11 @@ A: A giraffe.
 <p>When editing fields, Anki shows the names of sound files. To see the names of image files, you can press ctrl+shift+x while the cursor is in the field with the image (cmd+shift+x on a Mac). For an image or sound file to work, a file with the exact same file name must be in the collection.media folder.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="splitting-a-field-into-multiple-fields"><a class="header" href="#splitting-a-field-into-multiple-fields">Splitting a field into multiple fields</a></h1>
 <h2 id="recent-anki-versions"><a class="header" href="#recent-anki-versions">Recent Anki versions</a></h2>
-<p>With recent Anki versions, there is no need to export+import. An example is provided here:</p>
-<p>https://forums.ankiweb.net/t/cloze-type-to-basic-type/23305/2</p>
+<p>With recent Anki versions, there is no need to export+import. An example is provided <a href="https://forums.ankiweb.net/t/cloze-type-to-basic-type/23305/2">in this forum post</a>.</p>
 <h2 id="older-anki-versions"><a class="header" href="#older-anki-versions">Older Anki versions</a></h2>
 <p>Sometimes you may create a deck, or download a shared deck, with several things in one field, such as text and audio, but then later decide that you would rather have the information in two fields so that you can have more precise control over what displays on each card. One option is to add a new field and then manually cut and paste the content between fields; this may be the fastest if you have less than a hundred cards or so, but otherwise it will be very tedious and slow. Here is a method you can use based on exporting to a text file and doing a search and replace; as an example, we'll focus on</p>
 <ol>
-<li>If the field you want to split is the first field, make a different field the first field by using the <strong>Reposition</strong> button in the Fields dialog.. This field needs to be unique, so that no two cards have the same content in that field. If you don't have any unique fields except the one you're trying to split, you can use the <a href="https://ankiweb.net/shared/info/1672832404">add note ID</a> add-on to add a unique field to the notes.</li>
+<li>If the field you want to split is the first field, make a different field the first field by using the <strong>Reposition</strong> button in the Fields dialog. This field needs to be unique, so that no two cards have the same content in that field. If you don't have any unique fields except the one you're trying to split, you can use the <a href="https://ankiweb.net/shared/info/8897764">add note ID</a> add-on to add a unique field to the notes.</li>
 <li>Export the entire deck to a text file, using the <strong>Notes in plain text</strong> choice.</li>
 <li>Add a new field to your note type. The new field should come immediately after the one that you're trying to split, so if you had a &quot;Word and Audio&quot; field, you could rename it to &quot;Word&quot; and then add an &quot;Audio&quot; field and reposition it to go after the &quot;Word&quot; field.</li>
 <li>Open the text file and do the search and replace. If your text editor supports a certain form of regular expressions, this might work for the expression: <code>s/\[sound/\t\[sound/</code>. Otherwise, if you're not sure how to form the expression, you can ask on the Community section or look for regular expression help on the Internet.</li>
@@ -696,8 +695,7 @@ queue.</p>
 </ol>
 <p>When you do this, Anki will turn the cards back into new cards. If you click <strong>Info</strong> in the browser you'll see any previous reviews you've done listed there, but that history will not influence how the cards are scheduled: they will be treated just like new cards.</p>
 <h2 id="removing-the-review-history"><a class="header" href="#removing-the-review-history">Removing the review history</a></h2>
-<p>If you accidentally imported the review history of someone else, because they shared their deck with scheduling, you can use the following add-on to remove the history of cards you have selected.</p>
-<p><a href="https://ankiweb.net/shared/info/2089200096">https://ankiweb.net/shared/info/2089200096</a></p>
+<p>If you accidentally imported the review history of someone else, because they shared their deck with scheduling, you can use the <a href="https://ankiweb.net/shared/info/2089200096">Remove card history</a> add-on to remove the history of selected cards.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="settings-for-using-anki-to-prepare-for-a-large-exam"><a class="header" href="#settings-for-using-anki-to-prepare-for-a-large-exam">Settings for using Anki to prepare for a large exam</a></h1>
 <p>If you have started using Anki to help prepare for a large exam some weeks or months in the future, you may wonder how you should best configure it to get you ready for the test. Anki’s default settings are primarily configured to be useful for learning and remembering information over the long term, but this is usually the best way to prepare for an exam as well – you just need to make sure that you finish the material in enough time to be ready for the exam when it comes.</p>
 <h2 id="how-many-new-cards-per-day"><a class="header" href="#how-many-new-cards-per-day">How many new cards per day?</a></h2>
@@ -1231,15 +1229,15 @@ again to pick up where you left off.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changing-the-font"><a class="header" href="#changing-the-font">Changing the font</a></h1>
 <h2 id="anki"><a class="header" href="#anki">Anki</a></h2>
 <ul>
-<li>To change the font when reviewing, please see <a href="https://docs.ankiweb.net/templates/styling.html">here</a>.</li>
-<li>To change the font you see when adding or editing, please click the Fields button.</li>
-<li>To change the font in rows of cards in the browser, please click the Cards button, and then More, and then Browser Appearance.</li>
-<li>For buttons, menus and so on, Anki uses your system font settings, so you can alter the size by adjusting the system font scale. If you wish to override the font only in Anki, you'll need to install <a href="https://ankiweb.net/shared/info/2103013902">https://ankiweb.net/shared/info/2103013902</a> and then alter the fontHeight line, changing f.pixelSize() to a number like 16.</li>
+<li>To change the font you see when reviewing, please see <a href="https://docs.ankiweb.net/templates/styling.html">here</a>.</li>
+<li>To change the font you see when adding or editing, please click the &quot;Fields&quot; button.</li>
+<li>To change the font in rows of cards in the browser, please click the &quot;Cards&quot; button, then &quot;More&quot;, and then &quot;Browser Appearance&quot;.</li>
+<li>For buttons, menus and so on, Anki uses your system font settings, so you can alter the size by adjusting the system font scale. If you wish to override the font only in Anki, you can install the <a href="https://ankiweb.net/shared/info/1431333984">Change Interface Font</a> add-on.</li>
 </ul>
 <h2 id="ankimobile-1"><a class="header" href="#ankimobile-1">AnkiMobile</a></h2>
 <ul>
-<li>Any changes you make to your card templates will be reflected when studying in AnkiMobile</li>
-<li>You can also tap on Tools while reviewing to adjust the font scaling relative to the computer version</li>
+<li>Any changes you make to your card templates will be reflected when studying in AnkiMobile.</li>
+<li>You can also tap on the blue cog while reviewing to adjust the font scaling relative to the computer version.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="changing-the-interface-language"><a class="header" href="#changing-the-interface-language">Changing the interface language</a></h1>
 <p>By default, Anki displays interface text such as menus and dialog boxes in the language you selected when you ran Anki for the first time. If you selected wrong or want to use multiple languages, you can change the language in Anki's preferences screen (ctrl+p on Windows/Linux, cmd+, on OS X). After selecting a new language, restart Anki for the new language to take effect.</p>
