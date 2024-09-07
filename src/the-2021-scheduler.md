@@ -92,7 +92,7 @@ at 10.
 
 Because siblings are skipped when you click on a deck, the counts you see on the deck
 list will differ from the ones you see when you click on a deck. The overview screen
-will point out the number of cards that will be buried in grey.
+will point out the number of cards that were waiting but have been skipped.
 
 Learning cards that cross a day boundary ("interday learning cards") can be buried like review and new
 cards.
