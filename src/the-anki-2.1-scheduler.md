@@ -1,4 +1,4 @@
-# The Anki 2.1 scheduler
+# Old scheduler versions
 
 Anki 2.1 comes with a new scheduler that fixes a number of issues that previous
 Anki versions had.
