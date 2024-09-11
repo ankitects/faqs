@@ -37,3 +37,9 @@ A5: Once per month should be more than enough. A more sophisticated rule is to o
 Q6: Does FSRS take into account the amount of time that I spend reviewing a card?
 
 A6: No, FSRS only uses interval lengths and grades. However, the amount of time you spend on reviews is used when calculating optimal retention using the "Compute minimum recommended retention" feature.
+
+***
+
+Q7: Do I need 1000 reviews before I can optimize parameters?
+
+A7: That was the case in earlier versions of Anki. In the most recent version, the optimizer can be used with any number of reviews.
