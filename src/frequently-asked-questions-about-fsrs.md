@@ -16,7 +16,7 @@ If you wish to make the intervals shorter, you can increase your desired retenti
 
 ***
 
-Q3: I only use 'Again' and 'Good', will FSRS work fine?
+Q3: I only use **Again** and **Good**, will FSRS work fine?
 
 A3: Yes. In some cases, it may even more more accurate if you only use 2 buttons.
 
