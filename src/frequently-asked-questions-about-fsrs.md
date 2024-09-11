@@ -42,4 +42,4 @@ A6: No, FSRS only uses interval lengths and grades. However, the amount of time 
 
 Q7: Do I need 1000 reviews before I can optimize parameters?
 
-A7: That was the case in earlier versions of Anki. In the most recent version, the optimizer can be used with any number of reviews.
+A7: That was the case in earlier versions of Anki. In Anki 24.06.3 (and newer versions), the optimizer can be used with any number of reviews.
