@@ -8,7 +8,7 @@ A1: FSRS is supported on all platforms: desktop Anki (Windows, Mac, and Linux), 
 
 ***
 
-Q2: My first interval for 'Good' is 3-5 days, and my first interval for 'Easy' is over a week long! Is this normal?
+Q2: My first interval for **Good** is 3-5 days, and my first interval for **Easy** is over a week long! Is this normal?
 
 A2: Yes. FSRS tends to give longer first intervals than SM-2, but for mature cards the opposite is true - FSRS is more conservative.
 
