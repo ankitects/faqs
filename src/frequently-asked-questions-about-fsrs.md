@@ -22,7 +22,7 @@ A3: Yes. In some cases, it may even more more accurate if you only use 2 buttons
 
 ***
 
-Q4: Is it better to use the same parameters for all my cards or use different presets with different parameters?
+Q4: Is it better to use the same parameters for all my decks or make several different presets with different parameters?
 
 A4: The answer to this question depends entirely on how similar your material is. For example, if you are learning Japanese and geography, it is recommended to use two different presets with different parameters. If you have two decks with Japanese vocabulary, you should use the same preset for both of them. Generally speaking, it's usually better to have different presets.
 
