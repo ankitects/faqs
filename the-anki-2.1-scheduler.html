@@ -146,93 +146,102 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="the-anki-21-scheduler"><a class="header" href="#the-anki-21-scheduler">The Anki 2.1 scheduler</a></h1>
-<p>Anki 2.1 comes with a new scheduler that fixes a number of issues that previous
-Anki versions had.</p>
-<h2 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h2>
-<p>The 2.1 scheduler was introduced in Aug 2018. Support was added to AnkiMobile
-and AnkiWeb around the same time, and AnkiDroid has supported it in releases
-since Oct 2019.</p>
-<p>It is not supported by the older Anki 2.0.</p>
-<p>Anki 2.1.50+/AnkiMobile 2.0.84+ require an update to the 2.1 scheduler.</p>
-<h2 id="updating"><a class="header" href="#updating">Updating</a></h2>
+                        <h1 id="old-scheduler-versions"><a class="header" href="#old-scheduler-versions">Old scheduler versions</a></h1>
+<p>This section includes information about the currently outdated scheduler versions.</p>
+<h2 id="v1-scheduler"><a class="header" href="#v1-scheduler">v1 scheduler</a></h2>
+<h3 id="review-cards"><a class="header" href="#review-cards">Review cards</a></h3>
+<ul>
+<li>When a deck has subdecks, the cards appear from each deck in turn.</li>
+<li>The v1 scheduler applies parent limits to subdecks, regardless of which deck you click on to study.</li>
+</ul>
+<h3 id="relearning-cards"><a class="header" href="#relearning-cards">(Re)learning cards</a></h3>
+<ul>
+<li>The <strong>Easy</strong> button is not shown if the card is in relearning state. In learning state,  both <strong>Easy</strong> and <strong>Hard</strong> isn't shown.</li>
+<li>The card count shows reviews needed to finish all the cards in a queue, not the number of cards. Thus, one (re)learning card can be counted multiple times in the count.</li>
+<li>Suspending or burying (re)learning cards move them back to the new card queue or review queue.</li>
+</ul>
+<h3 id="new-cards"><a class="header" href="#new-cards">New cards</a></h3>
+<ul>
+<li>The v1 scheduler applies parent limits to subdecks, regardless of which deck you click on to study.</li>
+</ul>
+<h3 id="filtered-decks"><a class="header" href="#filtered-decks">Filtered decks</a></h3>
+<ul>
+<li>
+<p>Cards are presented more similarly to how they normally are, but studying cards have side effects, and the original position of new cards is lost when you study them.</p>
+</li>
+<li>
+<p>The custom steps option allows you to override the home deck’s steps and provide your own steps instead. The provided steps apply to both cards being learnt, lapsed
+reviews, and reviews ahead of time. </p>
+</li>
+<li>
+<p>If you create, rebuild, empty, or delete a filtered deck while cards are still in learning, they are turned into new cards. In the case of failed reviews in relearning, any remaining relearning steps are skipped.</p>
+</li>
+<li>
+<p>Cards cannot be buried or suspended while remaining in filtered deck.</p>
+</li>
+<li>
+<p>Filtered decks only have a single filter.</p>
+</li>
+<li>
+<p>Filtered decks cannot pull in cards in (re)learning state.</p>
+</li>
+<li>
+<p>Filtered decks don't show all 4 answer buttons when rescheduling is turned off.</p>
+</li>
+</ul>
+<h3 id="fuzz-factor"><a class="header" href="#fuzz-factor">Fuzz factor</a></h3>
+<ul>
+<li>Fuzz factor isn't included in next review time shown above answer buttons. If you’re noticing a slight discrepancy between what you select and the intervals your cards actually get, this is probably the cause.</li>
+</ul>
+<h2 id="v2-scheduler"><a class="header" href="#v2-scheduler">v2 scheduler</a></h2>
+<h3 id="review-cards-1"><a class="header" href="#review-cards-1">Review cards</a></h3>
+<ul>
+<li>
+<p>When a deck has subdecks, review cards are gathered from all subdecks at once.</p>
+</li>
+<li>
+<p>The review limit is taken from the deck you click to study. If you have a deck tree Parent::Child::Grandchild and you select Child, the limits you have set on Parent and Grandchild are ignored.</p>
+</li>
+</ul>
+<h3 id="new-cards-1"><a class="header" href="#new-cards-1">New cards</a></h3>
+<ul>
+<li>The v2 scheduler applies parent limits to subdecks, regardless of which deck you click on to study.</li>
+</ul>
+<h3 id="filtered-decks-1"><a class="header" href="#filtered-decks-1">Filtered decks</a></h3>
+<ul>
+<li>Filtered decks don't show all 4 answer buttons when rescheduling is turned off. </li>
+</ul>
+<h3 id="fuzz-factor-1"><a class="header" href="#fuzz-factor-1">Fuzz factor</a></h3>
+<ul>
+<li>Fuzz factor isn't included in next review time shown above answer buttons. If you’re noticing a slight discrepancy between what you select and the intervals your cards actually get, this is probably the cause.</li>
+</ul>
+<h2 id="updating-to-v2-from-v1"><a class="header" href="#updating-to-v2-from-v1">Updating to v2 from v1</a></h2>
 <p>If you are syncing with AnkiWeb, updating requires a one-way upload to AnkiWeb.
 Please ensure all of your devices are in sync before you update, as otherwise
 you may accidentally overwrite changes made on your other devices.</p>
 <p>Before updating, it is recommended you export a backup. Using the computer version,
-you can use the File&gt;Export menu item to create a .colpkg file containing all
-decks and scheduling. Using AnkiMobile, you can use the Add/Export option to export
-a colpkg file. In the unlikely case that you run into problems, you will
+you can use the <strong>File &gt; Export</strong> menu item to create a <code>.colpkg</code> file containing all
+decks and scheduling. Using AnkiMobile, you can use the <strong>Add/Export</strong> option to export
+a <code>.colpkg</code> file. In the unlikely case that you run into problems, you will
 be able to restore from the backup.</p>
-<p>Once you have updated, please sync and choose &quot;Upload&quot; to send the upgraded
+<p>Once you have updated, please sync and choose <strong>Upload</strong> to send the upgraded
 collection to AnkiWeb. Then please sync any other devices you use, choosing
-&quot;Download&quot; on each of them, to bring things back into sync.</p>
-<h3 id="anki-2141ankimobile-2075"><a class="header" href="#anki-2141ankimobile-2075">Anki 2.1.41+/AnkiMobile 2.0.75+.</a></h3>
+<strong>Download</strong> on each of them, to bring things back into sync.</p>
+<h3 id="anki-2141ankimobile-2075"><a class="header" href="#anki-2141ankimobile-2075">Anki 2.1.41+/AnkiMobile 2.0.75+</a></h3>
 <p>To update, click the Update message shown in the deck list.</p>
-<p>Unlike older Anki versions, cards in learning will not be reset, and cards in
+<p>Unlike previous Anki versions, cards in learning will not be reset, and cards in
 filtered decks will remain filtered. The new scheduler handles filtered decks
 differently, so custom steps you may have set will no longer apply, but filtered
 decks with rescheduling enabled will not reset learning cards.</p>
-<p>You may be asked if you use AnkiDroid 2.14 when updating. It is safe to choose
-&quot;no&quot; here, as AnkiDroid 2.15 has since been released. If you make a mistake when
-prompted, you can adjust the timezone handling in Anki's Preferences screen.</p>
 <p>Once you've updated, there is no option to switch back to the old scheduler. While
 it is possible to switch back to an older version of Anki on your computer and then
 change the scheduler in the preferences, please bear in mind that it will
 require your learning cards and filtered decks to be reset.</p>
-<p>If you have updated to AnkiMobile 2.0.84+, it will not be possible to return to the
-old scheduler, as Apple do not allow app downgrades.</p>
-<h3 id="older-anki-versions"><a class="header" href="#older-anki-versions">Older Anki versions</a></h3>
-<p>Older Anki versions reset all cards in learning prior to updating, and move all
+<h3 id="earlier-anki-versions"><a class="header" href="#earlier-anki-versions">Earlier Anki versions</a></h3>
+<p>Anki versions earlier than 2.1.41 reset all cards in learning prior to updating, and move all
 cards in filtered decks back to their original decks. This is problematic for
 people with longer learning steps. If you're in that situation, it is recommended
 you update with 2.1.41 or later.</p>
-<p>Older versions have an option in the preferences screen to toggle the scheduler
-version.</p>
-<h2 id="changes"><a class="header" href="#changes">Changes</a></h2>
-<p>Reviews:</p>
-<ul>
-<li>When a deck has children, reviews are taken from all children decks at once,
-instead of showing one deck at a time.</li>
-<li>The daily review limit is taken from the deck you click on. If you have a deck
-tree of the form &quot;grandparent::parent::child&quot; and you click on &quot;parent&quot;, the
-limits you have set on &quot;grandparent&quot; and &quot;child&quot; are ignored.</li>
-</ul>
-<p>(Re)learning:</p>
-<ul>
-<li>Learning cards have 4 buttons instead of 3 - Hard repeats the current step
-after the first step, and is the average of Again and Good on the first step.</li>
-<li>The learn count is now the number of cards, instead of the number of steps
-required to complete.</li>
-<li>Suspending/burying cards does not reset a card's learning steps.</li>
-<li>Lapsed reviews have their next due date updated on the last relearning step,
-instead of the first step.</li>
-<li>There is a new option in the preferences screen to show day learning cards
-before reviews.</li>
-<li>When cards are in relearning, the Easy button boosts the interval by 1 day.</li>
-</ul>
-<p>Filtered decks:</p>
-<ul>
-<li>Filtered decks no longer reset (re)learning cards when they are built or
-emptied, and reviews and learning cards will show up in the correct queue
-instead of the new queue.</li>
-<li>Filtered decks support a second search term, so you can include 100 cards to
-review and 20 new cards for example.</li>
-<li>Scheduling of cards that aren't yet due has been improved, and will show 4
-buttons instead of 3.</li>
-<li>Filtered decks no longer support custom steps, and there is now a simple
-&quot;preview mode&quot; instead of the old option to disable scheduling changes. The
-new card order does not get forgotten when previewing.</li>
-<li>Cards can be buried or suspended while remaining in the filtered deck.</li>
-</ul>
-<p>Other changes:</p>
-<ul>
-<li>&quot;Next day starts at&quot; is now relative to the current timezone.</li>
-<li>Anki now distinguishes between manually and automatically buried cards, and
-you can unbury one set without the other.</li>
-</ul>
-<h2 id="2021-updates"><a class="header" href="#2021-updates">2021 updates</a></h2>
-<p>Updates to the V2 scheduler are currently in <a href="./the-2021-scheduler.html">beta testing</a>.</p>
 
                     </main>
 
