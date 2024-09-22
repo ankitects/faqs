@@ -58,6 +58,7 @@
 - [The Anki v3 scheduler](./the-2021-scheduler.md)
 - [Timezone handling changes](./timezone-handling-changes.md)
 - [What spaced repetition algorithm does Anki use?](./what-spaced-repetition-algorithm.md)
+- [Frequently asked questions about FSRS](./frequently-asked-questions-about-fsrs.md)
 
 ---
 
