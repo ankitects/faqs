@@ -50,4 +50,4 @@ And easy increases the interval aggressively as usual.
 So it is recommended that you study as normal when you return to Anki
 after a period of absence. But if you absolutely must reset the deck,
 you can select the cards to reset in the browser, and use
-Cards&gt;Forget.
+**Cards**->**Reset** (or **Cards**->**Forget** in older versions).
