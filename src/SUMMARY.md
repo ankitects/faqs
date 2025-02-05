@@ -18,7 +18,6 @@
 - [Extra characters appearing on cards](./extra-characters-appearing-on-cards.md)
 - [Multiple choice questions](./multiple-choice-questions.md)
 - [No cloze found on card](./no-cloze-found-on-card.md)
-- [Note types with strange names](./note-types-with-strange-names.md)
 - [Printing cards in your collection](./printing-cards-in-your-collection.md)
 - [Removing duplicate note types](./removing-duplicate-note-types.md)
 - [Some updates were ignored because note type has changed](./some-updates-were-ignored-because-the-note-type-has-changed.md)
