@@ -20,3 +20,6 @@ warning-policy = "warn"
 follow-web-links = true
 # sites that block programmatic access
 exclude = [ 'quora\.com', 'reddit.com', 'superuser.com', 'github.com/open-spaced-repetition' ]
+
+[output.html.redirect]
+"removing-duplicate-note-types.md" = "note-types-with-strange-names.md"
