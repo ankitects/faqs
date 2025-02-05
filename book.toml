@@ -22,4 +22,5 @@ follow-web-links = true
 exclude = [ 'quora\.com', 'reddit.com', 'superuser.com', 'github.com/open-spaced-repetition' ]
 
 [output.html.redirect]
-"./src/note-types-with-strange-names.md" = "./src/removing-duplicate-note-types.md"
+# redirect deleted pages to new pages to preserve legacy links
+"../note-types-with-strange-names.md" = "../removing-duplicate-note-types.md"
