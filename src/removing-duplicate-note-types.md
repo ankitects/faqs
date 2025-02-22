@@ -1,10 +1,13 @@
 # Removing duplicate note types
 
-Sometimes you may end up with several note types of the same name. This usually happens due to importing multiple decks, although you can also create a note type with the same name as another one in the Manage Note Types dialog box.
+After you have used Anki for a while, you may find you have multiple note types with the same name followed by different characters, like `Basic-908e4`, `Cloze-37a28`, or `Image Occlusion++++`. This can happen when you import a shared deck that uses a note type with the same name as one that is already in your collection, or if you create a note type with a duplicate name. Anki adds characters to the name to avoid merging or overwriting the existing note type.
 
-While this is generally harmless, it can be somewhat annoying if you can't tell which cards belong to which note type, so you can fix it as follows:
+While these "duplicate" note types are generally harmless, it can be somewhat confusing if you can't tell which note type you are using. To clean that up, you can do the following:
 
-1. First, confirm that all of the note types with duplicate names are really the same by going to the browser, clicking on each one in turn, and comparing the fields that are shown at the bottom of the window. (If you're not sure, you can also click the Cards button and make sure that the templates are the same as well.) If they're not the same, you should use the Manage Note Types dialog (mentioned in step 2) to rename one to something else instead.
-2. In the main Anki window, choose Tools → Manage Note Types. Select one of the duplicate note types, click Rename, and give it a new name (you can change it back later if you wish).
-3. Open the browser and click on one of the remaining note types with a duplicate name. Select all the cards, choose Edit → Change Note Type, and select the note type you just renamed for "New note type." Repeat this step as necessary.
-4. Close the browser, go back to the Manage Note Types dialog box, and delete the now-unused note types. If you wish, you can change the one you renamed in step 2 back to its original name.
+1. Compare the fields, card templates, and styling of each of the note types by clicking <kbd>Fields</kbd> and <kbd>Cards</kbd> in the Manage Note Types window (Notes → Manage Note Types).
+   * If they are the same, decide which note type to delete and click <kbd>Rename</kbd> to change its name so you will know which one it is (e.g., add `-delete` to the name).
+   * If they aren't the same, rename one to something more descriptive, and keep them both. 
+2. In the Browse window, in the left Sidebar, select the note type that you want to delete, then choose Edit → Select All to select all of its notes/cards.
+3. Choose Notes → Change Note Type and select the note type that you are keeping from the dropdown on the right side of the screen. \[This step will require a one-way sync the next time you sync with AnkiWeb, so if you have unsynced progress on other devices, you should stop here and get your devices in sync. Anki will give you a warning about this.\] Verify that the fields and templates are mapping as you expect. Click Save. 
+4. Repeat steps 2 & 3 for any other note types you want to delete. 
+5. Open the Manage Note Types window again and delete the now-unused note types (each will say it is used by "\[0 notes\]"). 
