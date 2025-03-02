@@ -23,4 +23,4 @@ exclude = [ 'quora\.com', 'reddit.com', 'superuser.com', 'github.com/open-spaced
 
 [output.html.redirect]
 # redirect deleted pages to new pages to preserve legacy links
-"../note-types-with-strange-names.html" = "../removing-duplicate-note-types.html"
+"./src/note-types-with-strange-names.md" = "./src/removing-duplicate-note-types.md"
