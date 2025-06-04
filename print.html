@@ -1,18 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Anki FAQs</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
-        
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
         <meta name="description" content="Frequently asked questions about Anki. Anki is a program that makes learning easier.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -26,26 +25,41 @@
         <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="css/misc.css">
 
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
     </head>
     <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
-        </script>
-
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -58,56 +72,66 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            html.classList.add("js");
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
+            sidebar_toggle.checked = sidebar === 'visible';
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="getting-help.html">Getting help</a></li><li class="chapter-item expanded affix "><a href="when-problems-occur.html">When problems occur</a></li><li class="chapter-item expanded affix "><a href="restoring-an-automatic-backup-recovering-from-data-loss.html">Restoring an Automatic Backup (Recovering from Data Loss)</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Cards and Notes</li><li class="chapter-item expanded "><a href="linking-cards-together.html">Can I link cards together?</a></li><li class="chapter-item expanded "><a href="can-i-reveal-parts-of-a-card-one-at-a-time.html">Can I reveal parts of a card one at a time?</a></li><li class="chapter-item expanded "><a href="card-template-has-a-problem.html">Card template has a problem</a></li><li class="chapter-item expanded "><a href="cards-are-reversed-appearing-twice.html">Cards are reversed / appearing twice</a></li><li class="chapter-item expanded "><a href="characters-are-cut-off.html">Characters are cut off</a></li><li class="chapter-item expanded "><a href="customizing-mathjax.html">Customizing MathJax</a></li><li class="chapter-item expanded "><a href="errors-when-recording.html">Errors when recording</a></li><li class="chapter-item expanded "><a href="extra-characters-appearing-on-cards.html">Extra characters appearing on cards</a></li><li class="chapter-item expanded "><a href="multiple-choice-questions.html">Multiple choice questions</a></li><li class="chapter-item expanded "><a href="no-cloze-found-on-card.html">No cloze found on card</a></li><li class="chapter-item expanded "><a href="printing-cards-in-your-collection.html">Printing cards in your collection</a></li><li class="chapter-item expanded "><a href="removing-duplicate-note-types.html">Removing duplicate note types</a></li><li class="chapter-item expanded "><a href="some-updates-were-ignored-because-the-note-type-has-changed.html">Some updates were ignored because note type has changed</a></li><li class="chapter-item expanded "><a href="sounds-or-images-have-gone-missing.html">Sound/image media files have gone missing!</a></li><li class="chapter-item expanded "><a href="splitting-a-field-into-multiple-fields.html">Splitting a field into multiple fields</a></li><li class="chapter-item expanded "><a href="text-to-speech-support.html">Text to speech support</a></li><li class="chapter-item expanded "><a href="sticky-fields.html">When adding a new card, some fields do not reset!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Decks</li><li class="chapter-item expanded "><a href="a-deck-i-want-has-disappeared-from-ankiweb.html">A deck I want has disappeared from AnkiWeb</a></li><li class="chapter-item expanded "><a href="a-shared-deck-is-not-showing-images-or-playing-audio.html">A shared deck is not showing images/playing audio</a></li><li class="chapter-item expanded "><a href="cards-are-being-placed-in-the-default-deck.html">Cards are being placed in the "Default" deck</a></li><li class="chapter-item expanded "><a href="hiding-decks.html">Hiding Decks</a></li><li class="chapter-item expanded "><a href="how-can-i-work-with-someone-else-to-create-a-deck.html">How can I work with someone else to create a deck?</a></li><li class="chapter-item expanded "><a href="how-do-i-move-cards-between-decks.html">How do I move cards between decks?</a></li><li class="chapter-item expanded "><a href="merging-or-combining-two-decks.html">Merging/combining two decks</a></li><li class="chapter-item expanded "><a href="shared-decks-with-broken-javascript.html">Shared decks with broken Javascript</a></li><li class="chapter-item expanded "><a href="timestamps-in-the-future.html">Importing/exporting fails due to timestamps in the future</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Scheduling</li><li class="chapter-item expanded "><a href="anki-is-not-showing-me-all-my-cards.html">Anki's not showing me all my cards!</a></li><li class="chapter-item expanded "><a href="study-in-a-particular-order.html">Can I study my cards in a particular order?</a></li><li class="chapter-item expanded "><a href="due-times-after-a-break.html">Due times after a break</a></li><li class="chapter-item expanded "><a href="extra-copies-of-a-card-are-coming-up.html">Extra copies of a card are coming up</a></li><li class="chapter-item expanded "><a href="hard-good-interval-longer-than-good-easy.html">Hard/good interval is longer than good/easy</a></li><li class="chapter-item expanded "><a href="i-am-going-on-vacation-can-i-pause-the-scheduler.html">I'm going on vacation. Can I pause the scheduler?</a></li><li class="chapter-item expanded "><a href="learning-steps-skipped-or-repeated.html">Learning steps are skipped or repeated</a></li><li class="chapter-item expanded "><a href="resetting-progress-in-a-deck.html">Resetting progress in a deck</a></li><li class="chapter-item expanded "><a href="settings-for-using-anki-to-prepare-for-a-large-exam.html">Settings for using Anki to prepare for a large exam</a></li><li class="chapter-item expanded "><a href="the-anki-2.1-scheduler.html">The Anki 2.1 scheduler</a></li><li class="chapter-item expanded "><a href="the-2021-scheduler.html">The Anki v3 scheduler</a></li><li class="chapter-item expanded "><a href="timezone-handling-changes.html">Timezone handling changes</a></li><li class="chapter-item expanded "><a href="what-spaced-repetition-algorithm.html">What spaced repetition algorithm does Anki use?</a></li><li class="chapter-item expanded "><a href="frequently-asked-questions-about-fsrs.html">Frequently asked questions about FSRS</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Synchronising and AnkiWeb</li><li class="chapter-item expanded "><a href="ankiweb-account-removal.html">AnkiWeb account removal</a></li><li class="chapter-item expanded "><a href="are-there-limits-on-file-sizes-on-ankiweb.html">Are there limits on file sizes on AnkiWeb?</a></li><li class="chapter-item expanded "><a href="can-i-sync-only-some-of-my-decks.html">Can I sync only some of my decks?</a></li><li class="chapter-item expanded "><a href="email-verification.html">Email verification</a></li><li class="chapter-item expanded "><a href="emails-not-being-received.html">Emails not being received</a></li><li class="chapter-item expanded "><a href="error-establishing-a-secure-connection-when-syncing.html">Error establishing a secure connection when syncing</a></li><li class="chapter-item expanded "><a href="media-files-may-take-time-to-sync.html">Media files may take time to sync</a></li><li class="chapter-item expanded "><a href="outlook-silently-discards-email.html">Outlook.com silently discards email</a></li><li class="chapter-item expanded "><a href="synchronizing-multiple-profiles.html">Synchronizing multiple profiles</a></li><li class="chapter-item expanded "><a href="syncing-failed-connection-timed-out-errors-when-syncing.html">Syncing failed: Connection timed out errors when syncing</a></li><li class="chapter-item expanded "><a href="sounds-or-images-are-not-appearing-on-ankiweb-or-the-mobile-clients.html">Sounds/images are not appearing on AnkiWeb or the mobile clients</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Anki Desktop</li><li class="chapter-item expanded "><a href="shortcut-not-working.html">A shortcut key is not working</a></li><li class="chapter-item expanded "><a href="anki-must-be-able-to-connect-to-a-local-port.html">Anki must be able to connect to a local port</a></li><li class="chapter-item expanded "><a href="anki-says-my-clock-is-wrong.html">Anki says my clock is wrong</a></li><li class="chapter-item expanded "><a href="changing-the-font.html">Changing the font</a></li><li class="chapter-item expanded "><a href="changing-the-interface-language.html">Changing the interface language</a></li><li class="chapter-item expanded "><a href="my-antivirus-program-says-anki-is-infected.html">My antivirus program says Anki is infected!</a></li><li class="chapter-item expanded "><a href="running-from-python.html">Running from Python</a></li><li class="chapter-item expanded "><a href="screenshots-large-and-blurry-on-retina-displays.html">Screenshots large and blurry on retina displays</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">AnkiMobile</li><li class="chapter-item expanded "><a href="requesting-a-refund-for-ankimobile.html">Requesting a refund for AnkiMobile</a></li><li class="chapter-item expanded "><a href="retrieving-ankimobile-crash-logs.html">Retrieving AnkiMobile crash logs</a></li><li class="chapter-item expanded "><a href="why-does-ankimobile-cost-more-than-a-typical-mobile-app.html">Why does AnkiMobile cost more than a typical mobile app?</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Other Apps</li><li class="chapter-item expanded "><a href="anki-knockoffs.html">Anki knockoffs</a></li><li class="chapter-item expanded "><a href="ankiapp-is-not-part-of-the-anki-ecosystem.html">AnkiApp is not part of the Anki ecosystem</a></li><li class="chapter-item expanded "><a href="ankidroid-has-a-separate-support-site.html">AnkiDroid has a separate support site</a></li><li class="chapter-item expanded "><a href="ankiuniversal-is-not-supported-here.html">AnkiUniversal is not supported here</a></li><li class="chapter-item expanded "><a href="we-do-not-make-robots.html">We do not make robots</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Miscellaneous</li><li class="chapter-item expanded "><a href="anki-2.0-support-has-ended.html">Anki 2.0 support has ended</a></li><li class="chapter-item expanded "><a href="anki-2.0-add-ons.html">Anki 2.0 add-ons</a></li><li class="chapter-item expanded "><a href="can-i-use-anki-in-a-company-or-school.html">Can I use Anki in a company or school?</a></li><li class="chapter-item expanded "><a href="how-can-i-donate.html">How can I donate?</a></li></ol>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
@@ -137,7 +161,7 @@
                 </div>
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -168,14 +192,14 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="can-i-link-cards-together"><a class="header" href="#can-i-link-cards-together">Can I link cards together?</a></h1>
 <p>Anki supports links between cards of a note, but not between unrelated
 cards. Imagine you are studying Japanese and aiming to be able to both
-recognize and reproduce the Japanese. You may enter the word &quot;ookii&quot;,
-which means &quot;big&quot;, and tell Anki to generate two cards - ookii→big and
+recognize and reproduce the Japanese. You may enter the word "ookii",
+which means "big", and tell Anki to generate two cards - ookii→big and
 big→ookii.</p>
 <p>In the above situation Anki can space reviews of those two sibling cards
 out so that they don’t appear one after the other.</p>
 <p>Some people want to extend this link between arbitrary cards. They want
-to be able to tell Anki &quot;after showing me this card, show me that card&quot;,
-or &quot;don’t show me that card until I know this card well enough&quot;. This
+to be able to tell Anki "after showing me this card, show me that card",
+or "don’t show me that card until I know this card well enough". This
 might sound like a nice idea in theory, but in practice it is not
 practical.</p>
 <p>For one, unlike the sibling card case above, you would have to define
@@ -194,9 +218,9 @@ between them. Synonyms are rarely completely interchangeable - they tend
 to have nuances attached, and it’s not unusual for a sentence to become
 strange if one synonym is replaced with another.</p>
 <p>Continuing with the Japanese example earlier, imagine you want to learn
-the word &quot;dekai&quot;, which also roughly translates to &quot;big&quot;, but is a more
+the word "dekai", which also roughly translates to "big", but is a more
 colloquial expression. If you still want to review in both directions,
-you might make the English prompt of this word &quot;big (more casual)&quot;. The
+you might make the English prompt of this word "big (more casual)". The
 further you progress in your language studies though, the more of a
 burden it becomes to define the differences between similar words, which
 is why cards asking you to produce a particular word are best left to
@@ -261,7 +285,7 @@ easiness.</p>
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cards-are-reversed--appearing-twice"><a class="header" href="#cards-are-reversed--appearing-twice">Cards are reversed / appearing twice</a></h1>
 <p>Anki can be configured to show cards in both a forward and reverse direction. If you want cards to only show from front-&gt;back, you can delete the reverse card.</p>
-<p>If you have added cards to the <code>Basic (and reversed)</code> or <code>Basic (optional reversed)</code> notetypes, you can change the cards to the &quot;Basic&quot; card type by selecting them in the Browse screen, then using the Change Note Type menu item. Select your Basic note type, choosing to keep Card 1, and discard Card 2.</p>
+<p>If you have added cards to the <code>Basic (and reversed)</code> or <code>Basic (optional reversed)</code> notetypes, you can change the cards to the "Basic" card type by selecting them in the Browse screen, then using the Change Note Type menu item. Select your Basic note type, choosing to keep Card 1, and discard Card 2.</p>
 <p>If you have modified the Basic card template to add an unwanted reverse direction, you can modify it back instead:</p>
 <ul>
 <li>Edit a card</li>
@@ -271,7 +295,7 @@ easiness.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="characters-are-cut-off"><a class="header" href="#characters-are-cut-off">Characters are cut off</a></h1>
 <p>If you find that parts of your characters are missing, the font you're using is probably not appropriate for the language you're studying. To fix this:</p>
 <ul>
-<li>While an affected card is shown, click Edit, then Cards. </li>
+<li>While an affected card is shown, click Edit, then Cards.</li>
 <li>Click the Add Field button.</li>
 <li>Select Front or Back, depending on which side you want the field to be shown on.</li>
 <li>Choose a font that is intended for the language you're studying.</li>
@@ -307,7 +331,7 @@ if (typeof is_already_run == 'undefined') {
 <div style="break-before: page; page-break-before: always;"></div><h1 id="errors-when-recording"><a class="header" href="#errors-when-recording">Errors when recording</a></h1>
 <p>If you have problems recording audio in Anki, please make sure:</p>
 <ul>
-<li>a microphone is connected to the computer </li>
+<li>a microphone is connected to the computer</li>
 <li>the microphone is set as the default recording device in your system's sound settings</li>
 <li>another program like Skype is not using the microphone - you may need to close the other microphone-using program. If that does not help, please try restarting your computer.</li>
 </ul>
@@ -328,10 +352,10 @@ if (typeof is_already_run == 'undefined') {
 they are commonly used in an academic setting is because they are easy to mark,
 and they allow the person studying to demonstrate their ability to recognize the
 correct answer, even if they can’t produce it themselves.</p>
-<p>When you need to pick from a selection of answers, it is easy to &quot;cheat&quot;, as you
+<p>When you need to pick from a selection of answers, it is easy to "cheat", as you
 can guess what the correct answer is if you know what the other displayed options
 are. When multiple choice tests are designed by humans, the test creator can create
-clever &quot;distractors&quot; that are similar to the correct answer, making it harder for
+clever "distractors" that are similar to the correct answer, making it harder for
 you to guess. Computers are not so good at this.</p>
 <p>If you are studying for a test and you have a sample test with a
 multiple choice questions, like the following:</p>
@@ -358,7 +382,7 @@ A: A giraffe.
 </code></pre>
 <p>are both changes that would make card 3 blank. When you view card 3, you'll see a message indicating that the card is blank, and can be cleaned up with the Empty Cards function. You can access that function via the Tools menu of the computer version's main window, and use it to remove blank cards. Please check the reported empty cards first, and if in doubt, create a backup with the File&gt;Export menu item before proceeding.</p>
 <h2 id="all-cloze-cards-empty"><a class="header" href="#all-cloze-cards-empty">All cloze cards empty</a></h2>
-<p>If you accidentally modify your card template, it may prevent any cloze deletions from appearing. If that has happened, please edit one such problem card, and note down the name of the first field - it is usually called &quot;Text&quot;. Then, please:</p>
+<p>If you accidentally modify your card template, it may prevent any cloze deletions from appearing. If that has happened, please edit one such problem card, and note down the name of the first field - it is usually called "Text". Then, please:</p>
 <ul>
 <li>
 <p>Click on the Cards... button</p>
@@ -375,23 +399,23 @@ A: A giraffe.
 <p>If your field was called something other than Text, replace Text with the name of the field.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="printing-cards-in-your-collection"><a class="header" href="#printing-cards-in-your-collection">Printing cards in your collection</a></h1>
 <p>Some people like to print the cards in their collection so that they can review them on paper or for other reasons. Before you do this, please keep in mind that Anki is most effective when you study only through the application. Studying a list of your cards will necessarily require you to study them at suboptimal intervals compared to the ones Anki gives you.</p>
-<p>Printing in Anki is handled by the <a href="https://ankiweb.net/shared/info/1025789669">Basic Printing Support</a> add-on. If you have trouble getting your browser to open, please follow the directions in the review &quot;WORKS, but does not open the browser automatically&quot;, located on that page.</p>
+<p>Printing in Anki is handled by the <a href="https://ankiweb.net/shared/info/1025789669">Basic Printing Support</a> add-on. If you have trouble getting your browser to open, please follow the directions in the review "WORKS, but does not open the browser automatically", located on that page.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="removing-duplicate-note-types"><a class="header" href="#removing-duplicate-note-types">Removing duplicate note types</a></h1>
 <p>After you have used Anki for a while, you may find you have multiple note types with the same name followed by different characters, like <code>Basic-908e4</code>, <code>Cloze-37a28</code>, or <code>Image Occlusion++++</code>. This can happen when you import a shared deck that uses a note type with the same name as one that is already in your collection, or if you create a note type with a duplicate name. Anki adds characters to the name to avoid merging or overwriting the existing note type.</p>
-<p>While these &quot;duplicate&quot; note types are generally harmless, it can be somewhat confusing if you can't tell which note type you are using. To clean that up, you can do the following:</p>
+<p>While these "duplicate" note types are generally harmless, it can be somewhat confusing if you can't tell which note type you are using. To clean that up, you can do the following:</p>
 <ol>
 <li>Compare the fields, card templates, and styling of each of the note types by clicking <kbd>Fields</kbd> and <kbd>Cards</kbd> in the Manage Note Types window (Notes → Manage Note Types).
 <ul>
 <li>If they are the same, decide which note type to delete and click <kbd>Rename</kbd> to change its name so you will know which one it is (e.g., add <code>-delete</code> to the name).</li>
-<li>If they aren't the same, rename one to something more descriptive, and keep them both. </li>
+<li>If they aren't the same, rename one to something more descriptive, and keep them both.</li>
 </ul>
 </li>
 <li>In the Browse window, in the left Sidebar, select the note type that you want to delete, then choose Edit → Select All to select all of its notes/cards.</li>
-<li>Choose Notes → Change Note Type and select the note type that you are keeping from the dropdown on the right side of the screen. [This step will require a one-way sync the next time you sync with AnkiWeb, so if you have unsynced progress on other devices, you should stop here and get your devices in sync. Anki will give you a warning about this.] Verify that the fields and templates are mapping as you expect. Click Save. </li>
-<li>Repeat steps 2 &amp; 3 for any other note types you want to delete. </li>
-<li>Open the Manage Note Types window again and delete the now-unused note types (each will say it is used by &quot;[0 notes]&quot;). </li>
+<li>Choose Notes → Change Note Type and select the note type that you are keeping from the dropdown on the right side of the screen. [This step will require a one-way sync the next time you sync with AnkiWeb, so if you have unsynced progress on other devices, you should stop here and get your devices in sync. Anki will give you a warning about this.] Verify that the fields and templates are mapping as you expect. Click Save.</li>
+<li>Repeat steps 2 &amp; 3 for any other note types you want to delete.</li>
+<li>Open the Manage Note Types window again and delete the now-unused note types (each will say it is used by "[0 notes]").</li>
 </ol>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="some-updates-were-ignored-because-note-type-has-changed"><a class="header" href="#some-updates-were-ignored-because-note-type-has-changed">&quot;Some updates were ignored because note type has changed&quot;</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="some-updates-were-ignored-because-note-type-has-changed"><a class="header" href="#some-updates-were-ignored-because-note-type-has-changed">"Some updates were ignored because note type has changed"</a></h1>
 <p>When importing a shared deck that has previously been imported, Anki will only be able to update your existing cards if:</p>
 <ul>
 <li>the name, number and order of fields has not changed</li>
@@ -406,8 +430,8 @@ A: A giraffe.
 <p>Repeat for the shared deck imported into a temporary profile. If the numbers match, the note types are still linked.</p>
 <p>If one of the fields in the shared deck has not been altered, it is also possible to apply updates via a text import. After importing the shared deck into a temporary profile, use File&gt;Export to save the notes in txt format. Then in your original profile, you can import the text file, matching against a field that has not changed. Text imports can only operate on one note type at once, so if the shared deck you've downloaded contains multiple note types, you'll need to do the process one note type at a time. More info is at <a href="https://docs.ankiweb.net/importing/packaged-decks.html#updating">https://docs.ankiweb.net/importing/packaged-decks.html#updating</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="soundimage-media-files-have-gone-missing"><a class="header" href="#soundimage-media-files-have-gone-missing">Sound/image media files have gone missing!</a></h1>
-<p>Anki stores your cards' sound and image files on your computer, in your <a href="https://docs.ankiweb.net/files.html#file-locations">Anki folder</a>, in User 1/collection.media. If you delete any files from that folder, Anki notes they have been removed and on the next sync it will remove them from your other devices as well. What sometimes happens is users tidy up files on their computer, and accidentally remove the sounds and images that their cards use, resulting in sounds not playing or images not appearing. This is particularly easy to do accidentally on a Mac with the &quot;all my files&quot; feature of the Finder, but can happen on other platforms as well.</p>
-<p>You can use Anki's Tools&gt;Check Media function to find out which images are missing from your collection by looking at the &quot;Used on cards but missing from media folder&quot; section.</p>
+<p>Anki stores your cards' sound and image files on your computer, in your <a href="https://docs.ankiweb.net/files.html#file-locations">Anki folder</a>, in User 1/collection.media. If you delete any files from that folder, Anki notes they have been removed and on the next sync it will remove them from your other devices as well. What sometimes happens is users tidy up files on their computer, and accidentally remove the sounds and images that their cards use, resulting in sounds not playing or images not appearing. This is particularly easy to do accidentally on a Mac with the "all my files" feature of the Finder, but can happen on other platforms as well.</p>
+<p>You can use Anki's Tools&gt;Check Media function to find out which images are missing from your collection by looking at the "Used on cards but missing from media folder" section.</p>
 <p>If you've accidentally deleted the files your cards were using, you may be able to restore them from your recycle bin / trash can if the trash has not been emptied yet. Placing them back in the collection.media folder should cause the media to work again.</p>
 <p>If you are unable to recover your media from any of your devices, we may be able to restore it from AnkiWeb's backups for you if it was deleted recently.</p>
 <p>If you've lost your sound and images, but had obtained them from a shared deck, if the shared deck is still available you can import it into a new profile, and then copy the sounds and images from it into your original collection to restore the data.</p>
@@ -420,7 +444,7 @@ A: A giraffe.
 <ol>
 <li>If the field you want to split is the first field, make a different field the first field by using the <strong>Reposition</strong> button in the Fields dialog. This field needs to be unique, so that no two cards have the same content in that field. If you don't have any unique fields except the one you're trying to split, you can use the <a href="https://ankiweb.net/shared/info/8897764">add note ID</a> add-on to add a unique field to the notes.</li>
 <li>Export the entire deck to a text file, using the <strong>Notes in plain text</strong> choice.</li>
-<li>Add a new field to your note type. The new field should come immediately after the one that you're trying to split, so if you had a &quot;Word and Audio&quot; field, you could rename it to &quot;Word&quot; and then add an &quot;Audio&quot; field and reposition it to go after the &quot;Word&quot; field.</li>
+<li>Add a new field to your note type. The new field should come immediately after the one that you're trying to split, so if you had a "Word and Audio" field, you could rename it to "Word" and then add an "Audio" field and reposition it to go after the "Word" field.</li>
 <li>Open the text file and do the search and replace. If your text editor supports a certain form of regular expressions, this might work for the expression: <code>s/\[sound/\t\[sound/</code>. Otherwise, if you're not sure how to form the expression, you can ask on the Community section or look for regular expression help on the Internet.</li>
 <li>Import the text file back into your collection, making sure to use the correct note type and deck. Your notes will be updated with the newly split field.</li>
 </ol>
@@ -438,11 +462,11 @@ A: A giraffe.
 <p>It works by downloading the audio into your collection, so that when you sync with AnkiWeb, your other devices will gain access to the audio as well.</p>
 <p>If you want to use the generated files outside the computer version, make sure you use the stored files mode and not 'on the fly'.</p>
 <p>While AnkiMobile &lt;2.0.56 has no official support for on-device TTS, Apple introduced TTS support in iOS7, and it is possible to gain access to it. The following is based on a user-contributed solution.</p>
-<pre><code class="language-html">&lt;span id=&quot;word&quot;&gt;{{Word}}&lt;/span&gt;
+<pre><code class="language-html">&lt;span id="word"&gt;{{Word}}&lt;/span&gt;
 
 &lt;script&gt;
-  var w = document.getElementById(&quot;word&quot;);
-  window.setTimeout(&quot;speak(w.innerHTML)&quot;, 500);
+  var w = document.getElementById("word");
+  window.setTimeout("speak(w.innerHTML)", 500);
 
   function speak(word) {
     var speech = new SpeechSynthesisUtterance();
@@ -452,7 +476,7 @@ A: A giraffe.
     speech.pitch = 1; // 0 to 2, 1=normal
     speech.voice = window.speechSynthesis
       .getVoices()
-      .filter((v) =&gt; v.lang == &quot;en-GB&quot;)[0];
+      .filter((v) =&gt; v.lang == "en-GB")[0];
     speechSynthesis.cancel();
     speechSynthesis.speak(speech);
   }
@@ -462,8 +486,8 @@ A: A giraffe.
 <p>You may need to install the Enhanced audio files for the language you want to play, which you can do so via the Settings app, then General, Accessibility, Speech and Voices.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="when-adding-a-new-card-some-fields-do-not-reset"><a class="header" href="#when-adding-a-new-card-some-fields-do-not-reset">When adding a new card, some fields do not reset!</a></h1>
 <p>Anki supports adjusting sticky fields directly from the editor window from v 2.1.45. This feature
-can be turned on / off by clicking on the pin icon on the right of a field. </p>
-<p>If the pin icon is inactive, Anki will clear out the field's content after a note is added. </p>
+can be turned on / off by clicking on the pin icon on the right of a field.</p>
+<p>If the pin icon is inactive, Anki will clear out the field's content after a note is added.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="a-deck-i-want-has-disappeared-from-ankiweb"><a class="header" href="#a-deck-i-want-has-disappeared-from-ankiweb">A deck I want has disappeared from AnkiWeb</a></h1>
 <p>The shared decks on AnkiWeb are provided by other Anki users. If the deck author has chosen to remove a shared deck, the deck has been deleted from our servers, and we do not have the ability to restore it.</p>
 <p>Shared decks may also be hidden from view for other reasons, such as their copyright status needing to be confirmed. For legal reasons, we can not restore decks in these cases until we hear back from the deck author.</p>
@@ -471,7 +495,7 @@ can be turned on / off by clicking on the pin icon on the right of a field. </p>
 <p>Some shared decks are missing sounds or images, either because the author expects you to download them from a separate location, or because they've accidentally or deliberately omitted them.</p>
 <p>When downloading a shared deck from AnkiWeb, the number of included sounds and images is listed near the top of the download page.</p>
 <p>If you've downloaded a shared deck from somewhere other than AnkiWeb and media files are not working, please contact the sharer for assistance.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="cards-are-being-placed-in-the-default-deck"><a class="header" href="#cards-are-being-placed-in-the-default-deck">Cards are being placed in the &quot;Default&quot; deck</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cards-are-being-placed-in-the-default-deck"><a class="header" href="#cards-are-being-placed-in-the-default-deck">Cards are being placed in the "Default" deck</a></h1>
 <p>This is usually caused by an AnkiDroid bug, but can happen for other reasons as well. To fix the problem, please click the Cards button while adding a card, select the card type you're having trouble with via the tabs at the top, and ensure Options&gt;Deck Override (More&gt;Deck Override on Anki 2.0) is turned off.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hiding-decks"><a class="header" href="#hiding-decks">Hiding Decks</a></h1>
 <p>If you do not intend to study a deck for some time do not want to delete it, you may wish to <em>hide</em> it. There are two ways to do this.</p>
@@ -484,14 +508,14 @@ can be turned on / off by clicking on the pin icon on the right of a field. </p>
 <li>Finally, delete the deck from your collection.</li>
 </ol>
 <p>You can restore the deck to your collection by choosing File → Import and importing the deck again. It will be restored with the same name it had when you exported it.</p>
-<p><strong>B) Create an &quot;unused&quot; deck.</strong></p>
+<p><strong>B) Create an "unused" deck.</strong></p>
 <p>You can create a tree of decks in Anki by dragging and dropping the decks in the deck list. You can use a combination of this property and options groups to hide decks you do not intend to use:</p>
 <ol>
-<li>Click <em>Create Deck</em> and add a deck called &quot;Unused,&quot; &quot;Hidden,&quot; or something similar. You can place a tilde (~) before the name (like &quot;~Unused&quot;) if you want to force the deck to appear at the bottom of the list.</li>
+<li>Click <em>Create Deck</em> and add a deck called "Unused," "Hidden," or something similar. You can place a tilde (~) before the name (like "~Unused") if you want to force the deck to appear at the bottom of the list.</li>
 <li>Drag and drop the deck you wish to hide to underneath the new deck. Then collapse the Unused deck by clicking the minus sign next to the name.</li>
 <li>You can stop here if you're happy with this; however, if you leave it this way, due counts will still be displayed. If you would rather get rid of them, continue with step 4.</li>
 <li>Click the options button next to the Unused deck and choose Options.</li>
-<li>Click the options button in the upper-right-hand corner and add a new options group (you can call it &quot;unused deck&quot; or something similar).</li>
+<li>Click the options button in the upper-right-hand corner and add a new options group (you can call it "unused deck" or something similar).</li>
 <li>On the New Cards tab, select a new cards/day limit of 0. On the reviews tab, select a maximum reviews/day limit of 0.</li>
 </ol>
 <p>To restore the deck, simply drag and drop it back into the main deck list (you can go either to the very top or the very bottom of the list to get the top level). You can leave the Unused deck for future use.</p>
@@ -499,7 +523,7 @@ can be turned on / off by clicking on the pin icon on the right of a field. </p>
 <p>Anki's collaboration support is limited at the moment, but it is possible for multiple people to work on content together.</p>
 <p>If you are creating cards that have no sounds or images, then the easiest option may be to take advantage of an online document collaboration service such as Google Drive.</p>
 <p>With this system, you create your cards in a spreadsheet (one column per field in the note type you're using). To allow updating easily, the first column should be one that you do not expect to change if you update the cards. You can add and edit cards together at whatever time you want; when you're ready to update your collection with new and updated cards, each user can export the spreadsheet to a text file and <a href="https://docs.ankiweb.net/importing/intro.html">import it into Anki</a>.</p>
-<p>If you are creating cards that contain images or sounds, it gets more complicated. You can use the above approach, but it means you'll need to distribute the media files separately. Instead, we recommend taking turns to create the content. For example, if students are collaborating on a class, student A creates a deck &quot;lesson 1&quot; and puts all the first lesson content in it, then student B creates &quot;lesson 2&quot;, and so on. As each lesson is done, the student exports the deck to an apkg file, and uploads/emails/etc it, and the other people import it.</p>
+<p>If you are creating cards that contain images or sounds, it gets more complicated. You can use the above approach, but it means you'll need to distribute the media files separately. Instead, we recommend taking turns to create the content. For example, if students are collaborating on a class, student A creates a deck "lesson 1" and puts all the first lesson content in it, then student B creates "lesson 2", and so on. As each lesson is done, the student exports the deck to an apkg file, and uploads/emails/etc it, and the other people import it.</p>
 <p>Using a separate deck for each unit of work makes it easier to export the content separately, instead of sharing everything that's been created so far (which would lead to large files). After other users import the content, they can move it to another deck if they wish, using the computer version.</p>
 <p>Advanced users can skip the separate deck step by instead creating a filtered deck using something like 'added:7' to only include cards added in the last 7 days, and then exporting that filtered deck to share.</p>
 <p>There are also add-ons available that support collaboration, such as <a href="https://www.ankihub.net">AnkiHub</a> or <a href="https://www.ankicollab.com/">AnkiCollab</a>. Additional add-ons offering similar functionality can be found on the <a href="https://ankiweb.net/shared/addons">shared add-ons page</a>.</p>
@@ -525,7 +549,7 @@ can be turned on / off by clicking on the pin icon on the right of a field. </p>
 <p>See also <a href="https://faqs.ankiweb.net/how-do-i-move-cards-between-decks.html?highlight=mergin#how-do-i-move-cards-between-decks">How do I move cards between decks?</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="shared-decks-with-broken-javascript"><a class="header" href="#shared-decks-with-broken-javascript">Shared decks with broken Javascript</a></h1>
 <p>Some shared decks make use of a feature called 'Javascript', which allows them to dynamically modify the display of the card. Javascript can be fragile, which is why the Anki manual recommends deck authors avoid it. It may break when Anki is updated, or when the deck author has not tested their Javascript on the different Anki platforms.</p>
-<p>If you encounter a Javascript error in a shared deck, please post a review on the shared deck download page to let the deck author and other users know of the problem. If the deck author is active, they will hopefully address 
+<p>If you encounter a Javascript error in a shared deck, please post a review on the shared deck download page to let the deck author and other users know of the problem. If the deck author is active, they will hopefully address
 the issue in a future update.</p>
 <p>If the deck author is unable to help you, you can try edit your card template to remove the Javascript to prevent an error from showing. Depending on what the Javascript was doing, this may result in lost functionality.</p>
 <p>To do so, using the computer version of Anki:</p>
@@ -555,8 +579,8 @@ of the following methods:</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ankis-not-showing-me-all-my-cards"><a class="header" href="#ankis-not-showing-me-all-my-cards">Anki's not showing me all my cards!</a></h1>
 <h2 id="anki-decides-which-cards-you-see"><a class="header" href="#anki-decides-which-cards-you-see">Anki decides which cards you see</a></h2>
 <p>Anki was designed to help you remember large amounts of material for a long time. To do this, it operates differently to a traditional flashcard program.</p>
-<p>In a conventional flashcard program, you see the same set of cards over and over again, and decide when you want to stop. Repeatedly reviewing material in this way - &quot;cramming&quot; - tends to be what we're used to, and for many people it feels like the natural way to study.</p>
-<p>There's just one problem with this approach - it's not terribly effective! Studies have shown that you can achieve better results by adding a delay between each review of an item, instead of reviewing it multiple times in a short period. This delay between reviews is called &quot;spaced repetition&quot;.</p>
+<p>In a conventional flashcard program, you see the same set of cards over and over again, and decide when you want to stop. Repeatedly reviewing material in this way - "cramming" - tends to be what we're used to, and for many people it feels like the natural way to study.</p>
+<p>There's just one problem with this approach - it's not terribly effective! Studies have shown that you can achieve better results by adding a delay between each review of an item, instead of reviewing it multiple times in a short period. This delay between reviews is called "spaced repetition".</p>
 <p>In Anki, instead of going over material until you decide to stop, Anki chooses which cards you need to see. If you press the Again button on a card because you've forgotten it, it will be shown again soon. Once you've remembered the card correctly for 10 minutes, Anki will not show the card again until the next day - and if you answer it correctly then, the delay will grow larger each time.</p>
 <p>If you are new to spaced repetition, you may well be skeptical, and you may still feel that cramming would help you more. You are not alone - studies have shown that people tend to assume that cramming will be more effective, even when results show that spaced repetition actually works better. Please keep an open mind, and try it for a few weeks before you decide which approach is best for you.</p>
 <p>If you have a test due in a few days, it's probably not the best time to be starting with Anki. While Anki does have tools to bypass the regular scheduling for things like upcoming tests, they take some time to learn how to use, and they are awkward to use on a daily basis. If you have an imminent test, you may want to consider studying as you have done previously, and then picking Anki back up when you're not under as much pressure.</p>
@@ -587,7 +611,7 @@ or spaced apart, or shown one after the other depending on your preferences.</p>
 <ul>
 <li>To have the cards shown on different days, enable burying in the deck options.</li>
 <li>Sibling cards are spaced apart by default.</li>
-<li>To have the cards shown next to each other, enable the <a href="./the-2021-scheduler.html">v3 scheduler</a>, 
+<li>To have the cards shown next to each other, enable the <a href="./the-2021-scheduler.html">v3 scheduler</a>,
 and then change the sort order in the deck options, in the display order section.</li>
 </ul>
 <h2 id="reviews-1"><a class="header" href="#reviews-1">Reviews</a></h2>
@@ -674,15 +698,15 @@ you can select the cards to reset in the browser, and use
 <p>If the <a href="https://docs.ankiweb.net/deck-options.html#learning-steps">learning steps</a> are set to be longer than the <a href="https://docs.ankiweb.net/deck-options.html#graduating-interval">graduating or easy interval</a>, Hard/Good might show longer intervals than Good/Easy.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="im-going-on-vacation-can-i-pause-the-scheduler"><a class="header" href="#im-going-on-vacation-can-i-pause-the-scheduler">I'm going on vacation. Can I pause the scheduler?</a></h1>
 <p>Being able to come back from a break to find Anki in exactly the same state you left it in may sound attractive, but unfortunately while it's easy to tell the computer to suspend its estimates of how quickly you are forgetting, it's not possible to suspend your memory, so memories will continue to decay if you don't review. If you paused the scheduler, you would be delaying the review of every card in your deck, increasing your chance of forgetting every one of them, even those that would normally have appeared after you returned from your break.</p>
-<p>Anki does have a &quot;Set Due Date&quot; feature in the Browse screen that can change the due date of cards. You can use this to either to move cards to an earlier due date (allowing you to study more before you take a break), or to push cards back to a later date. Conservative changes are recommended - if you alter the due date of cards by too much, there is a good chance you will forget them and need to relearn them again.</p>
+<p>Anki does have a "Set Due Date" feature in the Browse screen that can change the due date of cards. You can use this to either to move cards to an earlier due date (allowing you to study more before you take a break), or to push cards back to a later date. Conservative changes are recommended - if you alter the due date of cards by too much, there is a good chance you will forget them and need to relearn them again.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="learning-steps-are-skipped-or-repeated"><a class="header" href="#learning-steps-are-skipped-or-repeated">Learning steps are skipped or repeated</a></h1>
 <p>If you change the learning steps while cards are already in learning, you may find
 the cards skip or repeat steps until you mark them Again or they graduate the learning
 queue.</p>
 <p>This issue no longer exists if you change the learning steps in Anki 2.1.55+.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="resetting-progress-in-a-deck"><a class="header" href="#resetting-progress-in-a-deck">Resetting progress in a deck</a></h1>
-<p>Sometimes you may want to &quot;reset&quot; part of your collection so that the cards become new again and the scheduling algorithm starts from the beginning. For instance, you might have completely changed a card or updated it so that you need to start learning it again, or you may have flipped through some cards without really studying if you were just trying to take a look at the cards or figure out how Anki works.</p>
-<p><strong>Resetting part of your collection because you are behind is not recommended.</strong> While it can be tough to recover from a backlog of cards, erasing all the progress you have made is the worst possible thing you can do: you will still remember many of those cards, and you'll have to start them all over even though you could have pushed &quot;easy.&quot; Instead, consider setting up a <a href="https://docs.ankiweb.net/deck-options.html#daily-limits">daily review limit</a> (&quot;maximum reviews/day&quot; in the options) and studying a set number of the overdue cards each day until you catch up.</p>
+<p>Sometimes you may want to "reset" part of your collection so that the cards become new again and the scheduling algorithm starts from the beginning. For instance, you might have completely changed a card or updated it so that you need to start learning it again, or you may have flipped through some cards without really studying if you were just trying to take a look at the cards or figure out how Anki works.</p>
+<p><strong>Resetting part of your collection because you are behind is not recommended.</strong> While it can be tough to recover from a backlog of cards, erasing all the progress you have made is the worst possible thing you can do: you will still remember many of those cards, and you'll have to start them all over even though you could have pushed "easy." Instead, consider setting up a <a href="https://docs.ankiweb.net/deck-options.html#daily-limits">daily review limit</a> ("maximum reviews/day" in the options) and studying a set number of the overdue cards each day until you catch up.</p>
 <h2 id="resetting-cards-within-anki"><a class="header" href="#resetting-cards-within-anki">Resetting cards within Anki</a></h2>
 <ol>
 <li>Find the cards you want to reset in the browser.</li>
@@ -728,7 +752,7 @@ queue.</p>
 </li>
 <li>
 <p>The custom steps option allows you to override the home deck’s steps and provide your own steps instead. The provided steps apply to both cards being learnt, lapsed
-reviews, and reviews ahead of time. </p>
+reviews, and reviews ahead of time.</p>
 </li>
 <li>
 <p>If you create, rebuild, empty, or delete a filtered deck while cards are still in learning, they are turned into new cards. In the case of failed reviews in relearning, any remaining relearning steps are skipped.</p>
@@ -766,7 +790,7 @@ reviews, and reviews ahead of time. </p>
 </ul>
 <h3 id="filtered-decks-1"><a class="header" href="#filtered-decks-1">Filtered decks</a></h3>
 <ul>
-<li>Filtered decks don't show all 4 answer buttons when rescheduling is turned off. </li>
+<li>Filtered decks don't show all 4 answer buttons when rescheduling is turned off.</li>
 </ul>
 <h3 id="fuzz-factor-1"><a class="header" href="#fuzz-factor-1">Fuzz factor</a></h3>
 <ul>
@@ -800,8 +824,8 @@ cards in filtered decks back to their original decks. This is problematic for
 people with longer learning steps. If you're in that situation, it is recommended
 you update with 2.1.41 or later.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="the-anki-v3-scheduler"><a class="header" href="#the-anki-v3-scheduler">The Anki v3 Scheduler</a></h1>
-<p>The 2021 scheduler (&quot;v3&quot;) is an update to the <a href="./the-anki-2.1-scheduler.html">Anki 2.1
-scheduler</a> (&quot;v2&quot;).</p>
+<p>The 2021 scheduler ("v3") is an update to the <a href="./the-anki-2.1-scheduler.html">Anki 2.1
+scheduler</a> ("v2").</p>
 <h2 id="enabling"><a class="header" href="#enabling">Enabling</a></h2>
 <p>As of Anki/AnkiMobile 23.10, and AnkiDroid 2.17, the v3 scheduler is the default and only option.</p>
 <p>On earlier versions, the scheduler can be changed from the preferences screen.</p>
@@ -831,7 +855,7 @@ cards will be introduced. This prevents the backlog from getting
 worse.</p>
 <p>If you find this happening, the recommended solution is to increase your review limit, and work through
 the backlog before you add more new cards. If you're sure you want to add more new cards
-even though you have a backlog, you can enable the &quot;New cards ignore review limit&quot; option
+even though you have a backlog, you can enable the "New cards ignore review limit" option
 in deck options.</p>
 <p>The limits of each deck will control the number of cards that are gathered from that deck
 and its subdecks. Limits are applied from the deck you select, so if you select
@@ -873,7 +897,7 @@ at 10.</p>
 <p>Because siblings are skipped when you click on a deck, the counts you see on the deck
 list will differ from the ones you see when you click on a deck. The overview screen
 will point out the number of cards that were waiting but have been skipped.</p>
-<p>Learning cards that cross a day boundary (&quot;interday learning cards&quot;) can be buried like review and new
+<p>Learning cards that cross a day boundary ("interday learning cards") can be buried like review and new
 cards.</p>
 <h3 id="fuzz"><a class="header" href="#fuzz">Fuzz</a></h3>
 <p>The small random delay added to intervals is reflected on the answer buttons,
@@ -887,11 +911,11 @@ determining what fits within the limit, Anki gathers interday learning cards
 first, then review cards, and finally new cards.</p>
 <h3 id="filtered-decks-2"><a class="header" href="#filtered-decks-2">Filtered decks</a></h3>
 <p>Filtered decks with rescheduling disabled show 4 answer buttons. You can configure a time delay for each button. Setting this delay to 0 for an answer button means that button will return the card to its home deck.</p>
-<p>In earlier releases, a delay could be configured for &quot;Again&quot;. &quot;Hard&quot; used 1.5x that delay, whereas &quot;Good&quot; used 2x that delay, and &quot;Easy&quot; returned the card to its home deck.</p>
+<p>In earlier releases, a delay could be configured for "Again". "Hard" used 1.5x that delay, whereas "Good" used 2x that delay, and "Easy" returned the card to its home deck.</p>
 <h2 id="add-ons-and-custom-scheduling"><a class="header" href="#add-ons-and-custom-scheduling">Add-ons and custom scheduling</a></h2>
 <p>The v3 scheduler is a ground-up rewrite, so add-ons that modified the previous scheduler's card-gathering or answering routines will not work with it. It is no
-longer possible to selectively replace parts of the scheduler's code (&quot;monkey
-patching&quot;), so some add-ons may not be practical to port without significant
+longer possible to selectively replace parts of the scheduler's code ("monkey
+patching"), so some add-ons may not be practical to port without significant
 effort.</p>
 <p>However, the v3 scheduler does provide more control over the scheduling. As each
 card is presented, the times and states associated with each answer button are
@@ -930,13 +954,13 @@ if (states.good.normal?.review) {
 </code></pre>
 <p>Because this is implemented in JavaScript, it is not limited to the computer
 version. AnkiMobile and AnkiDroid both support it as well, and AnkiWeb may also
-support it in the future. This will allow advanced users to make 
+support it in the future. This will allow advanced users to make
 adjustments to the standard scheduling behaviour, that apply on all platforms.</p>
 <p>The various scheduling states are described in <a href="https://github.com/ankitects/anki/blob/main/proto/anki/scheduler.proto">SchedulingStates</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="timezone-handling-changes"><a class="header" href="#timezone-handling-changes">Timezone handling changes</a></h1>
 <p>Anki 2.1.22+, AnkiMobile 2.0.57+, and AnkiDroid 2.15+ contain an optional change to the way Anki calculates the elapsed number of days. This change addresses some corner cases where timezone changes (including daylight savings) could cause Anki to move back or forward a day, and addresses cards being unburied / daily counts being reset for some users when syncing with AnkiWeb.</p>
 <p>For most users, the new calculation should produce the same number of elapsed days as the old calculation. For some users, enabling this code may move Anki forward or back by one day, but this will only happen once, and Anki should be more robust against timezone changes afterwards.</p>
-<p><strong>Please make sure you are running the above-mentioned versions prior to enabling the new code.</strong> If any of your Anki clients have not been updated yet, you won't be able to sync them while this feature is enabled. </p>
+<p><strong>Please make sure you are running the above-mentioned versions prior to enabling the new code.</strong> If any of your Anki clients have not been updated yet, you won't be able to sync them while this feature is enabled.</p>
 <p>To enable the new calculation, please make sure:</p>
 <ul>
 <li>your devices are in sync</li>
@@ -958,7 +982,7 @@ the second one is called <a href="https://github.com/open-spaced-repetition">FSR
 you have full control over the length of the initial learning steps.
 Anki understands that it can be necessary to see a new card a number
 of times before you’re able to memorize it, and those initial
-&quot;failures&quot; don’t mean you need to be punished by being shown the
+"failures" don’t mean you need to be punished by being shown the
 failed card many times over the course of a few days. Performance
 during the learning stage does not reflect performance in the
 retaining stage.</p>
@@ -991,26 +1015,26 @@ SM-2 algorithm.</p>
 <p>Successive failures while cards are in learning do not result in
 further decreases to the card’s ease. A common complaint with the
 standard SM-2 algorithm is that repeated failings of a card cause
-the card to get stuck in &quot;low interval hell&quot;. In Anki, the initial
+the card to get stuck in "low interval hell". In Anki, the initial
 acquisition process does not influence a card’s ease.</p>
 </li>
 </ul>
 <h2 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h2>
-<p>FSRS aims to learn your memory patterns and schedule reviews 
+<p>FSRS aims to learn your memory patterns and schedule reviews
 more efficiently than SM-2.</p>
-<p>FSRS is based on the &quot;Three Component Model of Memory&quot;. The model asserts 
-that three variables are sufficient to describe the status of a 
+<p>FSRS is based on the "Three Component Model of Memory". The model asserts
+that three variables are sufficient to describe the status of a
 unitary memory in a human brain.
 These three variables include:</p>
 <ul>
 <li>
-<p>Retrievability (R): The probability that the person can successfully 
-recall a particular information at a given moment. It depends 
+<p>Retrievability (R): The probability that the person can successfully
+recall a particular information at a given moment. It depends
 on the time elapsed since the last review and the memory stability (S).</p>
 </li>
 <li>
 <p>Stability (S): The time, in days, required for R to decrease from
-100% to 90%. For example, S = 365 means that an entire year 
+100% to 90%. For example, S = 365 means that an entire year
 will pass before the probability of recalling a particular card drops to 90%.</p>
 </li>
 <li>
@@ -1018,25 +1042,25 @@ will pass before the probability of recalling a particular card drops to 90%.</p
 It represents how difficult it is to increase memory stability after a review.</p>
 </li>
 </ul>
-<p>In FSRS, these three values are collectively called the &quot;memory state&quot;.
-The value of R changes daily, while D and S change only after a card 
+<p>In FSRS, these three values are collectively called the "memory state".
+The value of R changes daily, while D and S change only after a card
 has been reviewed.
-Each card has its own DSR values, in other words, each card has 
+Each card has its own DSR values, in other words, each card has
 its own memory state.
-To accurately estimate the DSR values, FSRS analyzes the user's 
-review history and uses machine learning to find parameters that 
+To accurately estimate the DSR values, FSRS analyzes the user's
+review history and uses machine learning to find parameters that
 provide the best fit to the review history.</p>
 <p>Note that the users should not tweak the parameters manually.
 If you want to adjust the scheduling, all you need to do is choose an appropriate
 value of desired retention.
-With FSRS, users can target a specific value of retention, allowing them 
+With FSRS, users can target a specific value of retention, allowing them
 to balance how much they remember and how many reviews they have to do.
 Higher retention leads to more reviews per day.</p>
-<p>Aside from allowing users to easily control their retention, 
+<p>Aside from allowing users to easily control their retention,
 FSRS has some other advantages when compared to Anki's default algorithm.
-With FSRS, users have to do fewer reviews than with Anki's default algorithm 
-to achieve the same retention level. FSRS is also much better at scheduling 
-cards that have been reviewed with a delay, for example, if the user took 
+With FSRS, users have to do fewer reviews than with Anki's default algorithm
+to achieve the same retention level. FSRS is also much better at scheduling
+cards that have been reviewed with a delay, for example, if the user took
 a break from Anki for a few weeks or months.</p>
 <p>The scheduling code can be found in <code>rslib/src/scheduler/states</code>. Here is a summary
 (see the <a href="https://docs.ankiweb.net/deck-options.html">deck options</a>
@@ -1106,22 +1130,22 @@ in a <a href="https://faqs.ankiweb.net/due-times-after-a-break.html">previous FA
 <ul>
 <li>
 <p>Again<br />
-The card is placed into relearning mode, stability significantly decreases, 
+The card is placed into relearning mode, stability significantly decreases,
 and difficulty significantly increases.</p>
 </li>
 <li>
 <p>Hard<br />
-The card’s stability either increases or stays the same, 
+The card’s stability either increases or stays the same,
 and difficulty moderately increases.</p>
 </li>
 <li>
 <p>Good<br />
-The card’s stability increases, and difficulty may 
+The card’s stability increases, and difficulty may
 increase or decrease very slightly.</p>
 </li>
 <li>
 <p>Easy<br />
-The card’s stability significantly increases, and difficulty 
+The card’s stability significantly increases, and difficulty
 moderately decreases.</p>
 </li>
 </ul>
@@ -1152,10 +1176,10 @@ seem to indicate FSRS is roughly on par with SM-17.</p>
 <p>A3: The answer to this question depends entirely on how similar your material is. For example, if you are learning Japanese and geography, it is recommended to use two different presets with different parameters. If you have two decks with Japanese vocabulary, you should use the same preset for both of them. Generally speaking, it's usually better to have different presets.</p>
 <hr />
 <p>Q4: How often should I re-optimize parameters?</p>
-<p>A4: Once per month should be more than enough. A more sophisticated rule is to optimize every time the number of reviews doubles: after you did 100 reviews, then after 200, then after 400, etc. But the &quot;one month&quot; rule is simpler.</p>
+<p>A4: Once per month should be more than enough. A more sophisticated rule is to optimize every time the number of reviews doubles: after you did 100 reviews, then after 200, then after 400, etc. But the "one month" rule is simpler.</p>
 <hr />
 <p>Q5: Does FSRS take into account the amount of time that I spend reviewing a card?</p>
-<p>A5: No, FSRS only uses interval lengths and grades. However, the amount of time you spend on reviews is used when calculating optimal retention using the &quot;Compute minimum recommended retention&quot; feature.</p>
+<p>A5: No, FSRS only uses interval lengths and grades. However, the amount of time you spend on reviews is used when calculating optimal retention using the "Compute minimum recommended retention" feature.</p>
 <hr />
 <p>Q6: Do I need 1000 reviews before I can optimize parameters?</p>
 <p>A6: That was the case in earlier versions of Anki. In Anki 24.06.3 (and newer versions), the optimizer can be used with any number of reviews.</p>
@@ -1167,7 +1191,7 @@ seem to indicate FSRS is roughly on par with SM-17.</p>
 <h2 id="returning-to-ankiweb-after-your-data-has-expired"><a class="header" href="#returning-to-ankiweb-after-your-data-has-expired">Returning to AnkiWeb after your data has expired</a></h2>
 <p>If your account data was deleted due to inactivity, you may still be able to recover that data if you have a copy on your computer or mobile device. You can confirm this by opening Anki or AnkiMobile/AnkiDroid to see if your data is still there. If you had data on your device but accidentally overwrote it in a sync, you may be able to recover it from an <a href="https://faqs.ankiweb.net/restoring-an-automatic-backup-recovering-from-data-loss.html">automatic backup</a></p>
 <p>If you'd like to start syncing that data with AnkiWeb again, please start by logging in to ankiweb.net using your Email. If your account details are correct, you will find you have 0 cards.</p>
-<p>Once you have a valid AnkiWeb login, you can sync your computer or mobile device, enter your details, and then choose &quot;Upload&quot; to send your data back to AnkiWeb. Please make sure to upload, as choosing download would overwrite your local content with your empty AnkiWeb collection.</p>
+<p>Once you have a valid AnkiWeb login, you can sync your computer or mobile device, enter your details, and then choose "Upload" to send your data back to AnkiWeb. Please make sure to upload, as choosing download would overwrite your local content with your empty AnkiWeb collection.</p>
 <h2 id="avoiding-account-deletion"><a class="header" href="#avoiding-account-deletion">Avoiding account deletion</a></h2>
 <p>Each time you visit ankiweb.net, or use the synchronisation feature in Anki, AnkiMobile or AnkiDroid, your account will automatically be marked as active. The mobile clients do not sync automatically, so simply using them to study will not result in your AnkiWeb account being marked active unless you use the sync button.</p>
 <p>If your account has been inactive for 6 months or more, and you used the service for a week or longer, we will send you an email notifying you that deletion is pending. If you'd like to keep your account active, please log in to ankiweb.net and study a card, or sync one of your devices within 30 days.</p>
@@ -1191,7 +1215,7 @@ seem to indicate FSRS is roughly on par with SM-17.</p>
 <p>AnkiWeb was previously lax about verifying your email address, sending a message out when you sign up for an account but not requiring that it be responded to. The problem with this is that email hosts don't like it when email is sent to invalid addresses, and we risk the messages we send about the service landing in the spam folder or being dropped completely if the email providers decide the valid/invalid ratio is not good enough.</p>
 <p>So to address this, we've had to start verifying your email address is valid once a year. Once you click the link in the verify email message, it tells us your address is current and we are known to you, so we can send you service-related mails in the future (like when you reset your password) with a reasonable degree of certainty that the mails will not bounce back.</p>
 <p>Please note our privacy policy has not changed - we will only use your email address for messages related to Anki.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="emails-not-being-received-due-to-spam"><a class="header" href="#emails-not-being-received-due-to-spam">Emails not being received due to &quot;spam&quot;</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="emails-not-being-received-due-to-spam"><a class="header" href="#emails-not-being-received-due-to-spam">Emails not being received due to "spam"</a></h1>
 <p>Some email providers (typically school or business email) outsource spam
 checking to external companies. Some of these external companies can be
 heavy-handed when fighting spam, and collateral damage unfortunately happens -
@@ -1205,7 +1229,7 @@ a dedicated IP used only by AnkiWeb, hosted in Amazon's network. If your email
 provider are not able to fix the problem for you, please sign up for a free
 email address at somewhere like gmail.com instead, as they reliably accept the
 email we send.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="error-establishing-a-secure-connection-when-syncing"><a class="header" href="#error-establishing-a-secure-connection-when-syncing">&quot;Error establishing a secure connection.&quot; when syncing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="error-establishing-a-secure-connection-when-syncing"><a class="header" href="#error-establishing-a-secure-connection-when-syncing">"Error establishing a secure connection." when syncing</a></h1>
 <p>This error happens when Anki tries to make a connection to AnkiWeb, and receives an invalid response. It can be caused by:</p>
 <ul>
 <li>antivirus or firewall software on your machine</li>
@@ -1223,7 +1247,7 @@ email we send.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="media-files-may-take-time-to-sync"><a class="header" href="#media-files-may-take-time-to-sync">Media files may take time to sync</a></h1>
 <p>Please take a look at the <a href="https://www.youtube.com/watch?v=phP9GGG-PxY&amp;yt:cc=on">media syncing intro video</a>. If you prefer not to watch a video, please read on.</p>
 <p>Recent Anki and AnkiMobile versions synchronize sounds and images in the background, allowing you to continue using the app while they are transferred. Until the media files have been transferred, audio may fail to play, and images may fail to appear if those files are not available yet.</p>
-<p>If you tap/click on the sync button when a spinner is shown next to it, it will reveal more details about the syncing progress. If you are waiting for sounds/images to start working, please wait for that window to show &quot;media sync complete&quot;. Once that message has been displayed, it indicates all media files have been transferred to or from your device, and the media should then work during study.</p>
+<p>If you tap/click on the sync button when a spinner is shown next to it, it will reveal more details about the syncing progress. If you are waiting for sounds/images to start working, please wait for that window to show "media sync complete". Once that message has been displayed, it indicates all media files have been transferred to or from your device, and the media should then work during study.</p>
 <h2 id="ankimobile"><a class="header" href="#ankimobile">AnkiMobile</a></h2>
 <p>If you turn your device's screen off, or you switch to a different app, it will interrupt the sync. When you sync again, the download will resume where it stopped.</p>
 <p>If you have a lot of media, the initial sync may take quite a while. AnkiMobile 2.0.64+ will keep the screen turned on while the media syncing screen is shown. Older AnkiMobile versions did not do this, so if you are on an older version and you leave your device unattented, the screen may turn off, interrupting the sync. You can check
@@ -1233,10 +1257,10 @@ the version you're running in the Preferences&gt;About screen. If you are on an 
 does not change for an extended period, you can use the Abort button to interrupt the sync, then sync
 again to pick up where you left off.</p>
 <h2 id="if-problems-persist"><a class="header" href="#if-problems-persist">If problems persist</a></h2>
-<p>If sounds or images fail to appear after &quot;media sync complete&quot; is shown, please check that you have syncing of sounds and images enabled in the preferences screen of each Anki version you use, and please use the &quot;Check Media&quot; function in the preferences screen or tools menu to check if you are missing files.</p>
+<p>If sounds or images fail to appear after "media sync complete" is shown, please check that you have syncing of sounds and images enabled in the preferences screen of each Anki version you use, and please use the "Check Media" function in the preferences screen or tools menu to check if you are missing files.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="outlookcom-silently-discards-email"><a class="header" href="#outlookcom-silently-discards-email">Outlook.com silently discards email</a></h1>
 <p>Microsoft's email servers do not reliably deliver email. There are numerous reports on the web of email being successfully delivered to Microsoft's servers, but failing to show up in a user's inbox - even in the spam folder.</p>
-<p>You may be able to work around this by clicking on the cog icon in your inbox, going to &quot;Safe and blocked senders&quot;, and adding <code>noreply@ankiweb.net</code> to the list of safe senders. You can then visit AnkiWeb's verification page and refresh it until another verification email is sent.</p>
+<p>You may be able to work around this by clicking on the cog icon in your inbox, going to "Safe and blocked senders", and adding <code>noreply@ankiweb.net</code> to the list of safe senders. You can then visit AnkiWeb's verification page and refresh it until another verification email is sent.</p>
 <p>If problems persist, you will need to use a different email provider (such as a free gmail.com account) that reliably delivers email.</p>
 <p>Verifying your email may be frustrating, but it is important to have a working contact method - without one, you would not be able to recover your account if you forgot your password.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="synchronizing-multiple-profiles"><a class="header" href="#synchronizing-multiple-profiles">Synchronizing multiple profiles</a></h1>
@@ -1265,22 +1289,22 @@ again to pick up where you left off.</p>
 <p>Once installed, you should use mtr to access 'ankiweb.net', and let it run for about 15 minutes. If any of the steps between your device and the AnkiWeb servers show a packet loss above 0%, it indicates instability.</p>
 <p>If you are seeing no packet loss at all but are still having problems syncing, you may be having a different problem - please contact us and let us know.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="soundsimages-are-not-appearing-on-ankiweb-or-the-mobile-clients"><a class="header" href="#soundsimages-are-not-appearing-on-ankiweb-or-the-mobile-clients">Sounds/images are not appearing on AnkiWeb or the mobile clients</a></h1>
-<p>If you created your deck by importing from a text file, or you downloaded a shared deck that was created in that way, it's possible the filenames in Anki do not match the filenames on the computer. Some computers treat &quot;file.jpg&quot;, &quot;file.JPG&quot; and &quot;FILE.JPG&quot; all as the same file, but other computers do not. This means that if the deck contains a reference to &quot;dog.jpg&quot; but the file on disk is &quot;dog.JPG&quot;, some devices (including AnkiWeb) will not be able to display the image.</p>
-<p>You can confirm this is a problem by editing a card that's not showing up correctly using the computer version. If audio isn't working, you'll see a link like <code>[sound:hello.mp3]</code>. If you see a broken image link, click on that field, then press the down arrow on the top right, choose &quot;Edit HTML&quot;, and locate text that looks like:</p>
-<pre><code class="language-html">&lt;img src=&quot;cat.jpg&quot; /&gt;
+<p>If you created your deck by importing from a text file, or you downloaded a shared deck that was created in that way, it's possible the filenames in Anki do not match the filenames on the computer. Some computers treat "file.jpg", "file.JPG" and "FILE.JPG" all as the same file, but other computers do not. This means that if the deck contains a reference to "dog.jpg" but the file on disk is "dog.JPG", some devices (including AnkiWeb) will not be able to display the image.</p>
+<p>You can confirm this is a problem by editing a card that's not showing up correctly using the computer version. If audio isn't working, you'll see a link like <code>[sound:hello.mp3]</code>. If you see a broken image link, click on that field, then press the down arrow on the top right, choose "Edit HTML", and locate text that looks like:</p>
+<pre><code class="language-html">&lt;img src="cat.jpg" /&gt;
 </code></pre>
 <p>Note down the name of the file.</p>
 <p>Then open your collection's media folder (<a href="https://docs.ankiweb.net/files.html#file-locations">https://docs.ankiweb.net/files.html#file-locations</a>) and locate the file that is referenced. If the file does not use exactly the same combination of lowercase or uppercase letters, you've found the problem.</p>
 <p>Please also make sure you <a href="https://docs.ankiweb.net/media.html#manually-adding-media">ran a media check</a>.</p>
-<p>If it was a shared deck, please report the issue to the shared deck author. If the differences in case are regular, you can try fix the problem using Anki's find&amp;replace feature in the browser. For example, if the link is for &quot;dog.JPG&quot; but the file on disk is &quot;dog.jpg&quot;, you can click browse, select all cards, and use find&amp;replace to replace JPG with jpg.</p>
+<p>If it was a shared deck, please report the issue to the shared deck author. If the differences in case are regular, you can try fix the problem using Anki's find&amp;replace feature in the browser. For example, if the link is for "dog.JPG" but the file on disk is "dog.jpg", you can click browse, select all cards, and use find&amp;replace to replace JPG with jpg.</p>
 <p>If that doesn't explain your issue, please check that the computer you're on is not using a vfat/fat32 file system. Anki currently is unable to detect changes to the media folder when it's on such a filesystem, so media syncing will not work in this case. A workaround is planned for a future release.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="a-shortcut-key-is-not-working"><a class="header" href="#a-shortcut-key-is-not-working">A shortcut key is not working</a></h1>
 <p>Some other program on your computer is likely capturing the shortcut. For example, some users have recently reported that their AMD/ATI video card software is stealing the cloze deletion shortcut key. When they disable the shortcut in that program's preferences, the key starts working in Anki again.</p>
 <p>If you run into similar problems, please try temporarily closing/turning off other software running on your machine, until you discover the cause.</p>
 <p>If you use add-ons in Anki, please also try disabling them to rule them out as the cause of the problem.</p>
-<p>In some cases, using a non-English keyboard layout may cause the problem. </p>
+<p>In some cases, using a non-English keyboard layout may cause the problem.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki-must-be-able-to-connect-to-a-local-port"><a class="header" href="#anki-must-be-able-to-connect-to-a-local-port">Anki must be able to connect to a local port</a></h1>
-<p>When Anki 2.1 starts up, it listens on a port on localhost for requests from the user interface. If you have a proxy server configured on your machine, please go into your proxy settings and make sure that &quot;bypass proxy server for local addresses&quot; is enabled - otherwise Anki's user interface will have its local communication redirected through the proxy, which will prevent Anki from functioning.</p>
+<p>When Anki 2.1 starts up, it listens on a port on localhost for requests from the user interface. If you have a proxy server configured on your machine, please go into your proxy settings and make sure that "bypass proxy server for local addresses" is enabled - otherwise Anki's user interface will have its local communication redirected through the proxy, which will prevent Anki from functioning.</p>
 <p>More info: <a href="https://superuser.com/a/261434">https://superuser.com/a/261434</a></p>
 <p>This problem may also occur if you have a firewall running on your machine that blocks local connections, or are using a VPN that is incorrectly redirecting local traffic.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki-says-my-clock-is-wrong"><a class="header" href="#anki-says-my-clock-is-wrong">Anki says my clock is wrong</a></h1>
@@ -1292,7 +1316,7 @@ again to pick up where you left off.</p>
 <li>daylight savings</li>
 </ul>
 <p>If you receive an error about the clock being wrong, please check to ensure all of the above are set correctly. Please note that even if your system is showing you what looks like the correct time, if the above settings are not correct, the computer's internal idea of the correct time may be wrong.</p>
-<p><strong>&quot;What should I do if my country has just changed its handling of daylight savings?&quot;</strong></p>
+<p><strong>"What should I do if my country has just changed its handling of daylight savings?"</strong></p>
 <p>When politicians change the handling of daylight savings time, it can take companies like Windows and Apple time to update their operating systems to reflect the new handling. To work around the problem, you can select a different timezone that has the same UTC offset as your current location, and then update the clock to make sure it is correct. For example:</p>
 <ul>
 <li>it's 10AM where you are</li>
@@ -1301,7 +1325,7 @@ again to pick up where you left off.</p>
 <li>in your system settings, look for a timezone that is +10:00</li>
 <li>after adjusting the time zone, adjust the clock so it shows the correct time</li>
 </ul>
-<p><strong>&quot;Why doesn't Anki let me ignore the error?&quot;</strong></p>
+<p><strong>"Why doesn't Anki let me ignore the error?"</strong></p>
 <p>If you study while the clock is incorrect, then your progress is likely to be messed up when any of the following happen:</p>
 <ul>
 <li>the clock is automatically reset to the correct time in an OS upgrade</li>
@@ -1315,8 +1339,8 @@ again to pick up where you left off.</p>
 <h2 id="anki"><a class="header" href="#anki">Anki</a></h2>
 <ul>
 <li>To change the font you see when reviewing, please see <a href="https://docs.ankiweb.net/templates/styling.html">here</a>.</li>
-<li>To change the font you see when adding or editing, please click the &quot;Fields&quot; button.</li>
-<li>To change the font in rows of cards in the browser, please click the &quot;Cards&quot; button, then &quot;More&quot;, and then &quot;Browser Appearance&quot;.</li>
+<li>To change the font you see when adding or editing, please click the "Fields" button.</li>
+<li>To change the font in rows of cards in the browser, please click the "Cards" button, then "More", and then "Browser Appearance".</li>
 <li>For buttons, menus and so on, Anki uses your system font settings, so you can alter the size by adjusting the system font scale. If you wish to override the font only in Anki, you can install the <a href="https://ankiweb.net/shared/info/1431333984">Change Interface Font</a> add-on.</li>
 </ul>
 <h2 id="ankimobile-1"><a class="header" href="#ankimobile-1">AnkiMobile</a></h2>
@@ -1371,12 +1395,12 @@ out of luck.</p>
 <p>If you edit a card, click on Cards, and then place the following at the very
 bottom of the styling section, it will shrink screenshots down to the correct
 size:</p>
-<pre><code>img[src*=&quot;Screen&quot;] {
+<pre><code>img[src*="Screen"] {
   zoom: 50%;
 }
 </code></pre>
-<p>It works by targeting any filenames that have &quot;Screen&quot; in them - which applies
-to the default &quot;Screen Shot&quot; name that macOS uses. If your screenshots use a
+<p>It works by targeting any filenames that have "Screen" in them - which applies
+to the default "Screen Shot" name that macOS uses. If your screenshots use a
 different but consistent name, you can adjust the line above.</p>
 <p>If your screenshots use names that don't have a consistent pattern, you can
 remove the square brackets and the text inside them, which will cause all images
@@ -1413,25 +1437,25 @@ unfortunately that is not something we can change.</p>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="why-does-ankimobile-cost-more-than-a-typical-mobile-app"><a class="header" href="#why-does-ankimobile-cost-more-than-a-typical-mobile-app">Why does AnkiMobile cost more than a typical mobile app?</a></h1>
 <p>AnkiMobile is not a standalone app - it is intended to be used in conjunction with the online synchronization service and open source computer version that I've made available for free for the last 10 years. Working on these three platforms is a full time job, and AnkiMobile is my way of putting food on the table and supporting future development.</p>
-<p>Because there are so many $1 apps out there, some people are surprised by the price. But when you factor in the computer version, synchronization service, and free updates, AnkiMobile's price is quite competitive. At the time of writing (2013-10-04), SuperMemo's computer+iPhone version will set you back $60, and MentalCase's combo will cost you $29.95. </p>
+<p>Because there are so many $1 apps out there, some people are surprised by the price. But when you factor in the computer version, synchronization service, and free updates, AnkiMobile's price is quite competitive. At the time of writing (2013-10-04), SuperMemo's computer+iPhone version will set you back $60, and MentalCase's combo will cost you $29.95.</p>
 <p>Whether you find AnkiMobile's price to be a good deal will ultimately depend on your needs. If you're an existing Anki user that has invested many hours studying on the computer, AnkiMobile provides an easy way to do your studies anywhere while taking advantage of the advanced scheduling and formatting features that Anki provides. On the other hand, if you're looking for something inexpensive and simple and don't mind being restricted to your Apple device, there are cheaper alternatives out there that you may want to consider.</p>
 <p>One other thing to note is that once purchased, you can use AnkiMobile on up to 5 of your iOS devices, provided they use the same Apple ID. AnkiMobile also supports family sharing, for families that have that set up.</p>
 <p>Some frequently asked questions:</p>
-<p><strong>&quot;You'd make more money if you priced it cheaper.&quot;</strong></p>
+<p><strong>"You'd make more money if you priced it cheaper."</strong></p>
 <p>I have experimented with different price points in the past, and reducing the price resulted in a net decrease in income. Games like Angry Birds are able to make a profit because they appeal to a wide audience. Spaced repetition flashcard apps are quite a niche market in comparison. For this reason, neither a price change nor a sale is likely in the foreseeable future.</p>
-<p><strong>&quot;It's too expensive in my country.&quot;</strong></p>
+<p><strong>"It's too expensive in my country."</strong></p>
 <p>I appreciate that costs of living are different in different countries, but I'm afraid it's not practical to vary the price depending on where you live. The
 costs of building and supporting Anki are fixed, and they don't vary based on the country a person using Anki lives in.</p>
 <p>As for why the price might not be exactly the same as $25 USD, please note that Apple sets the price in each country based on the local taxes and costs of doing business there. Please also bear in mind that the price in the US is the price before state sales taxes are applied, so the difference may not be as as much as you think.</p>
-<p><strong>&quot;As a student, I think it's too expensive.&quot;</strong></p>
+<p><strong>"As a student, I think it's too expensive."</strong></p>
 <p>Please compare it to the price of the average textbook and then consider how many hours of use you get out of each. If you don't use Anki enough to justify the price, then you're welcome to use AnkiWeb instead or look into cheaper alternatives.</p>
-<p><strong>&quot;Can I get a free copy for personal use, or for writing a review?&quot;</strong></p>
+<p><strong>"Can I get a free copy for personal use, or for writing a review?"</strong></p>
 <p>Sorry, I do not offer promo codes, as preparing them takes time away from development.</p>
-<p><strong>&quot;You should just rely on donations.&quot;</strong></p>
+<p><strong>"You should just rely on donations."</strong></p>
 <p>Unfortunately that would not be enough to live on. No matter how much people appreciate a product or service, if they're given the option of not paying, most people will choose not to.</p>
-<p><strong>&quot;You should charge for AnkiWeb instead.&quot;</strong></p>
+<p><strong>"You should charge for AnkiWeb instead."</strong></p>
 <p>Apple's app store provides a safe and friction-free way of making purchases. Purchasing a subscription from a website requires considerably more effort, and many people are wary of making purchases online.</p>
-<p><strong>&quot;Why is the Android version free?&quot;</strong></p>
+<p><strong>"Why is the Android version free?"</strong></p>
 <p>The Android version is developed by a different group of people, who based it off the computer version I wrote. Because they have day jobs and can only work on it in their free time, AnkiMobile is better supported: no questions or bug reports go unanswered, the app is more polished, and most bugs get fixed quickly.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki-knockoffs"><a class="header" href="#anki-knockoffs">Anki knockoffs</a></h1>
 <p>AnkiApp and Anki Pro were developed by separate groups of people, and they are not related to the rest of the Anki ecosystem. They were released years after Anki was already established in the marketplace, and we suspect the names were deliberately chosen to take advantage of the brand recognition we have built up. Using Anki in the name implies that they will function with the other Anki clients, which they do not.</p>
@@ -1439,7 +1463,7 @@ costs of building and supporting Anki are fixed, and they don't vary based on th
 <p>If you purchased a subscription from them, you could try contacting Apple to see if they can refund your money.</p>
 <p>The Anki ecosystem is made up of Anki, AnkiMobile, AnkiDroid, and AnkiWeb, all of which are linked from our official website: <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a></p>
 <p><strong>Importing from AnkiApp/Anki Pro</strong></p>
-<p>Abdo has kindly published <a href="https://ankiweb.net/shared/info/2072125761">an add-on</a> to help you import your AnkiApp and Anki Pro decks into Anki. </p>
+<p>Abdo has kindly published <a href="https://ankiweb.net/shared/info/2072125761">an add-on</a> to help you import your AnkiApp and Anki Pro decks into Anki.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ankiapp-is-not-part-of-the-anki-ecosystem"><a class="header" href="#ankiapp-is-not-part-of-the-anki-ecosystem">AnkiApp is not part of the Anki ecosystem</a></h1>
 <p>Please see <a href="./anki-knockoffs.html">Anki knockoffs</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ankidroid-has-a-separate-support-site"><a class="header" href="#ankidroid-has-a-separate-support-site">AnkiDroid has a separate support site</a></h1>
@@ -1453,7 +1477,7 @@ costs of building and supporting Anki are fixed, and they don't vary based on th
 <p>We make a <em>flashcard program</em> called Anki. If you are having problems with a robot you bought from a <em>company</em> called Anki, please go to <a href="https://support.digitaldreamlabs.com/">https://support.digitaldreamlabs.com/</a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="anki-20-support-has-ended"><a class="header" href="#anki-20-support-has-ended">Anki 2.0 support has ended</a></h1>
 <h2 id="anki-1"><a class="header" href="#anki-1">Anki</a></h2>
-<p>Update 1 Jun 2020: An upstream SSL certificate has expired, and this has broken syncing for the remaining users on 2.0. </p>
+<p>Update 1 Jun 2020: An upstream SSL certificate has expired, and this has broken syncing for the remaining users on 2.0.</p>
 <p>On Feb 1 2020, AnkiWeb received a security update that broke syncing for some Anki 2.0 users. The tools Anki 2.0 was built on are no longer receiving bugfixes or security updates, and there is a risk that Anki 2.0 will stop working without warning. For this reason, we highly recommend you start migrating to Anki 2.1.</p>
 <p>Syncing with Anki 2.1.x will continue to function. If you have not updated to Anki 2.1.x yet, upgrading is as simple as installing it on your computer, as Anki 2.0.x and 2.1.x use the same file format. You can even switch back and forth if you install 2.0 and 2.1 in separate locations - though please make sure to use the <a href="https://changes.ankiweb.net">Downgrade</a> button if you're using the latest Anki.</p>
 <p>For information on the changes in Anki 2.1, please see <a href="https://changes.ankiweb.net/changes/2.1.html">https://changes.ankiweb.net/changes/2.1.html</a></p>
@@ -1531,26 +1555,27 @@ friends about Anki helps out too.</p>
 
 
 
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
 
 
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
 
+    </div>
     </body>
 </html>
