@@ -24,3 +24,8 @@ exclude = [ 'quora\.com', 'reddit.com', 'superuser.com', 'github.com/open-spaced
 [output.html.redirect]
 # redirect deleted pages to new pages to preserve legacy links
 "note-types-with-strange-names.html" = "removing-duplicate-note-types.html"
+"ankiweb-account-removal.html" = "https://docs.ankiweb.net/syncing.html#ankiweb-data-deletion"
+"card-template-has-a-problem.html" = "https://docs.ankiweb.net/templates/errors.html#template-syntax-error"
+"customizing-mathjax.html" = "https://docs.ankiweb.net/math.html#customize-mathjax"
+"due-times-after-a-break.html" = "https://docs.ankiweb.net/studying.html#falling-behind"
+"no-cloze-found-on-card.html" = "https://docs.ankiweb.net/templates/errors.html#no-cloze-filter-on-cloze-note-type"
