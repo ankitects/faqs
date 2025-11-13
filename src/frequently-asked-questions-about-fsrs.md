@@ -37,3 +37,9 @@ A5: No, FSRS only uses interval lengths and grades. However, the amount of time 
 Q6: Do I need 1000 reviews before I can optimize parameters?
 
 A6: That was the case in earlier versions of Anki. In Anki 24.06.3 (and newer versions), the optimizer can be used with any number of reviews.
+
+***
+
+Q7: Is there an optimal number of new cards per day that I should be doing with FSRS?
+
+A7: No, FSRS works equally well regardless of whether you are learning 5 or 50 new cards/day.
