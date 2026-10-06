@@ -3,10 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; URL=removing-duplicate-note-types.html">
-    <link rel="canonical" href="removing-duplicate-note-types.html">
+    <meta http-equiv="refresh" content="0; URL=https://docs.ankiweb.net/faqs/removing-duplicate-note-types">
+    <link rel="canonical" href="https://docs.ankiweb.net/faqs/removing-duplicate-note-types">
   </head>
   <body>
-      <p>Redirecting to... <a href="removing-duplicate-note-types.html">removing-duplicate-note-types.html</a>.</p>
+      <p>Redirecting to... <a href="https://docs.ankiweb.net/faqs/removing-duplicate-note-types">https://docs.ankiweb.net/faqs/removing-duplicate-note-types</a>.</p>
+
+<script>
+    // This handles redirects that involve fragments.
+    document.addEventListener('DOMContentLoaded', function() {
+        const fragmentMap =
+            {}
+        ;
+        const fragment = window.location.hash;
+        if (fragment) {
+            let redirectUrl = "https://docs.ankiweb.net/faqs/removing-duplicate-note-types";
+            const target = fragmentMap[fragment];
+            if (target) {
+                let url = new URL(target, window.location.href);
+                redirectUrl = url.href;
+            } else {
+                let url = new URL(redirectUrl, window.location.href);
+                url.hash = window.location.hash;
+                redirectUrl = url.href;
+            }
+            window.location.replace(redirectUrl);
+        }
+        // else redirect handled by http-equiv
+    });
+</script>
   </body>
 </html>
